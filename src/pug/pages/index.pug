@@ -1,17 +1,16 @@
 extends ../layout/main
 
 block variables
-  - var title = 'Webpack + Pug';
-  - var description = 'Description for Webpack + Pug';
+  - var title = 'Webpack и Pug';
+  - var description = 'Описание для Webpack и Pug';
   - var pageClass = 'index-page';
 
 block content
   section
     .container
-      +item('item title', 'item descr')
-      +item('item title', 'item descr')
-      +item('item title', 'item descr')
-  example-component
+      +item('наименование элемента 1', 'описание элемента 1')
+      +item('наименование элемента 2', 'описание элемента 2')
+      +item('наименование элемента 3', 'описание элемента 3')
 
 
 block script
