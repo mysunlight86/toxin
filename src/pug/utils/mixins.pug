@@ -2,3 +2,8 @@ mixin item(title, descr)
   .item
     h2.item-title= title
     p.item-descr= descr
+
+mixin explanation(header, text)
+  .explanation
+            h2= header
+            | #{text}

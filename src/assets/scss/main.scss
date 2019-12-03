@@ -1,0 +1,82 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+@import "uikit/uikit.scss";
+
+html {
+  line-height: $main-line-height;
+	font-size: $main-font-size;
+  color: $main-font-color;
+  font-family: $main-font;
+  font-weight: $main-font-weight;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+//  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after { box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+a { text-decoration: none; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* section, .section {
+  position: relative;
+  padding: 40px 0;
+  @media screen and (max-width: $lg-desktop-width) {
+    padding: 36px 0;
+  }
+  @media screen and (max-width: $table-width) {
+    padding: 28px 0;
+  }
+  @media screen and (max-width: $phone-width) {
+    padding: 20px 0;
+  }
+} */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+  margin: 0 auto;
+  max-width: $container-width;
+  @media screen and (max-width: $sm-desktop-width) {
+    max-width: table-width;
+  }
+  @media screen and (max-width: $table-width) {
+    max-width: phone-width;
+  }
+  @media screen and (max-width: $phone-width) {
+    max-width: sm-phone-width;
+  }
+}
+
+// Modules
+// @import "modules/my-module.scss";

@@ -1,5 +1,6 @@
 // Main js file
 
+/*
 $(document).ready(function() {
   $('.wrapper').css('background-color', 'green');
 });
@@ -7,3 +8,4 @@ $(document).ready(function() {
 $( document ).ready(function() {
   console.log( "ready!" );
 });
+*/

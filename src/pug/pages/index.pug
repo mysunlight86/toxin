@@ -1,8 +1,8 @@
 extends ../layout/main
 
 block variables
-  - var title = 'Webpack и Pug';
-  - var description = 'Описание для Webpack и Pug';
+  - var title = 'Toxin';
+  - var description = 'Сайт о бронировании номера в гостинице';
   - var pageClass = 'index-page';
 
 block content
@@ -12,7 +12,7 @@ block content
       +item('наименование элемента 2', 'описание элемента 2')
       +item('наименование элемента 3', 'описание элемента 3')
 
-block script
+block scripts
   script(type='text/javascript').
     const foo = true;
     let bar = function() {};

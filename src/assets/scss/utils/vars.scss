@@ -6,40 +6,43 @@ $dark-shade-25: rgba(31, 32, 65, 0.25);
 $dark-shade-5: rgba(31, 32, 65, 0.05);
 $purple: rgba(188, 156, 255, 1);
 $green: rgba(111, 207, 151, 1);
+// $background-color: rgba(229, 229, 229, 1);
 
 // Font
 $main-font: 'Montserrat', Helvetica, Arial, sans-serif;
 $main-font-color: $dark-shade-75;
-$main-font-size            : 14px;
-$main-font-weight          : normal;
-$main-line-height          : 24px;
+$main-font-size: 14px;
+$main-font-weight: normal;
+$main-line-height: 1.25;
 
 // Font header 1
 $h1-font: 'Quicksand', Helvetica, Arial, sans-serif;
 $h1-font-color: $dark-shade-100;
-$h1-font-size            : 24px;
-$h1-font-weight          : bold;
-$h1-line-height          : 30px;
+$h1-font-size: 24px;
+$h1-font-weight: bold;
+// $h1-line-height: 30px;
 
 // Font header 2
 $h2-font: 'Quicksand', Helvetica, Arial, sans-serif;
 $h2-font-color: $dark-shade-100;
-$h2-font-size            : 19px;
-$h2-font-weight          : bold;
-$h2-line-height          : 24px;
+$h2-font-size: 19px;
+$h2-font-weight: bold;
+// $h2-line-height: 24px;
 
 // Font header 3
 $h3-font: 'Montserrat', Helvetica, Arial, sans-serif;
 $h3-font-color: $dark-shade-100;
-$h3-font-size            : 12px;
-$h3-font-weight          : bold;
-$h3-line-height          : 15px;
+$h3-font-size: 12px;
+$h3-font-weight: bold;
+// $h3-line-height: 15px;
 
 // Size
-$lg-desktop-width            : 1920px;
-$md-desktop-width            : 1680px;
-$desktop-width            : 1280px;
-$sm-desktop-width          : 980px;
-$table-width              : 768px;
-$phone-width              : 480px;
-$sm-phone-width            : 320px;
+$lg-desktop-width: 1920px;
+$md-desktop-width: 1680px;
+$desktop-width: 1280px;
+$sm-desktop-width: 980px;
+$table-width: 768px;
+$phone-width: 480px;
+$sm-phone-width: 320px;
+
+$container-width: 1440 - 150 * 2;

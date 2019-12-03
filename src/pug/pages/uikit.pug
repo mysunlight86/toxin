@@ -1,0 +1,39 @@
+extends ../layout/main-without-header-footer
+
+block variables
+  - var title = 'Toxin';
+  - var description = 'Подготовка базовых элементов';
+  - var pageClass = 'uikit-page';
+
+block head
+  link(href='https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap', rel='stylesheet')
+
+block content
+  section
+    .container
+      .palette
+        .block_color_info
+          .block.block_dark_100
+          .explanation
+            h2 Dark Shade 100%
+            | #1F2041
+        .block_color_info
+          .block.block_dark_75
+          .explanation
+            h2 Dark Shade 75%
+            | #1F2041
+        .block_color_info
+          .block.block_dark_50
+          +explanation('Dark Shade 50%', '#1F2041')
+        .block_color_info
+          .block.block_dark_25
+          +explanation('Dark Shade 25%', '#1F2041')
+        .block_color_info
+          .block.block_dark_5
+          +explanation('Dark Shade 5%', '#1F2041')
+        .block_color_info
+          .block.block_purple
+          +explanation('Purple', '#BC9CFF')
+        .block_color_info
+          .block.block_green
+          +explanation('Green', '#6FCF97')
