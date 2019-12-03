@@ -1,2 +1,11 @@
 /node_modules/
 /.ionide/
+
+.vscode
+
+*.log
+
+npm-debug.log*
+
+Thumbs.db
+Desktop.ini
