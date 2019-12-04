@@ -4,6 +4,7 @@ const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 // Main const
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#main-const
@@ -48,9 +49,8 @@ module.exports = {
   module: {
     rules: [{
       test: /\.pug$/,
-      loader: 'pug-loader'
-  //      }
-  //    ]
+      loader: 'pug-loader',
+      exclude: '/node_modules/'
     }, {
       test: /\.js$/,
       loader: 'babel-loader',
@@ -74,13 +74,17 @@ module.exports = {
         MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
-          options: { sourceMap: true }
+          options: { sourceMap: true, url: false }
         }, {
           loader: 'postcss-loader',
           options: { sourceMap: true, config: { path: `./postcss.config.js` } }
         }, {
           loader: 'sass-loader',
-          options: { sourceMap: true }
+          options: { sourceMap: true,
+            sassOptions: {
+              includePaths: ['./node_modules']
+            } 
+          }
         }
       ]
     }, {
@@ -90,7 +94,7 @@ module.exports = {
         MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
-          options: { sourceMap: true }
+          options: { sourceMap: true, url: false }
         }, {
           loader: 'postcss-loader',
           options: { sourceMap: true, config: { path: `./postcss.config.js` } }
@@ -118,6 +122,7 @@ module.exports = {
       { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: '' },
     ]),
+    new CleanWebpackPlugin(),
 
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,

@@ -1,5 +1,6 @@
 // JS
 import './js/'
+import 'popper.js'
 import 'webpack-jquery-ui'
 import 'webpack-jquery-ui/css'
 
