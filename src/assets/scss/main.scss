@@ -1,8 +1,8 @@
-// @import "utils/libs";
+@import "utils/libs";
 @import "utils/vars";
-// @import "utils/mixins";
-// @import "utils/fonts";
-// @import "utils/reset";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
 
 
 html {
@@ -85,4 +85,5 @@ ul, li {
 // Modules
 // @import "modules/my-module.scss";
 
-@import "modules/uikit/uikit";
+// @import "modules/uikit";
+@import "uikit";
