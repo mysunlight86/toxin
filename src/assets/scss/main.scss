@@ -8,10 +8,30 @@
 html {
   line-height: $main-line-height;
 	font-size: $main-font-size;
-  color: $main-font-color;
+  color: $dark-shade-100;
   font-family: $main-font;
-  font-weight: $main-font-weight;
+  font-weight: 400;
   // height: 100%;
+}
+
+h1, h2 {
+  font-family: $header-font;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
 }
 
 /*
@@ -69,7 +89,7 @@ ul, li {
   display: flex;
   flex: 0 0 auto;
   position: relative;
-  margin: 0 auto;
+  margin: 145px auto;
   max-width: $container-width;
   @media screen and (max-width: $sm-desktop-width) {
     max-width: table-width;
@@ -80,7 +100,7 @@ ul, li {
   @media screen and (max-width: $phone-width) {
     max-width: sm-phone-width;
   }
-} */
+}*/
 
 // Modules
 // @import "modules/my-module.scss";

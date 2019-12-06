@@ -5,12 +5,9 @@ block variables
   - var description = 'Подготовка базовых элементов';
   - var pageClass = 'uikit-page';
 
-block head
-  link(href='https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap', rel='stylesheet')
-
 block content
   section
-    .container
+    .container_base
       .color_palette
         .block_color_info
           .block.block_dark_100
@@ -37,7 +34,21 @@ block content
         .block_color_info
           .block.block_green
           +explanation('Green', '#6FCF97')
-      .text_palette
-        .block_text_info
-          .block.block_h1 H1
-          .text_explanation This one is the sub-section or widget title
+      
+      table.text_palette
+        tr.block_text_info
+          td.block_text.block_h1 H1
+          td
+            h1 This one is the sub-section or widget title
+        tr.block_text_info
+          td.block_text.block_h2 H2
+          td
+            h2 Next one is the item title inside widgets
+        tr.block_text_info
+          td.block_text.block_h3 H3
+          td
+            h3 This is a label or CTA text
+        tr.block_text_info
+          td.block_text.block_p Body
+          td
+            p This is the body text which is used for most of the design, like paragraphs, lists, etc.

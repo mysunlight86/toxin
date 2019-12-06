@@ -1,11 +1,12 @@
+.container_base {
+  display: flex;
+}
+
 .color_palette {
   margin-top: 145px;
   margin-left: 150px;
-  font-family: $h2-font;
-  font-style: normal;
   font-size: $h2-font-size;
   line-height: 29px;
-  color: $h2-font-color;
 }
 
 .block_color_info {
@@ -52,6 +53,52 @@
   margin-left: 40px;
 }
 
-h2 {
-  font-weight: bold;
+.text_palette {
+  margin-top: 145px;
+  margin-left: 435px;
+}
+
+.block_text_info {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.block_text {
+  color: $dark-shade-25;
+  text-align: right;
+  margin-right: 30px;
+  width: 40px;
+}
+
+.block_h1 {
+  font-size: $h1-font-size;
+}
+
+.block_h2 {
+  font-size: $h2-font-size;
+}
+
+.block_h3 {
+  font-size: $h3-font-size;
+}
+
+.text_palette h1 {
+  width: 336px;
+  line-height: 30px;
+}
+
+.text_palette h2 {
+  width: 282px;
+  line-height: 24px;
+}
+
+.text_palette h3 {
+  width: 186px;
+  line-height: 15px;
+}
+
+.text_palette p {
+  width: 301px;
+  color: $dark-shade-75;
+  line-height: 24px;
 }
