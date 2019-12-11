@@ -52,3 +52,18 @@ block content
           td.block_text.block_p Body
           td
             p This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+  section
+    .container
+      .find-room
+        form(action="#")
+          h1 Найдём номера под ваши пожелания
+          .period
+            .date-from
+              label прибытие
+                .date-from-calendar ДД.ММ.ГГГГ
+            .date-to
+              label выезд
+                .date-to-calendar ДД.ММ.ГГГГ
+          .guests Сколько гостей
+          input(type="submit", value="подобрать номер")
