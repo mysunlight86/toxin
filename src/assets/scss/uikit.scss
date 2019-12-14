@@ -3,7 +3,7 @@ section svg {
   margin-left: 30px;
 }
 
-.container_base {
+.container-base {
   display: flex;
   width: 1440px;
   margin: 0 auto;
@@ -102,11 +102,52 @@ section svg {
 
 .text_palette h3 {
   width: 186px;
+}
+
+._label-text {
+  font-size: $h3-font-size;
   line-height: 15px;
+}
+
+._label-text_bold {
+  font-weight: 700;
+}
+
+._label-text_uppercase {
+  text-transform: uppercase;
+}
+
+.label_color {
+  color: $dark-shade-50;
 }
 
 .text_palette p {
   width: 301px;
   color: $dark-shade-75;
   line-height: 24px;
+}
+
+.block-elements {
+  margin-top: 65px;
+  margin-left: 141px;
+}
+
+.text-field-input {
+  width: 320px;
+}
+
+.field-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-field-input-email {
+  margin-top: 8px;
+  width: 320px;
+  font-size: 14px;
+  line-height: 18px;
+  box-sizing: border-box;
+  color: $dark-shade-25;
+  border: 1px solid $dark-shade-25;
+  border-radius: 4px;
 }
