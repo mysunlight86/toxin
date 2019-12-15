@@ -134,6 +134,7 @@ section svg {
 
 .text-field-input {
   width: 320px;
+  margin-bottom: 20px;
 }
 
 .field-label {
@@ -141,13 +142,20 @@ section svg {
   justify-content: space-between;
 }
 
-.text-field-input-email {
-  margin-top: 8px;
+.text-field-input-enter {
+  margin-top: 5px;
   width: 320px;
   font-size: 14px;
   line-height: 18px;
   box-sizing: border-box;
-  color: $dark-shade-25;
+  @include placeholder{color: $dark-shade-25};
   border: 1px solid $dark-shade-25;
   border-radius: 4px;
+}
+
+.text-field-input-enter:hover,
+.text-field-input-enter:focus {
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-shade-75;
 }
