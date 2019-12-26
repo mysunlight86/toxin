@@ -4,6 +4,7 @@ const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 // Main const
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#main-const
@@ -107,6 +108,7 @@ module.exports = {
     }
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[hash].css`,
     }),
