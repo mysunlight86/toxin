@@ -42,6 +42,7 @@ $( document ).ready(function() {
 });
 */
 
+/*
 var $datepicker = $('.js-date');
             var dateToday = new Date();
 
@@ -87,3 +88,4 @@ $datepicker.each(function() {
                         .selectDate();
                     $html.removeClass('is-hidden');
                 });
+                */
