@@ -50,26 +50,6 @@ block content
         .block_tag.block_p Body
         p.block_text This is the body text which is used for most of the design, like paragraphs, lists, etc.
 
-    //-
-      table.text_palette
-        tr.block_text_info
-          td.block_text.block_h1 H1
-          td
-            h1 This one is the sub-section or widget title
-        tr.block_text_info
-          td.block_text.block_h2 H2
-          td
-            h2 Next one is the item title inside widgets
-        tr.block_text_info
-          td.block_text.block_h3 H3
-          td
-            h3._label-text._label-text_bold._label-text_uppercase This is a label or CTA text
-        tr.block_text_info
-          td.block_text.block_p Body
-          td
-            p This is the body text which is used for most of the design, like paragraphs, lists, etc.
-            
-
   section
     svg(width='48', height='48', viewBox='0 0 48 48', fill='none', xmlns='http://www.w3.org/2000/svg')
       path(d='M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z', fill='#1F2041', fill-opacity='0.25')
@@ -116,7 +96,11 @@ block content
                 ._label-text._label-text_bold._label-text_uppercase Text Field
                 ._label-text._label-text_uppercase.label_color Hover / Focus
               input(type="email", value="This is pretty awesome", class="text-field-input-enter")
-
+          .text-field-input
+            label
+              .field-label
+                ._label-text._label-text_bold._label-text_uppercase Dropdown
+                ._label-text._label-text_uppercase.label_color Default
               .iqdropdown
                 p.iqdropdown-selection
                 .iqdropdown-menu
@@ -134,3 +118,5 @@ block content
                       p.iqdropdown-description A short description
               li(data-id='item1', data-defaultcount='0', data-mincount='0', data-maxcount='1')
                 | ···
+
+              

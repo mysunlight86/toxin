@@ -151,10 +151,11 @@ section svg {
 .field-label {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5px;
 }
 
 .text-field-input-enter {
-  margin-top: 5px;
+  //margin-top: 5px;
   width: 320px;
   font-size: 14px;
   line-height: 18px;
