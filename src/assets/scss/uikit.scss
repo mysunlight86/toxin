@@ -62,16 +62,27 @@ section svg {
 }
 
 .text_palette {
+  display: grid;
+  grid-template-columns: 40px 336px;
+  grid-template-rows: 60px 48px 15px 60px;
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
   margin-top: 67px;
   // margin-left: 435px;
 }
 
+/*
 .block_text_info {
   display: flex;
   margin-bottom: 50px;
+}*/
+
+.block_tag,
+.block_text {
+  align-self: start;
 }
 
-.block_text {
+.block_tag {
   color: $dark-shade-25;
   text-align: right;
   margin-right: 30px;
