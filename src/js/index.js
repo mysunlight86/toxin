@@ -8,9 +8,9 @@ $(document).ready(function () {
             // min total items
             minItems: 0,
             // text to show on the dropdown
-            selectionText: 'item',
+            selectionText: 'гость',
             // text to show for multiple items
-            textPlural: 'items',
+            textPlural: 'гостей',
             // buttons to increment/decrement
             controls: {
               position: 'right',
