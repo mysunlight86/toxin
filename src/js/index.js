@@ -26,6 +26,9 @@ $(document).ready(function () {
             beforeIncrement: (id, itemCount) => {}
           },
     );
+  
+    $('.my-datepicker').datepicker([options]);
+  
   });
 
 /*$(document).ready(() => {

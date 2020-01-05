@@ -1,4 +1,4 @@
-section svg {
+div svg {
   margin-top: 30px;
   margin-left: 30px;
 }
@@ -145,6 +145,7 @@ section svg {
 
 .text-field-input {
   width: 320px;
+  //height: 44px;
   margin-bottom: 20px;
 }
 
@@ -158,11 +159,13 @@ section svg {
   //margin-top: 5px;
   width: 320px;
   font-size: 14px;
-  line-height: 18px;
+  //line-height: 18px;
   box-sizing: border-box;
   @include placeholder{color: $dark-shade-25};
   border: 1px solid $dark-shade-25;
   border-radius: 4px;
+  padding: 5px 10px;
+  color: $dark-shade-75;
 }
 
 .text-field-input-enter:hover,
@@ -170,4 +173,13 @@ section svg {
   font-size: 14px;
   line-height: 24px;
   color: $dark-shade-75;
+}
+
+.material-icons.md-dark-50 { 
+  color: $dark-shade-50;
+}
+
+.guest-dropdown {
+  display: flex;
+  justify-content: space-between;
 }
