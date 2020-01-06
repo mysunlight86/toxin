@@ -164,7 +164,7 @@ div svg {
   @include placeholder{color: $dark-shade-25};
   border: 1px solid $dark-shade-25;
   border-radius: 4px;
-  padding: 5px 10px;
+  padding: 9px 10px;
   color: $dark-shade-75;
 }
 
@@ -179,7 +179,41 @@ div svg {
   color: $dark-shade-50;
 }
 
-.guest-dropdown {
+.input-dropdown {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.material-icon {
+  line-height: 24px;
+  height: 24px;
+}
+
+.input-dropdown-half {
+  @extend .input-dropdown;
+  width: 150px;
+}
+
+.text-field-input-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-dropdown-half-big {
+  @extend .input-dropdown;
+  width: 266px;
+}
+
+.placeholder {
+  color: $dark-shade-25;
+}
+
+.material-icons.md-violet-blue { 
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  //color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  // color: blue;
 }
