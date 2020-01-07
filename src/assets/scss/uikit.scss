@@ -115,23 +115,6 @@ div svg {
   width: 186px;
 }
 
-._label-text {
-  font-size: $h3-font-size;
-  line-height: 15px;
-}
-
-._label-text_bold {
-  font-weight: 700;
-}
-
-._label-text_uppercase {
-  text-transform: uppercase;
-}
-
-.label_color {
-  color: $dark-shade-50;
-}
-
 .text_palette p {
   width: 301px;
   color: $dark-shade-75;
@@ -141,11 +124,12 @@ div svg {
 .block-elements {
   margin-top: 65px;
   margin-left: 141px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .text-field-input {
   width: 320px;
-  //height: 44px;
   margin-bottom: 20px;
 }
 
@@ -173,6 +157,23 @@ div svg {
   font-size: 14px;
   line-height: 24px;
   color: $dark-shade-75;
+}
+
+._label-text {
+  font-size: $h3-font-size;
+  line-height: 15px;
+}
+
+._label-text_bold {
+  font-weight: 700;
+}
+
+._label-text_uppercase {
+  text-transform: uppercase;
+}
+
+.label_color {
+  color: $dark-shade-50;
 }
 
 .material-icons.md-dark-50 { 
@@ -217,3 +218,44 @@ div svg {
   //color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   // color: blue;
 }
+
+input[type=checkbox] {
+  display: none;
+}
+
+.input-checkbox {
+  margin-top: 17px;
+}
+
+.input-checkbox label {
+  margin-bottom: 10px;
+}
+
+.input-checkbox label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid $dark-shade-25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  //width: 125px;
+  border-radius: 4px;
+  position: relative;
+  bottom: -5px;
+}
+
+/*
+label:before {
+        position: absolute;
+  10
+        left: 0;
+  11
+        
+  12
+        background-color: #aaa;
+  13
+        box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+  14
+    }*/
