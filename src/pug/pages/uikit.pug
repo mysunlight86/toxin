@@ -167,15 +167,15 @@ block content
           .checkbox-fields
             ._label-text._label-text_bold._label-text_uppercase Checkbox Buttons
             .input-checkbox
-              label
-                input(type='checkbox', name='checkbox-value', value='smoke')
-                | Можно курить
-                br
-              label
-                input(type='checkbox', name='checkbox-value', value='pet')
-                | Можно с питомцами
-                br
-              label
-                input(type='checkbox', name='checkbox-value', value='invite')
-                | Можно пригласить гостей (до 10 человек)
-                br
+              div
+                label
+                  input(type='checkbox', name='checkbox-value', value='smoke')
+                  | Можно курить
+              div
+                label
+                  input(type='checkbox', name='checkbox-value', value='pet')
+                  | Можно с питомцами
+              div
+                label.last-child
+                  input(type='checkbox', name='checkbox-value', value='invite')
+                  div Можно пригласить гостей (до 10 человек)

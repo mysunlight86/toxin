@@ -226,9 +226,19 @@ input[type=checkbox] {
 .input-checkbox {
   margin-top: 17px;
 }
+/*
+.input-checkbox > div {
+  //width: 225px;
+}*/
 
 .input-checkbox label {
   margin-bottom: 10px;
+}
+
+.input-checkbox label > div {
+  display: inline-block;
+  width: 192px;
+  vertical-align: text-top;
 }
 
 .input-checkbox label:before {
@@ -240,10 +250,12 @@ input[type=checkbox] {
   border: 1px solid $dark-shade-25;
   box-sizing: border-box;
   border-radius: 4px;
-  //width: 125px;
-  border-radius: 4px;
   position: relative;
   bottom: -5px;
+}
+
+.input-checkbox label.last-child:before {
+  bottom: -8px;
 }
 
 /*
