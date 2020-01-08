@@ -168,14 +168,16 @@ block content
             ._label-text._label-text_bold._label-text_uppercase Checkbox Buttons
             .input-checkbox
               div
-                label
-                  input(type='checkbox', name='checkbox-value', value='smoke')
-                  | Можно курить
+                input#checkbox_1(type='checkbox', name='checkbox-value', value='smoke')
+                label(for='checkbox_1') Можно курить
               div
-                label
-                  input(type='checkbox', name='checkbox-value', value='pet')
-                  | Можно с питомцами
+                input#checkbox_2(type='checkbox', name='checkbox-value', value='pet')
+                label(for='checkbox_2') Можно с питомцами
               div
-                label.last-child
-                  input(type='checkbox', name='checkbox-value', value='invite')
+                input#checkbox_3(type='checkbox', name='checkbox-value', value='invite')
+                label.last-child(for='checkbox_3')
                   div Можно пригласить гостей (до 10 человек)
+
+
+
+

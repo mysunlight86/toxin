@@ -220,7 +220,8 @@ div svg {
 }
 
 input[type=checkbox] {
-  display: none;
+  //display: none;
+  opacity: 0;
 }
 
 .input-checkbox {
@@ -258,16 +259,16 @@ input[type=checkbox] {
   bottom: -8px;
 }
 
-/*
-label:before {
-        position: absolute;
-  10
-        left: 0;
-  11
-        
-  12
-        background-color: #aaa;
-  13
-        box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
-  14
-    }*/
+input[type=checkbox]:checked + label:before {
+	content: "\2713";
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	font-size: 15px;
+	color: green;
+	text-align: center;
+  line-height: 15px;
+  bottom: 1px;
+}
+
+input[type=checkbox]:checked + label.last-child:before {
+  bottom: -2px;
+}
