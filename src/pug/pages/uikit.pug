@@ -168,15 +168,33 @@ block content
             ._label-text._label-text_bold._label-text_uppercase Checkbox Buttons
             .input-checkbox
               div
-                input#checkbox_1(type='checkbox', name='checkbox-value', value='smoke')
-                label(for='checkbox_1') Можно курить
+                label
+                  input(type='checkbox', name='checkbox-value', value='smoke')
+                  span Можно курить
               div
-                input#checkbox_2(type='checkbox', name='checkbox-value', value='pet')
-                label(for='checkbox_2') Можно с питомцами
+                label
+                  input(type='checkbox', name='checkbox-value', value='pet', checked='')
+                  span Можно с питомцами
               div
-                input#checkbox_3(type='checkbox', name='checkbox-value', value='invite')
-                label.last-child(for='checkbox_3')
-                  div Можно пригласить гостей (до 10 человек)
+                label
+                  input(type='checkbox', name='checkbox-value', value='invite', checked='')
+                  span Можно пригласить гостей (до 10 человек)
+        //-
+          h3
+            | Checkbox Buttons
+            .checkbox-elements
+              .checkbox__elem
+                label
+                  input.checkbox-button(type='checkbox', name='mycheckbox', value='check1', checked='none')
+                  span Можно курить
+              .checkbox__elem
+                label
+                  input.checkbox-button(type='checkbox', name='mycheckbox2', value='check2', checked='checked')
+                  span Можно с питомцами
+              .checkbox__elem
+                label
+                  input.checkbox-button(type='checkbox', name='mycheckbox2', value='check3', checked='checked')
+                  span Можно пригласить гостей (до 10 человек)
 
 
 

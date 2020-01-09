@@ -12,7 +12,6 @@ div svg {
 
 .color_palette {
   margin-top: 67px;
-  // margin-left: 150px;
   font-size: $h2-font-size;
   line-height: 29px;
 }
@@ -68,14 +67,7 @@ div svg {
   grid-column-gap: 30px;
   grid-row-gap: 50px;
   margin-top: 67px;
-  // margin-left: 435px;
 }
-
-/*
-.block_text_info {
-  display: flex;
-  margin-bottom: 50px;
-}*/
 
 .block_tag,
 .block_text {
@@ -140,10 +132,8 @@ div svg {
 }
 
 .text-field-input-enter {
-  //margin-top: 5px;
   width: 320px;
   font-size: 14px;
-  //line-height: 18px;
   box-sizing: border-box;
   @include placeholder{color: $dark-shade-25};
   border: 1px solid $dark-shade-25;
@@ -215,60 +205,61 @@ div svg {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  //color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  // color: blue;
 }
 
 input[type=checkbox] {
-  //display: none;
-  opacity: 0;
+  display: none;
 }
 
 .input-checkbox {
   margin-top: 17px;
 }
-/*
-.input-checkbox > div {
-  //width: 225px;
-}*/
+
+.input-checkbox div {
+  margin-bottom: 10px;
+  max-width: 260px;
+}
 
 .input-checkbox label {
-  margin-bottom: 10px;
-}
-
-.input-checkbox label > div {
+  cursor: pointer;
+  position: relative;
   display: inline-block;
-  width: 192px;
-  vertical-align: text-top;
+  line-height: 18px;
 }
 
-.input-checkbox label:before {
+.input-checkbox label > span {
+  display: inline-block;
+  line-height: 18px;
+  margin-left: 30px;
+}
+
+.input-checkbox span:before {
   content: "";
-  display: inline-block;
   width: 20px;
   height: 20px;
-  margin-right: 10px;
   border: 1px solid $dark-shade-25;
   box-sizing: border-box;
   border-radius: 4px;
-  position: relative;
-  bottom: -5px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-.input-checkbox label.last-child:before {
-  bottom: -8px;
+input[type=checkbox]:checked+span:before {
+  border: 1px solid #BC9CFF;
 }
 
-input[type=checkbox]:checked + label:before {
-	content: "\2713";
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-	font-size: 15px;
-	color: green;
-	text-align: center;
-  line-height: 15px;
-  bottom: 1px;
+input[type=checkbox]:checked+span:after {
+  content: "";
+  width: 6px;
+  height: 8px;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-image-slice: 1;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 7px;
+  top: 4px;
 }
 
-input[type=checkbox]:checked + label.last-child:before {
-  bottom: -2px;
-}
