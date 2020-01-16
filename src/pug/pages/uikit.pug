@@ -179,22 +179,20 @@ block content
                 label
                   input(type='checkbox', name='checkbox-value', value='invite', checked='')
                   span Можно пригласить гостей (до 10 человек)
-        //-
-          h3
-            | Checkbox Buttons
-            .checkbox-elements
-              .checkbox__elem
+
+          .radio-fields
+            ._label-text._label-text_bold._label-text_uppercase Radio Buttons
+            .input-radio
+              div
                 label
-                  input.checkbox-button(type='checkbox', name='mycheckbox', value='check1', checked='none')
-                  span Можно курить
-              .checkbox__elem
+                  input(type='radio', name='radio-value', value='male', checked='')
+                  span Мужчина
+              div
                 label
-                  input.checkbox-button(type='checkbox', name='mycheckbox2', value='check2', checked='checked')
-                  span Можно с питомцами
-              .checkbox__elem
-                label
-                  input.checkbox-button(type='checkbox', name='mycheckbox2', value='check3', checked='checked')
-                  span Можно пригласить гостей (до 10 человек)
+                  input(type='radio', name='radio-value', value='female')
+                  span Женщина
+
+
 
 
 

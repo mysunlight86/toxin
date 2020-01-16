@@ -263,3 +263,56 @@ input[type=checkbox]:checked+span:after {
   top: 4px;
 }
 
+input[type=radio] {
+  display: none;
+}
+
+.input-radio {
+  margin-top: 16px;
+}
+
+.input-radio div {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.input-radio label {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  line-height: 24px;
+}
+
+.input-radio label > span {
+  display: inline-block;
+  line-height: 24px;
+  margin-left: 30px;
+}
+
+.input-radio span:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 1px solid $dark-shade-25;
+  box-sizing: border-box;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+input[type=radio]:checked+span:before {
+  border: 1px solid #BC9CFF;
+}
+
+input[type=radio]:checked+span:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  position: absolute;
+  left: 4px;
+  top: 4px;
+}
+
