@@ -201,10 +201,14 @@ div svg {
 }
 
 .material-icons.md-violet-blue { 
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: $purple-gradient;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.field-switches {
+  margin-bottom: 41px;
 }
 
 input[type=checkbox] {
@@ -249,13 +253,13 @@ input[type=checkbox]:checked+span:before {
   border: 1px solid #BC9CFF;
 }
 
-input[type=checkbox]:checked+span:after {
+input[name=checkbox-value]:checked+span:after {
   content: "";
   width: 6px;
   height: 8px;
   border-right: 2px solid transparent;
   border-bottom: 2px solid transparent;
-  border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-image: $purple-gradient;
   border-image-slice: 1;
   transform: rotate(45deg);
   position: absolute;
@@ -310,9 +314,64 @@ input[type=radio]:checked+span:after {
   width: 12px;
   height: 12px;
   border-radius: 10px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: $purple-gradient;
   position: absolute;
   left: 4px;
   top: 4px;
 }
+
+.input-toggle {
+  margin-top: 16px;
+}
+
+.input-toggle div {
+  margin-bottom: 10px;
+}
+
+.input-toggle label {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  line-height: 24px;
+}
+
+.input-toggle label > span {
+  display: inline-block;
+  line-height: 24px;
+  margin-left: 50px;
+}
+
+.toggle {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border: 1px solid $dark-shade-25;
+  box-sizing: border-box;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.toggle:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  background: $dark-shade-25;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+}
+
+input[name=toggle-value]:checked + .toggle {
+  border: 1px solid $purple;
+}
+
+input[name=toggle-value]:checked + .toggle:before {
+  background: $purple-gradient;
+  left: 23px;
+}
+
+
+
 

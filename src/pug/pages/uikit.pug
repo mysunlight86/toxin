@@ -164,7 +164,7 @@ block content
                 span.material-icon <i class="material-icons md-violet-blue">arrow_forward</i>
 
         .switch-fields
-          .checkbox-fields
+          .checkbox-fields.field-switches
             ._label-text._label-text_bold._label-text_uppercase Checkbox Buttons
             .input-checkbox
               div
@@ -180,7 +180,7 @@ block content
                   input(type='checkbox', name='checkbox-value', value='invite', checked='')
                   span Можно пригласить гостей (до 10 человек)
 
-          .radio-fields
+          .radio-fields.field-switches
             ._label-text._label-text_bold._label-text_uppercase Radio Buttons
             .input-radio
               div
@@ -192,7 +192,44 @@ block content
                   input(type='radio', name='radio-value', value='female')
                   span Женщина
 
+          .toggle-fields.field-switches
+            ._label-text._label-text_bold._label-text_uppercase Toggle
+            .input-toggle
+              div
+                label
+                  input.toggle-value(type='checkbox', name='toggle-value', value='receive', checked='')
+                  .toggle
+                  span Получать спецпредложения
+              div
+                label
+                  input.toggle-value(type='checkbox', name='toggle-value', value='no-receive')
+                  .toggle
+                  span Получать спецпредложения
 
+        //-
+          .toggle-block
+            h3 Toggle
+              .toggle-button
+                label.switch
+                  input(type='checkbox', name='mytoggle1', value='toggle1', checked='')
+                  span.slider.round
+                  span.toggleName Получать спецпредложения
+              .toggle-button
+                label.switch
+                  input(type='checkbox', name='mytoggle2', value='toggle2')
+                  span.slider.round
+                  span.toggleName Получать спецпредложения
+//-
+
+                    +toggle('Получать спецпредложения', 'mytoggle1', 'toggle1', 'checked' )
+                    +toggle('Получать спецпредложения', 'mytoggle2', 'toggle2')
+
+  mixin toggle(toggleHeader, toggleName, toggleValue, toggleChecked)
+    .toggle-button
+        label.switch
+            input(type='checkbox', name=toggleName, value=toggleValue, checked=toggleChecked)
+            span.slider.round
+        span.toggleName #{toggleHeader}
 
 
 
