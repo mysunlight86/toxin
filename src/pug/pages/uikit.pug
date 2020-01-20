@@ -206,31 +206,17 @@ block content
                   .toggle
                   span Получать спецпредложения
 
-        //-
-          .toggle-block
-            h3 Toggle
-              .toggle-button
-                label.switch
-                  input(type='checkbox', name='mytoggle1', value='toggle1', checked='')
-                  span.slider.round
-                  span.toggleName Получать спецпредложения
-              .toggle-button
-                label.switch
-                  input(type='checkbox', name='mytoggle2', value='toggle2')
-                  span.slider.round
-                  span.toggleName Получать спецпредложения
-//-
-
-                    +toggle('Получать спецпредложения', 'mytoggle1', 'toggle1', 'checked' )
-                    +toggle('Получать спецпредложения', 'mytoggle2', 'toggle2')
-
-  mixin toggle(toggleHeader, toggleName, toggleValue, toggleChecked)
-    .toggle-button
-        label.switch
-            input(type='checkbox', name=toggleName, value=toggleValue, checked=toggleChecked)
-            span.slider.round
-        span.toggleName #{toggleHeader}
-
+          .like-fields.field-switches
+            ._label-text._label-text_bold._label-text_uppercase like button
+            .input-like
+              div
+                label
+                  input.like-value(type='checkbox', name='like-value', value='no-like')
+                  .like
+              div
+                label
+                  input.like-value(type='checkbox', name='like-value', value='like', checked='')
+                  .like
 
 
 
