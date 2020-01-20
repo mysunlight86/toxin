@@ -381,7 +381,7 @@ input[name=toggle-value]:checked + .toggle:before {
   margin-right: 10px;
 }
 
-.input-like > label {
+.input-like label {
   cursor: pointer;
 }
 
@@ -428,5 +428,14 @@ input.like-value:checked {
   }
 }
 
+.input-rate {
+  margin-top: 16px;
+}
 
+.input-rate > div {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 24px;
+  line-height: 20px;
+}
 
