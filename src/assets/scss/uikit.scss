@@ -3,9 +3,9 @@ div svg {
   margin-left: 30px;
 }
 
-.container-base {
+.container {
   display: flex;
-  width: 1440px;
+  width: $container-width;
   margin: 0 auto;
   justify-content: space-around;
 }
@@ -115,9 +115,9 @@ div svg {
 
 .block-elements {
   margin-top: 65px;
-  margin-left: 141px;
+  /*margin-left: 141px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;*/
 }
 
 .text-field-input {
@@ -439,3 +439,22 @@ input.like-value:checked {
   line-height: 20px;
 }
 
+.ui-slider {
+  margin-top: 23px;
+  width: 266px;
+  height: 6px;
+  border: 1px solid $dark-shade-25;
+  border-radius: 3px;
+}
+
+.ui-slider-range {
+  background: $green-gradient;
+}
+
+.ui-slider-handle {
+  width: 12px!important;
+  height: 12px!important;
+  background: $green-gradient!important;
+  border: 2px solid #FFFFFF!important;
+  border-radius: 10px;
+}

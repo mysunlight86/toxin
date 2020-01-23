@@ -1,5 +1,5 @@
 // Main js file
-
+/*
 $(document).ready(function () {
     $('.iqdropdown').iqDropdown(
         {
@@ -29,7 +29,49 @@ $(document).ready(function () {
   
     $('.my-datepicker').datepicker([options]);
   
+  });*/
+
+
+// range-slider
+
+$( function() {
+  $( "#range" ).slider({
+    range: true,
+    min: 0,
+    max: 15000,
+    values: [ 5000, 10000 ],
+    slide : function( event, ui ) {
+      $( "#result" ).text( new Intl.NumberFormat().format( ui.values[ 0 ] ) + "₽ - " + new Intl.NumberFormat().format( ui.values[ 1 ] ) + "₽" );
+  }
   });
+
+  //Записываем значения ползунков в момент загрузки страницы
+  //То есть значения по умолчанию
+  $( "#result" ).text( new Intl.NumberFormat().format( $( "#range" ).slider( "values", 0 ) ) + "₽  - " + new Intl.NumberFormat().format( $( "#range" ).slider( "values", 1 ) ) + "₽" );
+
+} );
+
+//////////////////////////////
+/*
+$( function() {
+  $( "#slider-range" ).slider({
+    range: true,
+    min: 0,
+    max: 16000,
+    values: [ 5000, 10000 ],
+    slide: function( event, ui ) {
+      $( "#amount" ).val(ui.values[ 0 ] + "Р - " + ui.values[ 1 ] + "Р");
+    }
+  });
+  $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 )+  "Р  - "  +
+  $( "#slider-range" ).slider( "values", 1 ) + "₽" );
+} );
+*/
+
+/**/
+
+
+
 
 /*$(document).ready(() => {
     $('.iqdropdown').iqDropdown({ [options] });

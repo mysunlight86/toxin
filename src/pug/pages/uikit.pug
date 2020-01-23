@@ -12,7 +12,7 @@ block content
       path(d='M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z', fill='#1F2041', fill-opacity='0.25')
       path(d='M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z', fill='#1F2041', fill-opacity='0.25')
 
-    .container-base
+    .container
       .color_palette
         .block_color_info
           .block.block_dark_100
@@ -82,149 +82,155 @@ block content
       path(d='M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z', fill='#1F2041', fill-opacity='0.25')
       path(d='M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z', fill='#1F2041', fill-opacity='0.25')
 
-    .container-form-elements
-      .block-elements
-        .text-fields
-          .text-field-input
-            label
-              .field-label
-                ._label-text._label-text_bold._label-text_uppercase Text Field
-                ._label-text._label-text_uppercase.label_color Default
-              input(type="email", placeholder="Email", class="text-field-input-enter")
-          .text-field-input
-            label
-              .field-label
-                ._label-text._label-text_bold._label-text_uppercase Text Field
-                ._label-text._label-text_uppercase.label_color Hover / Focus
-              input(type="text", value="This is pretty awesome", class="text-field-input-enter")
-          .text-field-input
-            label
-              .field-label
-                ._label-text._label-text_bold._label-text_uppercase Dropdown
-                ._label-text._label-text_uppercase.label_color Default
-              .input-dropdown.text-field-input-enter
-                span Сколько гостей
-                span.expand_more <i class="material-icons md-dark-50">expand_more</i>
-            //-
-              .iqdropdown
-                p.iqdropdown-selection
-                .iqdropdown-menu
-                  .iqdropdown-menu-option(data-id='item1')
-                    div
-                      p.iqdropdown-item Item 1
-                      p.iqdropdown-description A short description
-                  .iqdropdown-menu-option(data-id='item2')
-                    div
-                      p.iqdropdown-item Item 2
-                      p.iqdropdown-description A short description
-                  .iqdropdown-menu-option(data-id='item3')
-                    div
-                      p.iqdropdown-item Item 3
-                      p.iqdropdown-description A short description
-              li(data-id='item1', data-defaultcount='0', data-mincount='0', data-maxcount='1')
-                | ···
+    .container.block-elements
+      .text-fields
+        .text-field-input
+          label
+            .field-label
+              ._label-text._label-text_bold._label-text_uppercase Text Field
+              ._label-text._label-text_uppercase.label_color Default
+            input(type="email", placeholder="Email", class="text-field-input-enter")
+        .text-field-input
+          label
+            .field-label
+              ._label-text._label-text_bold._label-text_uppercase Text Field
+              ._label-text._label-text_uppercase.label_color Hover / Focus
+            input(type="text", value="This is pretty awesome", class="text-field-input-enter")
+        .text-field-input
+          label
+            .field-label
+              ._label-text._label-text_bold._label-text_uppercase Dropdown
+              ._label-text._label-text_uppercase.label_color Default
+            .input-dropdown.text-field-input-enter
+              span Сколько гостей
+              span.expand_more <i class="material-icons md-dark-50">expand_more</i>
+          //-
+            .iqdropdown
+              p.iqdropdown-selection
+              .iqdropdown-menu
+                .iqdropdown-menu-option(data-id='item1')
+                  div
+                    p.iqdropdown-item Item 1
+                    p.iqdropdown-description A short description
+                .iqdropdown-menu-option(data-id='item2')
+                  div
+                    p.iqdropdown-item Item 2
+                    p.iqdropdown-description A short description
+                .iqdropdown-menu-option(data-id='item3')
+                  div
+                    p.iqdropdown-item Item 3
+                    p.iqdropdown-description A short description
+            li(data-id='item1', data-defaultcount='0', data-mincount='0', data-maxcount='1')
+              | ···
 
-          .text-field-input
-            label
-              .field-label
-                ._label-text._label-text_bold._label-text_uppercase masked text field
-                ._label-text._label-text_uppercase.label_color Default
-              input(type="text", placeholder="ДД.ММ.ГГГГ", class="text-field-input-enter")
+        .text-field-input
+          label
+            .field-label
+              ._label-text._label-text_bold._label-text_uppercase masked text field
+              ._label-text._label-text_uppercase.label_color Default
+            input(type="text", placeholder="ДД.ММ.ГГГГ", class="text-field-input-enter")
 
-            //-
-              .my-datepicker
-                <input type='text' class="datepicker-here" data-position="right top" />
+          //-
+            .my-datepicker
+              <input type='text' class="datepicker-here" data-position="right top" />
 
-          .text-field-input.text-field-input-flex
-            label
-              .field-label
-                ._label-text._label-text_bold._label-text_uppercase date Dropdown
-              .text-field-input-enter.input-dropdown-half
-                span ДД.ММ.ГГГГ
-                span.material-icon <i class="material-icons md-dark-50">expand_more</i>
-            label
-              .field-label
-                ._label-text._label-text_bold._label-text_uppercase date Dropdown
-              .text-field-input-enter.input-dropdown-half
-                span 19.08.2019
-                span.material-icon <i class="material-icons md-dark-50">expand_more</i>
-          .text-field-input
-            label
-              .field-label
-                ._label-text._label-text_bold._label-text_uppercase filter date dropdown
-              .text-field-input-enter.input-dropdown-half-big
-                span 19 авг - 23 авг
-                span.material-icon <i class="material-icons md-dark-50">expand_more</i>
-          .text-field-input
-            label
-              .field-label
-                ._label-text._label-text_bold._label-text_uppercase subscription text field
-              .text-field-input-enter.input-dropdown-half-big
-                span.placeholder Email
-                span.material-icon <i class="material-icons md-violet-blue">arrow_forward</i>
+        .text-field-input.text-field-input-flex
+          label
+            .field-label
+              ._label-text._label-text_bold._label-text_uppercase date Dropdown
+            .text-field-input-enter.input-dropdown-half
+              span ДД.ММ.ГГГГ
+              span.material-icon <i class="material-icons md-dark-50">expand_more</i>
+          label
+            .field-label
+              ._label-text._label-text_bold._label-text_uppercase date Dropdown
+            .text-field-input-enter.input-dropdown-half
+              span 19.08.2019
+              span.material-icon <i class="material-icons md-dark-50">expand_more</i>
+        .text-field-input
+          label
+            .field-label
+              ._label-text._label-text_bold._label-text_uppercase filter date dropdown
+            .text-field-input-enter.input-dropdown-half-big
+              span 19 авг - 23 авг
+              span.material-icon <i class="material-icons md-dark-50">expand_more</i>
+        .text-field-input
+          label
+            .field-label
+              ._label-text._label-text_bold._label-text_uppercase subscription text field
+            .text-field-input-enter.input-dropdown-half-big
+              span.placeholder Email
+              span.material-icon <i class="material-icons md-violet-blue">arrow_forward</i>
 
-        .switch-fields
-          .checkbox-fields.field-switches
-            ._label-text._label-text_bold._label-text_uppercase Checkbox Buttons
-            .input-checkbox
-              div
-                label
-                  input(type='checkbox', name='checkbox-value', value='smoke')
-                  span Можно курить
-              div
-                label
-                  input(type='checkbox', name='checkbox-value', value='pet', checked='')
-                  span Можно с питомцами
-              div
-                label
-                  input(type='checkbox', name='checkbox-value', value='invite', checked='')
-                  span Можно пригласить гостей (до 10 человек)
+      .switch-fields
+        .checkbox-fields.field-switches
+          ._label-text._label-text_bold._label-text_uppercase Checkbox Buttons
+          .input-checkbox
+            div
+              label
+                input(type='checkbox', name='checkbox-value', value='smoke')
+                span Можно курить
+            div
+              label
+                input(type='checkbox', name='checkbox-value', value='pet', checked='')
+                span Можно с питомцами
+            div
+              label
+                input(type='checkbox', name='checkbox-value', value='invite', checked='')
+                span Можно пригласить гостей (до 10 человек)
 
-          .radio-fields.field-switches
-            ._label-text._label-text_bold._label-text_uppercase Radio Buttons
-            .input-radio
-              div
-                label
-                  input(type='radio', name='radio-value', value='male', checked='')
-                  span Мужчина
-              div
-                label
-                  input(type='radio', name='radio-value', value='female')
-                  span Женщина
+        .radio-fields.field-switches
+          ._label-text._label-text_bold._label-text_uppercase Radio Buttons
+          .input-radio
+            div
+              label
+                input(type='radio', name='radio-value', value='male', checked='')
+                span Мужчина
+            div
+              label
+                input(type='radio', name='radio-value', value='female')
+                span Женщина
 
-          .toggle-fields.field-switches
-            ._label-text._label-text_bold._label-text_uppercase Toggle
-            .input-toggle
-              div
-                label
-                  input.toggle-value(type='checkbox', name='toggle-value', value='receive', checked='')
-                  .toggle
-                  span Получать спецпредложения
-              div
-                label
-                  input.toggle-value(type='checkbox', name='toggle-value', value='no-receive')
-                  .toggle
-                  span Получать спецпредложения
+        .toggle-fields.field-switches
+          ._label-text._label-text_bold._label-text_uppercase Toggle
+          .input-toggle
+            div
+              label
+                input.toggle-value(type='checkbox', name='toggle-value', value='receive', checked='')
+                .toggle
+                span Получать спецпредложения
+            div
+              label
+                input.toggle-value(type='checkbox', name='toggle-value', value='no-receive')
+                .toggle
+                span Получать спецпредложения
 
-          .like-fields.field-switches
-            ._label-text._label-text_bold._label-text_uppercase like button
-            .input-like
-              div
-                label
-                  input.like-value(type='checkbox', name='like-value', value='no-like')
-                  .like
-              div
-                label
-                  input.like-value(type='checkbox', name='like-value', value='like', checked='')
-                  .like
+        .like-fields.field-switches
+          ._label-text._label-text_bold._label-text_uppercase like button
+          .input-like
+            div
+              label
+                input.like-value(type='checkbox', name='like-value', value='no-like')
+                .like
+            div
+              label
+                input.like-value(type='checkbox', name='like-value', value='like', checked='')
+                .like
 
-          .rate-fields.field-switches
-            ._label-text._label-text_bold._label-text_uppercase rate button
-            .input-rate
-              div
-                .rate <i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star_border</i>
-              div
-                .rate <i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star</i>
+        .rate-fields.field-switches
+          ._label-text._label-text_bold._label-text_uppercase rate button
+          .input-rate
+            div
+              .rate <i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star_border</i>
+            div
+              .rate <i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star</i><i class="material-icons md-violet-blue">star</i>
+
+      .other-fields
+        .range-slider
+          .field-label
+            ._label-text._label-text_bold._label-text_uppercase Range Slider
+            #result._label-text._label-text_uppercase.label_color
+          #range
 
 
 
