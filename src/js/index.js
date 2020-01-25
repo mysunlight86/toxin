@@ -115,6 +115,6 @@ $( function() {
 
   //Записываем значения ползунков в момент загрузки страницы
   //То есть значения по умолчанию
-  $( "#result" ).text( new Intl.NumberFormat().format( $( "#range" ).slider( "values", 0 ) ) + "₽  - " + new Intl.NumberFormat().format( $( "#range" ).slider( "values", 1 ) ) + "₽" );
+  $( "#result" ).text( new Intl.NumberFormat().format( $( "#range" ).slider( "values", 0 ) ) + "₽ - " + new Intl.NumberFormat().format( $( "#range" ).slider( "values", 1 ) ) + "₽" );
 
 } );
