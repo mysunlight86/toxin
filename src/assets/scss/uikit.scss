@@ -458,3 +458,49 @@ input.like-value:checked {
   border: 2px solid #FFFFFF!important;
   border-radius: 10px;
 }
+
+.star-rating {
+  display: flex;
+}
+
+.star-rating__wrap{
+  display: inline-block;
+  margin-top: 16px;
+  &:first-child {
+    margin-right: 20px;
+  }
+}
+
+.star-rating__wrap:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.star-rating__ico{
+  float: right;
+  cursor: pointer;
+  background: $purple-gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.star-rating__input{
+  display: none;
+}
+
+.star-rating__ico:hover:before,
+.star-rating__ico:hover ~ .star-rating__ico:before,
+.star-rating__input:checked ~ .star-rating__ico:before
+{
+  content: "\e838";
+  font-family: Material Icons;
+  font-size: 24px;
+}
+
+.star-rating__ico:before {
+  content: "\e83a";
+  font-family: Material Icons;
+  font-size: 24px;
+}
