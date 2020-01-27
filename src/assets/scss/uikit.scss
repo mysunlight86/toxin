@@ -428,37 +428,6 @@ input.like-value:checked {
   }
 }
 
-.input-rate {
-  margin-top: 16px;
-}
-
-.input-rate > div {
-  display: inline-block;
-  margin-right: 20px;
-  font-size: 24px;
-  line-height: 20px;
-}
-
-.ui-slider {
-  margin-top: 23px;
-  width: 266px;
-  height: 6px;
-  border: 1px solid $dark-shade-25;
-  border-radius: 3px;
-}
-
-.ui-slider-range {
-  background: $green-gradient;
-}
-
-.ui-slider-handle {
-  width: 12px!important;
-  height: 12px!important;
-  background: $green-gradient!important;
-  border: 2px solid #FFFFFF!important;
-  border-radius: 10px;
-}
-
 .star-rating {
   display: flex;
 }
@@ -503,4 +472,118 @@ input.like-value:checked {
   content: "\e83a";
   font-family: Material Icons;
   font-size: 24px;
+}
+
+.ui-slider {
+  margin-top: 23px;
+  width: 266px;
+  height: 6px;
+  border: 1px solid $dark-shade-25;
+  border-radius: 3px;
+}
+
+.ui-slider-range {
+  background: $green-gradient;
+}
+
+.ui-slider-handle {
+  width: 12px!important;
+  height: 12px!important;
+  background: $green-gradient!important;
+  border: 2px solid #FFFFFF!important;
+  border-radius: 10px;
+}
+
+.buttons {
+  margin-top: 44px;
+}
+
+._flex {
+  display: flex;
+}
+
+.__button {
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+._button-small {
+  width: 99px;
+  height: 44px;
+  border-radius: 22px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+._button-text {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 44px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+._fill-100 {
+  background: $purple-gradient;
+}
+
+._fill-50 {
+  @extend ._fill-100;
+  opacity: 0.5;
+}
+
+._border-fill-100 {
+  background: $purple-gradient;
+  padding: 2px;
+  position: relative;
+  &:before {
+    content: "CLICK ME";
+    background-color: #fff;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 95px;
+    height: 40px;
+    border-radius: 22px;
+    color: $purple;
+  }
+}
+
+._border-fill-50 {
+  @extend ._border-fill-100;
+  opacity: 0.5;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+._button-transparent {
+  line-height: 15px;
+}
+
+.__color-active {
+  color: $purple;
+}
+
+.__color-passive {
+  color: $dark-shade-50;
+}
+
+._button-big {
+  @extend ._button-small;
+  width: 320px;
+  position: relative;
+  &:before {
+    content: "\e5c8";
+    font-family: Material Icons;
+    font-size: 24px;
+    font-weight: normal;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+  }
 }
