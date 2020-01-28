@@ -107,7 +107,7 @@ div svg {
   width: 186px;
 }
 
-.text_palette p {
+.body-text {
   width: 301px;
   color: $dark-shade-75;
   line-height: 24px;
@@ -587,3 +587,34 @@ input.like-value:checked {
     right: 10px;
   }
 }
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.page-number {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: $dark-shade-50;
+  &_active {
+    background: $purple-gradient;
+    border-radius: 22px;
+    color: #fff;
+  }
+  &_next {
+    @extend .page-number_active;
+    background: $green-gradient;
+  }
+}
+
+.decryption {
+   @extend .body-text;
+ }
+
+ .mt-11 {
+   margin-top: 11px;
+ }
