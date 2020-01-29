@@ -1,16 +1,16 @@
 // Main js file
-/*
+
 $(document).ready(function () {
     $('.iqdropdown').iqDropdown(
         {
             // max total items
             maxItems: Infinity,
             // min total items
-            minItems: 0,
+            minItems: 2,
             // text to show on the dropdown
-            selectionText: 'гость',
+            selectionText: ['спальня', 'кровать', 'ванная комната'],
             // text to show for multiple items
-            textPlural: 'гостей',
+            textPlural: ['спальни', 'кровати', 'ванные комнаты'],
             // buttons to increment/decrement
             controls: {
               position: 'right',
@@ -27,9 +27,9 @@ $(document).ready(function () {
           },
     );
   
-    $('.my-datepicker').datepicker([options]);
+/*    $('.my-datepicker').datepicker([options]);*/
   
-  });*/
+  });
 
 
 
