@@ -264,66 +264,72 @@ block content
           .field-label
             ._label-text._label-text_bold._label-text_uppercase Dropdown
             ._label-text._label-text_uppercase.label_color Default
-          .iqdropdown
+          .room.iqdropdown
             p.iqdropdown-selection
             .iqdropdown-menu
-              .iqdropdown-menu-option(data-id='item1')
+              .iqdropdown-menu-option(data-id='bedroom', data-defaultcount='2', data-mincount='1')
                 div
                   p.iqdropdown-item спальни
-              .iqdropdown-menu-option(data-id='item2')
+              .iqdropdown-menu-option(data-id='bed', data-defaultcount='2', data-mincount='1')
                 div
                   p.iqdropdown-item кровати
-              .iqdropdown-menu-option(data-id='item3')
+              .iqdropdown-menu-option(data-id='bathroom', data-defaultcount='0', data-mincount='0')
                 div
                   p.iqdropdown-item ванные комнаты
         .open-dropdown
           .field-label
             ._label-text._label-text_bold._label-text_uppercase Dropdown
             ._label-text._label-text_uppercase.label_color expanded
-          .iqdropdown
+          .room.iqdropdown
             p.iqdropdown-selection
             .iqdropdown-menu
-              .iqdropdown-menu-option(data-id='item1')
+              .iqdropdown-menu-option(data-id='bedroom', data-defaultcount='2', data-mincount='1')
                 div
                   p.iqdropdown-item спальни
-              .iqdropdown-menu-option(data-id='item2')
+              .iqdropdown-menu-option(data-id='bed', data-defaultcount='2', data-mincount='1')
                 div
                   p.iqdropdown-item кровати
-              .iqdropdown-menu-option(data-id='item3')
+              .iqdropdown-menu-option(data-id='bathroom', data-defaultcount='0', data-mincount='0')
                 div
                   p.iqdropdown-item ванные комнаты
       .column2
         .empty-dropdown
           .field-label
             ._label-text._label-text_bold._label-text_uppercase Dropdown
-          .iqdropdown
+          .visitors.iqdropdown
             p.iqdropdown-selection
             .iqdropdown-menu
-              .iqdropdown-menu-option(data-id='item1')
+              .iqdropdown-menu-option(data-id='adult', data-defaultcount='0', data-mincount='0')
                 div
                   p.iqdropdown-item взрослые
-              .iqdropdown-menu-option(data-id='item2')
+              .iqdropdown-menu-option(data-id='minor', data-defaultcount='0', data-mincount='0')
                 div
                   p.iqdropdown-item дети
-              .iqdropdown-menu-option(data-id='item3')
+              .iqdropdown-menu-option(data-id='infant', data-defaultcount='0', data-mincount='0')
                 div
                   p.iqdropdown-item младенцы
+              button.iqdropdown-menu-close
+                | Применить
       .column3
         .fill-dropdown
           .field-label
             ._label-text._label-text_bold._label-text_uppercase Dropdown
-          .iqdropdown
+          .visitors.iqdropdown
             p.iqdropdown-selection
             .iqdropdown-menu
-              .iqdropdown-menu-option(data-id='item1')
+              .iqdropdown-menu-option(data-id='adult', data-defaultcount='2', data-mincount='1')
                 div
                   p.iqdropdown-item взрослые
-              .iqdropdown-menu-option(data-id='item2')
+              .iqdropdown-menu-option(data-id='minor', data-defaultcount='1', data-mincount='0')
                 div
                   p.iqdropdown-item дети
-              .iqdropdown-menu-option(data-id='item3')
+              .iqdropdown-menu-option(data-id='infant', data-defaultcount='0', data-mincount='0')
                 div
                   p.iqdropdown-item младенцы
+              button.iqdropdown-menu-close
+                | Применить
+
+
         //-
           li(data-id='item1', data-defaultcount='0', data-mincount='0', data-maxcount='1')
           span.expand_more <i class="material-icons md-dark-50">expand_more</i>
