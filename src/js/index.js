@@ -8,8 +8,8 @@ $(document).ready(function() {
     textPlural: ['спальни', 'кровати', 'ванные комнаты'],
   });
   $('.visitors').iqDropdown({
-    selectionText: 'гость',
-    textPlural: "гостя",
+    selectionText: ['гость'],
+    textPlural: ['гостя'],
     onChange: function(id, count, totalItems) {
       console.log(id, count, totalItems);
     },
