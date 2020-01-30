@@ -6,11 +6,13 @@ $(document).ready(function () {
             // max total items
             maxItems: Infinity,
             // min total items
-            minItems: 2,
+            minItems: 0,
             // text to show on the dropdown
-            selectionText: ['спальня', 'кровать', 'ванная комната'],
+            selectionText: 'гость',
             // text to show for multiple items
-            textPlural: ['спальни', 'кровати', 'ванные комнаты'],
+            textPlural: 'гостя',
+            // text to show default
+            textDefault: 'Cколько гостей',
             // buttons to increment/decrement
             controls: {
               position: 'right',
@@ -38,9 +40,6 @@ $(document).ready(function () {
 
 
 
-/*$(document).ready(() => {
-    $('.iqdropdown').iqDropdown({ [options] });
-  });*/
 
 /*
 $(document).ready(function() {
