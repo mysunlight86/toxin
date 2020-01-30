@@ -18,7 +18,7 @@
         beforeIncrement: () => true,
       };
 
-      $.fn.iqDropdown = function (options) {
+      $.fn.iqDropdown2 = function (options) {
         this.each(function () {
           const $this = $(this);
           const $selection = $this.find('p.iqdropdown-selection').last();
@@ -38,6 +38,14 @@
               maxCount: Number.isNaN(Number(maxCount)) ? Infinity : maxCount,
             };
           }
+          
+          // Подумать на множественным выбором
+          function updateDisplay () {
+            const usePlural = totalItems !== 1 && settings.textPlural.length > 0;
+            const text = usePlural ? settings.textPlural : settings.selectionText;
+            $selection.html(`${totalItems} ${text}`);
+          }
+          //--
 
           function addControls (id, $item) {
             const $controls = $('<div />').addClass(settings.controls.controlsCls);
@@ -76,13 +84,7 @@
               event.preventDefault();
             });
 
-                      // Подумать на множественным выбором
-          function updateDisplay () {
-            const usePlural = totalItems !== 1 && settings.textPlural.length > 0;
-            const text = usePlural ? settings.textPlural : settings.selectionText;
-            $selection.html(`${totalItems} ${text}`);
-          }
-          //--
+
 
             $incrementButton.click((event) => {
               const { items, maxItems, beforeIncrement, onChange } = settings;

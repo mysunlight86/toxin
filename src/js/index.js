@@ -3,7 +3,7 @@
 import './iq-dropdown'
 
 $(document).ready(function() {
-  $('.room').iqDropdown({
+  $('.room').iqDropdown2({
     selectionText: ['спальня', 'кровать', 'ванная комната'],
     textPlural: ['спальни', 'кровати', 'ванные комнаты'],
   });
