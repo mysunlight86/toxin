@@ -6,6 +6,9 @@ $(document).ready(function() {
   $('.room').iqDropdown2({
     selectionText: ['спальня', 'кровать', 'ванная комната'],
     textPlural: ['спальни', 'кровати', 'ванные комнаты'],
+    onChange: function(id, count, totalItems) {
+      console.log(id, count, totalItems);
+    },
   });
   $('.visitors').iqDropdown({
     selectionText: ['гость'],
