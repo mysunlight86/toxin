@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open --config build/webpack.dev.conf.js",
+    "builddev": "webpack --watch --config build/webpack.dev.conf.js",
     "build": "webpack --config build/webpack.build.conf.js"
   },
   "browserslist": [
@@ -39,9 +40,9 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "@venuu/i18n-js-webpack-plugin": "^2.0.0",
     "air-datepicker": "^2.2.3",
     "clean-webpack-plugin": "^3.0.0",
+    "i18n-js": "^3.5.1",
     "jquery": "^3.4.1",
     "material-design-icons": "^3.0.1",
     "popper.js": "^1.16.0",

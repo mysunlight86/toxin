@@ -5,7 +5,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const { I18nRuntimePlugin } = require("@venuu/i18n-js-webpack-plugin");
 
 // Main const
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#main-const
@@ -124,20 +123,6 @@ module.exports = {
       { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: '' },
     ]),
-
-    new I18nRuntimePlugin({
-      fullTranslations: {
-        // Put your entire translations here like below
-        en: { hello: { world: "Hello, world!" } },
-        fi: { hello: { world: "Hei, maailma!" } },
-        sv: { hello: { world: "Och samma på svenska" } }
-      },
-      // Global calls for I18n translations that will be picked up
-      functionNames: ["I18n.t", "I18n.translate"],
-      // "Free variable" in your code that will be replaced with object containing all
-      // used translations.
-      translationPlaceholderConstantName: "I18N_RUNTIME_TRANSLATIONS"
-    }),
 
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
