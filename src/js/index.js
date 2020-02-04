@@ -1,44 +1,44 @@
 // Main js file
 
 import './iq-dropdown'
-//import './i18n'
-//import './item-quantity-dropdown.min.js'
-//import '../assets/css/item-quantity-dropdown.min.css'
+import i18n from 'i18n-js';
 
-//import i18n from './i18n';
-import 'roddeh-i18n'
+i18n.translations["ru"] = {
 
-i18n.translator.add({
-  values: {
-    "%n bathroom": [
-      [0, 0, "%n ванных"],
-      [1, 1, "%n ванная"],
-      [2, 4, "%n ванные"],
-      [5, null, "%n ванных"]
-    ],
-    "%n bedroom": [
-      [0, 0, "%n спален"],
-      [1, 1, "%n спальня"],
-      [2, 4, "%n спальни"],
-      [5, null, "%n спален"]
-    ],
-    "%n bed": [
-      [0, 0, "%n кроватей"],
-      [1, 1, "%n кровать"],
-      [2, 4, "%n кровати"],
-      [5, null, "%n кроватей"]
-    ],
-    "%n visitor": [
-      [0, 0, "%n гостей"],
-      [1, 1, "%n гость"],
-      [2, 4, "%n гостя"],
-      [5, null, "%n гостей"],
-    ],
-    "#HOW_MANY_VISITIRS_MSG" : "Сколько гостей?",
-    "(ru) How many visitors?" : "Сколько гостей?",
-    "(en) How many visitors?" : "How many visitors?",
-  }
-});
+
+  "%n bedroom": {
+    "one": "{{count}} спальня",
+    "few": "{{count}} спальни",
+    "many": "{{count}} спален",
+    "other": "{{count}} спален"
+  },
+  "%n bathroom": {
+    "one": "{{count}}&nbsp;ванная комната",
+    "few": "{{count}}&nbsp;ванные комнаты",
+    "many": "{{count}}&nbsp;ванных комнат",
+    "other": "{{count}}&nbsp;ванных комнат"
+  },
+  "%n bed": {
+    "one": "{{count}} кровать",
+    "few": "{{count}} кровати",
+    "many": "{{count}} кроватей",
+    "other": "{{count}} кроватей"
+  },
+  "%n visitor": {
+    "one": "{{count}} гость",
+    "few": "{{count}} гостя",
+    "many": "{{count}} гостей",
+    "other": "{{count}} гостей"
+  },
+};
+
+i18n.pluralization["ru"] = function (count) {
+  var key = count % 10 == 1 && count % 100 != 11 ? "one" : [2, 3, 4].indexOf(count % 10) >= 0 && [12, 13, 14].indexOf(count % 100) < 0 ? "few" : count % 10 == 0 || [5, 6, 7, 8, 9].indexOf(count % 10) >= 0 || [11, 12, 13, 14].indexOf(count % 100) >= 0 ? "many" : "other";
+  return [key];
+};
+
+i18n.defaultLocale = "ru";
+i18n.locale = "ru";
 
 var captions = {
   bathroom: "%n bathroom",
@@ -46,32 +46,35 @@ var captions = {
   bed: "%n bed"
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
   $('.room').iqDropdown({
     minItems: 2,
-    onChange: function(id, count, totalItems) {
+    onChange: function (id, count, totalItems) {
       console.log(id, count, totalItems);
     },
     getCustomMessage: function (itemCount, totalItems) {
       return Object.keys(itemCount)
-        .map(key => i18n(captions[key], itemCount[key]))
-        .join(', ');
+      .map(key => i18n.t(captions[key], {count: itemCount[key]}))
+      .join(', ');
     },
   });
   $('.visitors').iqDropdown({
     getCustomMessage: function (itemCount, totalItems) {
-      return i18n('%n visitor', totalItems);
+      if (totalItems === 0) {
+        return 'Сколько гостей';
+      }
+      return i18n.t('%n visitor', {count: totalItems});
     },
-    onChange: function(id, count, totalItems) {
+    onChange: function (id, count, totalItems) {
       console.log(id, count, totalItems);
     },
-    beforeDecrement: function(id, itemCount) {
+    beforeDecrement: function (id, itemCount) {
       if (id === "adult") {
         return itemCount.adult > itemCount.infant;
       }
       return true;
     },
-    beforeIncrement: function(id, itemCount) {
+    beforeIncrement: function (id, itemCount) {
       if (id === "infant") {
         return itemCount.adult > itemCount.infant;
       }

@@ -129,4 +129,7 @@ module.exports = {
       filename: `./${page.replace(/\.pug/,'.html')}`
     })),
   ],
+  devServer: {
+    watchContentBase: true
+  },
 }

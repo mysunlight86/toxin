@@ -1,6 +1,6 @@
 // plugin styles
-import '../assets/css/item-quantity-dropdown.min.css'
-    
+//import '../assets/css/item-quantity-dropdown.min.css'
+
 /* eslint-disable func-names */
 (function ($) {
   const defaults = {
@@ -60,12 +60,12 @@ import '../assets/css/item-quantity-dropdown.min.css'
         const $controls = $('<div />').addClass(settings.controls.controlsCls);
         const $decrementButton = $(`
           <button class="button-decrement">
-            <i class="icon-decrement"></i>
+            <i class="icon-decrement">-</i>
           </button>
         `);
         const $incrementButton = $(`
           <button class="button-increment">
-            <i class="icon-decrement icon-increment"></i>
+            <i class="icon-increment">+</i>
           </button>
         `);
         const $counter = $(`<span>${itemCount[id]}</span>`).addClass(settings.controls.counterCls);
@@ -113,6 +113,8 @@ import '../assets/css/item-quantity-dropdown.min.css'
 
         return $item;
       }
+
+
 
       $this.click(() => {
         $this.toggleClass('menu-open');
