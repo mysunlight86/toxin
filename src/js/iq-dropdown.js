@@ -13,8 +13,10 @@
       displayCls: 'iqdropdown-content',
       controlsCls: 'iqdropdown-item-controls',
       counterCls: 'counter',
+      controlsRst: 'iqdropdown-menu-reset',
     },
     items: {},
+//    resetData: () => {},
     onChange: () => {},
     beforeDecrement: () => true,
     beforeIncrement: () => true,
@@ -25,6 +27,7 @@
       const $this = $(this);
       const $selection = $this.find('p.iqdropdown-selection').last();
       const $menu = $this.find('div.iqdropdown-menu');
+      const $resetButton = $menu.find('button.iqdropdown-menu-reset');
       const $items = $menu.find('div.iqdropdown-menu-option');
       const itemCount = {};
       let totalItems = 0;
@@ -42,18 +45,48 @@
         options,
       );
 
-      function updateDisplay () {
+      function updateDisplay() {
         $selection.html(settings.getCustomMessage(itemCount, totalItems));
+        toggleReset(totalItems);
+      }
+
+      function toggleReset(totalItems) {
+        if (totalItems > 0) {
+          $resetButton.show();
+        } else {
+          $resetButton.hide();
+        }
       }
 
       function setItemSettings (id, $item) {
         const minCount = Number($item.data('mincount'));
         const maxCount = Number($item.data('maxcount'));
+        const defaultCount = Number($item.data('defaultcount'));
 
         settings.items[id] = {
           minCount: Number.isNaN(Number(minCount)) ? 0 : minCount,
           maxCount: Number.isNaN(Number(maxCount)) ? Infinity : maxCount,
+          defaultCount: Number.isNaN(Number(defaultCount)) ? 0 : defaultCount,
         };
+      }
+
+      function resetData(id, $counter) {
+        $resetButton.click((event) => {
+        const { items, onChange } = settings;
+        itemCount[id] = items[id].defaultCount;
+        $counter.html(itemCount[id]);
+        totalItems = 0;
+        for (const prop in itemCount) {
+          if (itemCount.hasOwnProperty(prop)) {
+            totalItems += itemCount[prop];
+          }
+        }
+          updateDisplay();
+          onChange(id, itemCount[id], totalItems);
+//          toggleReset(totalItems)
+          event.preventDefault();
+          event.stopPropagation();
+        });
       }
 
       function addControls (id, $item) {
@@ -89,6 +122,8 @@
             $counter.html(itemCount[id]);
             updateDisplay();
             onChange(id, itemCount[id], totalItems);
+            resetData(id, $counter);
+//            toggleReset(totalItems)
           }
 
           event.preventDefault();
@@ -104,17 +139,33 @@
             $counter.html(itemCount[id]);
             updateDisplay();
             onChange(id, itemCount[id], totalItems);
+            resetData(id, $counter);
+ //           toggleReset(totalItems);
           }
 
           event.preventDefault();
         });
 
+        // $resetButton.click((event) => {
+        //   const { items, onChange } = settings;
+        //   itemCount[id] = defaultCount;
+        //   $counter.html(itemCount[id]);
+        //   totalItems = 0;
+        //   for (const prop in itemCount) {
+        //     if (itemCount.hasOwnProperty(prop)) {
+        //       totalItems += itemCount[prop];
+        //     }
+        //   }
+        //   updateDisplay();
+        //   onChange(id, itemCount[id], totalItems);
+        //   event.preventDefault();
+        //   event.stopPropagation();
+        // });
+
         $item.click(event => event.stopPropagation());
 
         return $item;
       }
-
-
 
       $this.click(() => {
         $this.toggleClass('menu-open');
@@ -129,7 +180,16 @@
         totalItems += defaultCount;
         setItemSettings(id, $item);
         addControls(id, $item);
+//        resetData(id, itemCount[id], defaultCount);
       });
+
+//      $resetButton.toggleClass('menu-open');
+
+      // if (totalItems > 0) {
+      //   $resetButton.show();
+      // } else {
+      //   $resetButton.hide();
+      // }
 
       updateDisplay();
     });

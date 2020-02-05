@@ -68,6 +68,9 @@ $(document).ready(function () {
     onChange: function (id, count, totalItems) {
       console.log(id, count, totalItems);
     },
+    // resetData: function (id, count, defaultCount) {
+    //   console.log(id, count, defaultCount);
+    // },
     beforeDecrement: function (id, itemCount) {
       if (id === "adult") {
         return itemCount.adult > itemCount.infant;

@@ -720,12 +720,18 @@ span.counter {
 .iqdropdown-menu-buttons {
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
   width: 195px;
-  padding: 13px 0px 13px 8px;
+  padding: 13px 0px;
 }
+
+// .reset-hide {
+//   visibility: hidden;
+// }
 
 .iqdropdown-menu-reset {
   @extend span.counter;
+  background-color: #fff;
   color: $dark-shade-50;
 }
 
