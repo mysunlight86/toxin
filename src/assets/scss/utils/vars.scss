@@ -6,25 +6,27 @@ $dark-shade-25: rgba(31, 32, 65, 0.25);
 $dark-shade-5: rgba(31, 32, 65, 0.05);
 $purple: rgba(188, 156, 255, 1);
 $green: rgba(111, 207, 151, 1);
+$purple-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$green-gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 // $background-color: rgba(229, 229, 229, 1);
 
 // Font
 $main-font: 'Montserrat', sans-serif;
 $main-font-size: 14px;
-$main-line-height: 1.25;
+$main-line-height: 24px;
 
 // Font header 1
 $header-font: 'Quicksand', sans-serif;
 $h1-font-size: 24px;
-// $h1-line-height: 30px;
+$h1-line-height: 30px;
 
 // Font header 2
 $h2-font-size: 19px;
-// $h2-line-height: 24px;
+$h2-line-height: 24px;
 
 // Font header 3
 $h3-font-size: 12px;
-// $h3-line-height: 15px;
+$h3-line-height: 15px;
 
 // Size
 $lg-desktop-width: 1920px;
@@ -35,4 +37,4 @@ $table-width: 768px;
 $phone-width: 480px;
 $sm-phone-width: 320px;
 
-$container-width: 1440 - 150 * 2;
+$container-width: 1440px;
