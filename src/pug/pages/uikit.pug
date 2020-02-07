@@ -151,15 +151,15 @@ block content
             div
               label
                 input(type='checkbox', name='checkbox-value', value='smoke')
-                span Можно курить
+                div Можно курить
             div
               label
                 input(type='checkbox', name='checkbox-value', value='pet', checked='')
-                span Можно с питомцами
+                div Можно с питомцами
             div
               label
                 input(type='checkbox', name='checkbox-value', value='invite', checked='')
-                span Можно пригласить гостей (до&nbsp;10&nbsp;человек)
+                div Можно пригласить гостей (до&nbsp;10&nbsp;человек)
 
         .radio-fields.field-switches
           ._label-text._label-text_bold._label-text_uppercase Radio Buttons
@@ -259,7 +259,7 @@ block content
           .decryption.mt-11 1 – 12 из 100+ вариантов аренды
 
     .container.block-dropdowns._flex
-      .column1
+      div
         .close-dropdown
           .field-label
             ._label-text._label-text_bold._label-text_uppercase Dropdown
@@ -292,7 +292,8 @@ block content
               .iqdropdown-menu-option(data-id='bathroom', data-defaultcount='0', data-mincount='0')
                 div
                   p.iqdropdown-item ванные комнаты
-      .column2
+
+      div
         .empty-dropdown
           .field-label
             ._label-text._label-text_bold._label-text_uppercase Dropdown
@@ -312,8 +313,8 @@ block content
                 .iqdropdown-menu-apply Применить
                 button.iqdropdown-menu-reset
                   | очистить
-                
-      .column3
+
+      div
         .fill-dropdown
           .field-label
             ._label-text._label-text_bold._label-text_uppercase Dropdown
@@ -333,6 +334,108 @@ block content
                 .iqdropdown-menu-apply Применить
                 button.iqdropdown-menu-reset
                   | очистить
-                
 
+    .container.block-checkbox._flex
+      div
+        details
+          summary expandable checkbox list
+          p More info about the details.
+        details(open='')
+          summary.summary_open expandable checkbox list
+          .input-checkbox
+            div
+              label
+                input(type='checkbox', name='checkbox-value', value='breakfast')
+                div Завтрак
+            div
+              label
+                input(type='checkbox', name='checkbox-value', value='desk', checked='')
+                div Письменный стол
+            div
+              label
+                input(type='checkbox', name='checkbox-value', value='highchair', checked='')
+                div Стул для кормления
+            div
+              label
+                input(type='checkbox', name='checkbox-value', value='cot', checked='')
+                div Кроватка
+            div
+              label
+                input(type='checkbox', name='checkbox-value', value='TV')
+                div Телевизор
+            div
+              label
+                input(type='checkbox', name='checkbox-value', value='shampoo')
+                div Шампунь
+            div
+              label
+                input(type='checkbox', name='checkbox-value', value='TV')
+                div Телевизор
+            div
+              label
+                input(type='checkbox', name='checkbox-value', value='shampoo')
+                div Шампунь
 
+      div
+        ._label-text._label-text_bold._label-text_uppercase Rich Checkbox Buttons
+        .input-checkbox
+          div
+            label
+              input(type='checkbox', name='checkbox-value', value='smoke')
+              .div-checkbox
+                h3.title-checkbox Широкий коридор
+                p.description-checkbox Ширина коридоров в номере не менее 91 см.
+          div
+            label
+              input(type='checkbox', name='checkbox-value', value='pet', checked='')
+              .div-checkbox
+                h3.title-checkbox Помощник для инвалидов
+                p.description-checkbox На 1 этаже вас встретит специалист и проводит до номера.
+
+      div
+        ._label-text._label-text_bold._label-text_uppercase bullet list
+        ul.bullet-list
+          li.bullet-list-item Нельзя с питомцами
+          li.bullet-list-item Без вечеринок и мероприятий
+          li.bullet-list-item Время прибытия — после 13:00, а выезд до 12:00
+
+    .container.block-comfort._flex
+      .column-comfort
+        .item-comfort
+          i.material-icons.md-purple.md-48 insert_emoticon
+          .item-comfort__description
+            .item-comfort__description-title Комфорт
+            .item-comfort__description-text Шумопоглощающие стены
+
+        .item-comfort
+          i.material-icons.md-purple.md-48 location_city
+          .item-comfort__description
+            .item-comfort__description-title Удобство
+            .item-comfort__description-text Окно в каждой из спален
+
+      .column-comment
+        .user-ui
+          .user-avatar
+          .input-like
+            div
+              label
+                input.like-value(type='checkbox', name='like-value', value='like', checked='')
+                .like
+        .user-comment
+            .user-comment__name Мурад Сарафанов
+            .user-comment__written-days 5 дней назад
+            .user-comment__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+
+//-
+        .user-header
+          .user-avatar
+          .user-description
+            .user-description__title Мурад Сарафанов
+            .user-description__written-days 5 дней назад
+        .user-comment
+          .input-like
+            div
+              label
+                input.like-value(type='checkbox', name='like-value', value='like', checked='')
+                .like
+          .user-comment-text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
