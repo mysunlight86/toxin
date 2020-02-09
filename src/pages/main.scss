@@ -1,0 +1,38 @@
+@import "../modules/utils/reset";
+@import "../modules/utils/fonts";
+@import "../modules/utils/vars";
+@import "../modules/utils/mixins";
+@import "uikit/uikit";
+
+html {
+    line-height: $main-line-height;
+    font-size: $main-font-size;
+    color: $dark-shade-100;
+    font-family: $main-font;
+}
+
+h1,
+h2 {
+    font-family: $heading-font;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: (24/14)rem;
+    line-height: 30px;
+}
+
+h2 {
+    font-size: 19px;
+    line-height: 24px;
+}
+
+h3 {
+    font-size: 12;
+    line-height: 13;
+}
