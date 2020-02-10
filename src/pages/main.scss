@@ -1,7 +1,7 @@
-@import "../modules/utils/reset";
-@import "../modules/utils/fonts";
-@import "../modules/utils/vars";
-@import "../modules/utils/mixins";
+@import "../modules/scss/reset";
+@import "../modules/scss/fonts";
+@import "../modules/scss/vars";
+@import "../modules/scss/mixins";
 @import "uikit/uikit";
 
 html {
@@ -33,6 +33,14 @@ h2 {
 }
 
 h3 {
-    font-size: 12;
-    line-height: 13;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex: 0 0 auto;
+  position: relative;
+  max-width: $container-width;
 }

@@ -1,9 +1,10 @@
-extends ../layout/main-without-header-footer
-include ../utils/mixins
+extends ../../../../modules/pug/base.pug
+
 
 block variables
-  - var title = 'Toxin';
-  - var description = 'Подготовка базовых элементов';
-  - var pageClass = 'uikit-page';
+    - var title = 'Toxin - uikit';
+    - var description = 'Подготовка базовых элементов';
 
 block content
+    include ../../../../modules/pug/color-and-type.pug
+

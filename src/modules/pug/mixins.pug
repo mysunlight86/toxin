@@ -1,0 +1,7 @@
+mixin interpretation(options)
+    .color-and-type__row
+        div(class="block" + options.className)
+        .explanation
+            h2= options.header
+            | #{options.text}
+

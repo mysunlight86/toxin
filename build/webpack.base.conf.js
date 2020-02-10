@@ -17,7 +17,7 @@ const PATHS = {
 // Pages const for HtmlWebpackPlugin
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#html-dir-folder
 // const PAGES_DIR = PATHS.src
-const PAGES_DIR = `${PATHS.src}/pug/pages/`
+const PAGES_DIR = `${PATHS.src}/pages/`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
@@ -83,7 +83,7 @@ module.exports = {
           options: { sourceMap: true,
             sassOptions: {
               includePaths: ['./node_modules']
-            } 
+            }
           }
         }
       ]
