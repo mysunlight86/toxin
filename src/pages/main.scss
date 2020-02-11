@@ -2,7 +2,7 @@
 @import "../modules/scss/fonts";
 @import "../modules/scss/vars";
 @import "../modules/scss/mixins";
-@import "uikit/uikit";
+@import "./uikit";
 
 html {
     line-height: $main-line-height;
@@ -38,9 +38,6 @@ h3 {
 }
 
 .container {
-  width: 100%;
-  display: flex;
-  flex: 0 0 auto;
-  position: relative;
-  max-width: $container-width;
+  width: $container-width;
+  margin: 0 auto;
 }
