@@ -16,14 +16,6 @@ $main-font-size: 14px;
 $main-line-height: 24px;
 $heading-font: 'Quicksand', sans-serif;
 
-// Font header 2
-$h2-font-size: 19px;
-$h2-line-height: 24px;
-
-// Font header 3
-$h3-font-size: 12px;
-$h3-line-height: 15px;
-
 // Size
 $lg-desktop-width: 1920px;
 $md-desktop-width: 1680px;
@@ -33,4 +25,4 @@ $table-width: 768px;
 $phone-width: 480px;
 $sm-phone-width: 320px;
 
-//$container-width: ((1440px-150px-191px)/$main-font-size)rem;
+//$container-width: ((1440px-150px-191px)/$main-font-size) * 1rem;
