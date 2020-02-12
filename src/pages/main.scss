@@ -1,7 +1,8 @@
-@import "../modules/scss/reset";
-@import "../modules/scss/fonts";
-@import "../modules/scss/vars";
-@import "../modules/scss/mixins";
+@import "../modules/utils/scss/reset";
+@import "../modules/utils/scss/fonts";
+@import "../modules/utils/scss/vars";
+@import "../modules/utils/scss/mixins";
+@import "../modules/color-and-type/color-and-type";
 @import "./uikit";
 
 html {
@@ -23,7 +24,7 @@ h3 {
 }
 
 h1 {
-    font-size: (24/14)rem;
+    font-size: (24px / 14px) * 1rem;
     line-height: 30px;
 }
 
@@ -35,9 +36,4 @@ h2 {
 h3 {
     font-size: 12px;
     line-height: 15px;
-}
-
-.container {
-  width: $container-width;
-  margin: 0 auto;
 }

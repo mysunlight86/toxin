@@ -33,4 +33,4 @@ $table-width: 768px;
 $phone-width: 480px;
 $sm-phone-width: 320px;
 
-$container-width: 1440px;
+//$container-width: ((1440px-150px-191px)/$main-font-size)rem;
