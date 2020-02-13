@@ -1,0 +1,109 @@
+.iqdropdown {
+  width: 266px;
+  height: 44px;
+  padding: 10px 15px;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid $dark-shade-25;
+  box-sizing: border-box;
+  border-radius: 2px;
+
+  p.iqdropdown-selection {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark-shade-75;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 160px;
+    text-overflow: ellipsis;
+
+    &:after {
+      content: "\e5cf";
+      font-family: Material Icons;
+      color: $dark-shade-75;
+      position: absolute;
+      right: 15px;
+      font-size: 24px;
+    }
+  }
+
+  .iqdropdown-menu {
+    display: none;
+    border: 1px solid $dark-shade-50;
+    width: 266px;
+    margin-top: 8px;
+    margin-left: -16px;
+    padding-left: 8px;
+  }
+
+  &.menu-open {
+    border: 1px solid $dark-shade-50;
+
+    p.iqdropdown-selection:after {
+      content: "\e5ce";
+    }
+
+    .iqdropdown-menu {
+      display: block;
+    }
+  }
+}
+
+.iqdropdown-menu-option {
+  display: flex;
+  justify-content: space-between;
+  margin: 7px;
+  align-items: center;
+}
+
+p.iqdropdown-item,
+span.counter {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+span.counter {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+}
+
+.button-decrement,
+.button-increment {
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $dark-shade-25;
+  border-radius: 22px;
+}
+
+.icon-decrement,
+.icon-increment {
+  font-size: 18px;
+  line-height: 22px;
+  color: $dark-shade-50;
+}
+
+.iqdropdown-menu-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 195px;
+  padding: 13px 0px;
+}
+
+.iqdropdown-menu-reset {
+  @extend span.counter;
+  background-color: #fff;
+  color: $dark-shade-50;
+}
+
+.iqdropdown-menu-apply {
+  @extend span.counter;
+  color: $purple;
+}

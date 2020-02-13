@@ -16,3 +16,11 @@ mixin explanation(options)
     .block_tag
         #{options.tagName}= options.tagText
     #{options.tagName}.block_text #{options.text}
+
+mixin textField(options)
+    .text-field-input
+        label
+            .field-label
+                h3 #{options.headerTitle}
+                h3.field-label_color-weight #{options.headerSetting}
+            input(type=options.inputType placeholder=options.inputPlaceholder value=options.inputValue class="text-field-input-enter")

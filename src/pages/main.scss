@@ -3,6 +3,8 @@
 @import "../modules/utils/scss/vars";
 @import "../modules/utils/scss/mixins";
 @import "../modules/color-and-type/color-and-type";
+@import "../modules/form-elements/form-elements";
+@import "../modules/dropdown/dropdown";
 @import "./uikit";
 
 html {
@@ -21,6 +23,10 @@ h1,
 h2,
 h3 {
     font-weight: bold;
+}
+
+h3 {
+    text-transform: uppercase;
 }
 
 h1 {

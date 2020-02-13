@@ -1,0 +1,53 @@
+.form-elements
+    .block-elements
+        .block-elements__column
+            +textField( {headerTitle: 'Text Field', headerSetting: 'Default', inputType: 'email', inputPlaceholder: 'Email', inputValue: ''} )
+            +textField( {headerTitle: 'Text Field', headerSetting: 'Hover / Focus', inputType: 'text', inputPlaceholder: '', inputValue: 'This is pretty awesome'} )
+            include ../dropdown/dropdown
+
+
+
+//-
+
+        .text-field-input
+          label
+            .field-label
+              ._label-text._label-text_bold._label-text_uppercase Dropdown
+              ._label-text._label-text_uppercase.label_color Default
+            .input-dropdown.text-field-input-enter
+              span Сколько гостей
+              span.expand_more <i class="material-icons md-dark-50">expand_more</i>
+        .text-field-input
+          label
+            .field-label
+              ._label-text._label-text_bold._label-text_uppercase masked text field
+              ._label-text._label-text_uppercase.label_color Default
+            input(type="text", placeholder="ДД.ММ.ГГГГ", class="text-field-input-enter")
+        .text-field-input.text-field-input-flex
+          label
+            .field-label
+              ._label-text._label-text_bold._label-text_uppercase date Dropdown
+            .text-field-input-enter.input-dropdown-half
+              span ДД.ММ.ГГГГ
+              span.material-icon <i class="material-icons md-dark-50">expand_more</i>
+          label
+            .field-label
+              ._label-text._label-text_bold._label-text_uppercase date Dropdown
+            .text-field-input-enter.input-dropdown-half
+              span 19.08.2019
+              span.material-icon <i class="material-icons md-dark-50">expand_more</i>
+        .text-field-input
+          label
+            .field-label
+              ._label-text._label-text_bold._label-text_uppercase filter date dropdown
+            .text-field-input-enter.input-dropdown-half-big
+              span 19 авг - 23 авг
+              span.material-icon <i class="material-icons md-dark-50">expand_more</i>
+        .text-field-input
+          label
+            .field-label
+              ._label-text._label-text_bold._label-text_uppercase subscription text field
+            .text-field-input-enter.input-dropdown-half-big
+              span.placeholder Email
+              span.material-icon <i class="material-icons md-violet-blue">arrow_forward</i>
+

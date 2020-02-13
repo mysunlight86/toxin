@@ -3,6 +3,7 @@
 import 'popper.js'
 import 'webpack-jquery-ui'
 import 'webpack-jquery-ui/css'
+import './modules/dropdown/dropdown'
 
 // import 'air-datepicker'
 
