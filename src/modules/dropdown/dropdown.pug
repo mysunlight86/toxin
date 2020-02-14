@@ -1,48 +1,20 @@
 mixin dropdown(options)
-    .dropdown
-        .field-label
-            h3 #{options.headerTitle}
-            h3.field-label_color-weight #{options.headerSetting}
-        div(class="iqdropdown " + options.classDropdown + ' ' + options.menuOpen)
-            p.iqdropdown-selection
-            .iqdropdown-menu
-                each item in options.dataItem
-                    +menuOption( item )
-                .iqdropdown-menu-buttons
-                    .iqdropdown-menu-apply Применить
-                    button.iqdropdown-menu-reset
-                        | очистить
+    .block-elements__row
+        .dropdown
+            .field-label
+                h3 #{options.headerTitle}
+                h3.field-label_color-weight #{options.headerSetting}
+            div(class="iqdropdown " + options.classDropdown + " " + options.menuOpen + " " + options.widthSize)
+                p.iqdropdown-selection
+                div(class="iqdropdown-menu " + options.widthSize)
+                    each item in options.dataItem
+                        +menuOption( item )
+                    .iqdropdown-menu-buttons
+                        .iqdropdown-menu-apply Применить
+                        button.iqdropdown-menu-reset
+                            | очистить
 
 mixin menuOption(data)
     .iqdropdown-menu-option(data-id=data.optionId data-defaultcount=data.defaultcount data-mincount=data.mincount)
         div
             p.iqdropdown-item #{data.itemText}
-
-
-+dropdown( { headerTitle: 'Dropdown', headerSetting: 'Default', classDropdown: 'visitors', menuOpen: '', dataItem: [{optionId: 'adult', defaultcount: '0', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '0', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}] } )
-
-//-
-    .iqdropdown-menu
-        .iqdropdown-menu-option(data-id='adult' data-defaultcount='2' data-mincount='1')
-        div
-            p.iqdropdown-item взрослые
-        .iqdropdown-menu-option(data-id='minor' data-defaultcount='1' data-mincount='0')
-        div
-            p.iqdropdown-item дети
-        .iqdropdown-menu-option(data-id='infant' data-defaultcount='0' data-mincount='0')
-        div
-            p.iqdropdown-item младенцы
-        .iqdropdown-menu-buttons
-        .iqdropdown-menu-apply Применить
-        button.iqdropdown-menu-reset
-            | очистить
-
-    .empty-dropdown
-        .iqdropdown-menu
-            .iqdropdown-menu-option(data-id='infant' data-defaultcount='0' data-mincount='0')
-                div
-                    p.iqdropdown-item младенцы
-            .iqdropdown-menu-buttons
-                .iqdropdown-menu-apply Применить
-                button.iqdropdown-menu-reset
-                    | очистить

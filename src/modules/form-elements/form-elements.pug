@@ -1,53 +1,34 @@
 .form-elements
     .block-elements
         .block-elements__column
-            +textField( {headerTitle: 'Text Field', headerSetting: 'Default', inputType: 'email', inputPlaceholder: 'Email', inputValue: ''} )
-            +textField( {headerTitle: 'Text Field', headerSetting: 'Hover / Focus', inputType: 'text', inputPlaceholder: '', inputValue: 'This is pretty awesome'} )
+            +textField( {headerTitle: 'Text Field', headerSetting: 'Default', inputType: 'email', inputPlaceholder: 'Email', inputValue: '', subscription: ''} )
+
+            +textField( {headerTitle: 'Text Field', headerSetting: 'Hover / Focus', inputType: 'text', inputPlaceholder: '', inputValue: 'This is pretty awesome', subscription: ''} )
+
             include ../dropdown/dropdown
+            +dropdown( { headerTitle: 'Dropdown', headerSetting: 'Default', classDropdown: 'visitors', menuOpen: '', widthSize: 'widthLarge', dataItem: [{optionId: 'adult', defaultcount: '0', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '0', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}] } )
 
+            +textField( {headerTitle: 'masked text field', headerSetting: 'Default', inputType: 'text', inputPlaceholder: 'ДД.ММ.ГГГГ', inputValue: '', subscription: ''} )
 
+            .block-elements__row.block-elements__row_flex
+                label
+                    .field-label.widthSmall
+                        h3 date Dropdown
+                    .text-field-input-enter.input-dropdown.widthSmall
+                        span ДД.ММ.ГГГГ
+                        span.material-icon <i class="material-icons md-dark-50">expand_more</i>
+                label
+                    .field-label.widthSmall
+                        h3 date Dropdown
+                    .text-field-input-enter.input-dropdown.widthSmall
+                        span 19.08.2019
+                        span.material-icon <i class="material-icons md-dark-50">expand_more</i>
+            .block-elements__row
+                label
+                    .field-label
+                        h3 filter date dropdown
+                    .text-field-input-enter.input-dropdown.widthMedium
+                        span 19 авг - 23 авг
+                        span.material-icon <i class="material-icons md-dark-50">expand_more</i>
 
-//-
-
-        .text-field-input
-          label
-            .field-label
-              ._label-text._label-text_bold._label-text_uppercase Dropdown
-              ._label-text._label-text_uppercase.label_color Default
-            .input-dropdown.text-field-input-enter
-              span Сколько гостей
-              span.expand_more <i class="material-icons md-dark-50">expand_more</i>
-        .text-field-input
-          label
-            .field-label
-              ._label-text._label-text_bold._label-text_uppercase masked text field
-              ._label-text._label-text_uppercase.label_color Default
-            input(type="text", placeholder="ДД.ММ.ГГГГ", class="text-field-input-enter")
-        .text-field-input.text-field-input-flex
-          label
-            .field-label
-              ._label-text._label-text_bold._label-text_uppercase date Dropdown
-            .text-field-input-enter.input-dropdown-half
-              span ДД.ММ.ГГГГ
-              span.material-icon <i class="material-icons md-dark-50">expand_more</i>
-          label
-            .field-label
-              ._label-text._label-text_bold._label-text_uppercase date Dropdown
-            .text-field-input-enter.input-dropdown-half
-              span 19.08.2019
-              span.material-icon <i class="material-icons md-dark-50">expand_more</i>
-        .text-field-input
-          label
-            .field-label
-              ._label-text._label-text_bold._label-text_uppercase filter date dropdown
-            .text-field-input-enter.input-dropdown-half-big
-              span 19 авг - 23 авг
-              span.material-icon <i class="material-icons md-dark-50">expand_more</i>
-        .text-field-input
-          label
-            .field-label
-              ._label-text._label-text_bold._label-text_uppercase subscription text field
-            .text-field-input-enter.input-dropdown-half-big
-              span.placeholder Email
-              span.material-icon <i class="material-icons md-violet-blue">arrow_forward</i>
-
+            +textField( {headerTitle: 'subscription text field', headerSetting: '', inputType: 'email', inputPlaceholder: 'Email', inputValue: '', subscription: 'subscription'} )
