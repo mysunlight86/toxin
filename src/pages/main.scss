@@ -4,7 +4,12 @@
 @import "../modules/utils/scss/mixins";
 @import "../modules/color-and-type/color-and-type";
 @import "../modules/form-elements/form-elements";
+@import "../modules/text-field/text-field";
 @import "../modules/dropdown/dropdown";
+@import "../modules/checkbox/checkbox";
+@import "../modules/radio-button/radio-button";
+@import "../modules/toggle/toggle";
+@import "../modules/like-button/like-button";
 @import "./uikit";
 
 html {
@@ -31,17 +36,17 @@ h3 {
 
 h1 {
     font-size: (24px / $main-font-size) * 1rem;
-    line-height: (30px/$main-font-size)*1rem;
+    line-height: (30px / $main-font-size) * 1rem;
 }
 
 h2 {
-    font-size: (19px/$main-font-size)*1rem;
-    line-height: (24px/14px)*1rem;
+    font-size: (19px / $main-font-size) * 1rem;
+    line-height: (24px/14px) * 1rem;
 }
 
 h3 {
-    font-size: (12px/$main-font-size)*1rem;
-    line-height: (15px/$main-font-size)*1rem;
+    font-size: (12px / $main-font-size) * 1rem;
+    line-height: (15px / $main-font-size) * 1rem;
 }
 
 .widthSmall {
@@ -57,10 +62,11 @@ h3 {
 }
 
 .material-icon {
-  line-height: 24px;
-  height: 24px;
+    line-height: 24px;
+    height: 24px;
+    position: relative;
 }
 
 .material-icons.md-dark-50 {
-  color: $dark-shade-50;
+    color: $dark-shade-50;
 }

@@ -14,60 +14,10 @@
             display: flex;
             justify-content: space-between;
         }
-        & label {
-            position: relative;
-        }
     }
-}
-
-.field-label {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    width: 320px;
-
-    &_color-weight {
-        color: $dark-shade-50;
-        font-weight: normal;
-    }
-}
-
-.text-field-input-enter {
-    width: 320px;
-    @include placeholder {
-        color: $dark-shade-25;
-    }
-    border: 1px solid $dark-shade-25;
-    border-radius: 4px;
-    padding: 9px 10px;
-    color: $dark-shade-75;
-    line-height: 24px;
-    font-family: Montserrat;
-}
-
-.text-field-input-enter:hover,
-.text-field-input-enter:focus {
-    color: $dark-shade-75;
 }
 
 .input-dropdown {
     @extend .block-elements__row_flex;
     align-items: center;
-}
-
-.placeholder {
-    color: $dark-shade-25;
-}
-
-input.subscription + span.material-icon:after {
-    content: "\e5c8";
-    font-family: Material Icons;
-    background: $purple-gradient;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: absolute;
-    font-size: 24px;
-    top: 30px;
-    right: 15px;
-    cursor: pointer;
 }

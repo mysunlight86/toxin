@@ -1,0 +1,8 @@
+mixin checkbox(options)
+    div
+        label
+            if options.inputChecked
+                input(type='checkbox' name='checkbox-value' value=options.inputValue checked='')
+            else
+                input(type='checkbox' name='checkbox-value' value=options.inputValue)
+            div #{options.explanation}
