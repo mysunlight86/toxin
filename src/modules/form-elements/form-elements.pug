@@ -63,3 +63,10 @@
                     include ../like-button/like-button
                     +likeButton( {inputValue: 'no-like', inputChecked: false} )
                     +likeButton( {inputValue: 'like', inputChecked: true} )
+
+            .field-switches
+                h3 rate button
+                .star-rating
+                    include ../rate-button/rate-button
+                    +rateButton( {starNumber: 5, checkedNumber: 4, ratingNumber: 1} )
+                    +rateButton( {starNumber: 5, checkedNumber: 5, ratingNumber: 2} )
