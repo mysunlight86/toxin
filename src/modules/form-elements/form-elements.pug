@@ -70,3 +70,29 @@
                     include ../rate-button/rate-button
                     +rateButton( {starNumber: 5, checkedNumber: 4, ratingNumber: 1} )
                     +rateButton( {starNumber: 5, checkedNumber: 5, ratingNumber: 2} )
+
+        .block-elements__column
+            .range-slider
+                include ../range-slider/range-slider
+                +rangeSlider( {headerTitle: 'Range Slider', inputType: 'text', width: 'widthMedium'} )
+
+            .buttons
+                h3 buttons
+                .field-buttons
+                    .field-buttons__row
+                        include ../buttons/buttons
+                        +buttons( {fill: 'button_fill-100', styleText: 'button_button-text', buttonWidth: 'button_button-small', buttonValue: 'CLICK ME'} )
+                        +buttons( {fill: 'button_fill-50', styleText: 'button_button-text', buttonWidth: 'button_button-small', buttonValue: 'CLICK ME'} )
+                    .field-buttons__row
+                        +buttons( {styleText: 'button_button-text', buttonWidth: 'button_button-small', borderStyle: 'button_border-fill-100', buttonValue: 'CLICK ME'} )
+                        +buttons( {fill: '', styleText: 'button_button-text', buttonWidth: 'button_button-small', borderStyle: 'button_border-fill-50', buttonValue: 'CLICK ME'} )
+                    .field-buttons__row
+                        +buttons( {transparent: 'button_button-transparent', buttonWidth: 'button_button-small', buttonStatus: 'button_color-active', styleText: 'button_button-text', buttonValue: 'CLICK ME'} )
+                        +buttons( {transparent: 'button_button-transparent', buttonWidth: 'button_button-small', buttonStatus: 'button_color-passive', styleText: 'button_button-text', buttonValue: 'CLICK ME'} )
+                    .field-buttons__row
+                        +buttons( {buttonWidth: 'button_button-big', fill: 'button_fill-100', styleText: 'button_button-text', buttonValue: 'перейти к оплате'} )
+
+            .pagination
+                h3 pagination
+                include ../pagination/pagination
+

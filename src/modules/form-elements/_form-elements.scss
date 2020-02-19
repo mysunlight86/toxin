@@ -20,4 +20,17 @@
 .input-dropdown {
     @extend .block-elements__row_flex;
     align-items: center;
+    margin-top: 40px;
+}
+
+.buttons {
+    margin-top: 44px;
+}
+
+.field-buttons {
+    margin-top: 16px;
+
+    &__row {
+        display: flex;
+    }
 }
