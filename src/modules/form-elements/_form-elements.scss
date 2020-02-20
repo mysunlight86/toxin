@@ -4,12 +4,20 @@
 
 .block-elements {
     display: flex;
+
     &__column {
-        width: (1440px - 141px * 2)/3;
+        min-width: 320px;
+
+        &_center {
+            margin-left: 126px;
+            margin-right: 132px;
+        }
     }
+
     &__row {
         margin-bottom: 20px;
         width: 320px;
+
         &_flex {
             display: flex;
             justify-content: space-between;
@@ -20,7 +28,7 @@
 .input-dropdown {
     @extend .block-elements__row_flex;
     align-items: center;
-    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .buttons {
@@ -33,4 +41,12 @@
     &__row {
         display: flex;
     }
+}
+
+.block-dropdowns {
+    margin-top: 100px;
+}
+
+.block-comfort {
+    margin-top: 20px;
 }

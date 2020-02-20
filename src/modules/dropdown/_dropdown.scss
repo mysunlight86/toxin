@@ -1,5 +1,4 @@
 .iqdropdown {
-    //    width: 266px;
     height: 44px;
     padding: 10px 15px;
     position: relative;
@@ -35,7 +34,6 @@
     .iqdropdown-menu {
         display: none;
         border: 1px solid $dark-shade-50;
-        //       width: 266px;
         margin-top: 8px;
         margin-left: -16px;
         padding-left: 8px;
@@ -46,8 +44,6 @@
 
     &.menu-open {
         border: 1px solid $dark-shade-50;
-        // background-color: #fff;
-        // z-index: 1;
 
         p.iqdropdown-selection:after {
             content: "\e5ce";
@@ -103,7 +99,6 @@ span.counter {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
-    //    width: 195px;
     padding: 13px 0px;
     cursor: pointer;
 }

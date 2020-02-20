@@ -58,25 +58,25 @@ $(document).ready(function() {
         onChange: function(id, count, totalItems) {
             console.log(id, count, totalItems);
         },
-        getCustomMessage: function(itemCount, totalItems) {
+        setSelectionText: function(itemCount, totalItems) {
             return Object.keys(itemCount)
                 .map(key => i18n.t(captions[key], { count: itemCount[key] }))
                 .join(", ");
         }
     });
     $(".visitors").iqDropdown({
-        getCustomMessage: function(itemCount, totalItems) {
+        setSelectionText: function (itemCount, totalItems) {
             if (totalItems === 0) {
                 return "Сколько гостей";
             }
+            const items = Object.keys(itemCount)
+              .map(key => itemCount[key])
+              .join(' + ');
             return i18n.t("%n visitor", { count: totalItems });
-        },
+          },
         onChange: function(id, count, totalItems) {
             console.log(id, count, totalItems);
         },
-        // resetData: function (id, count, defaultCount) {
-        //   console.log(id, count, defaultCount);
-        // },
         beforeDecrement: function(id, itemCount) {
             if (id === "adult") {
                 return itemCount.adult > itemCount.infant;

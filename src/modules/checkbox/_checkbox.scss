@@ -6,7 +6,6 @@
     margin-top: 17px;
 
     div {
-        margin-bottom: 10px;
         max-width: 260px;
     }
 
@@ -21,6 +20,7 @@
             line-height: 18px;
             margin-left: 30px;
             color: $dark-shade-50;
+            margin-bottom: 10px;
         }
     }
 }
@@ -53,4 +53,19 @@ input[name="checkbox-value"]:checked + div:after {
     position: absolute;
     left: 7px;
     top: 4px;
+}
+
+h3.title-checkbox {
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark-shade-75;
+    text-transform: none;
+}
+
+p.description-checkbox {
+    font-size: 12px;
+    line-height: 14px;
+    color: $dark-shade-50;
+    margin-top: 5px;
+    //width: 203px;
 }

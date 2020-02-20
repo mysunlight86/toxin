@@ -28,10 +28,6 @@
     color: $dark-shade-75;
 }
 
-input.subscription {
-    margin-top: 40px;
-}
-
 input.subscription + span.material-icon:before {
     content: "\e5c8";
     font-family: Material Icons;

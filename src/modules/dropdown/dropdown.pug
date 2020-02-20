@@ -1,7 +1,7 @@
 mixin dropdown(options)
     .block-elements__row
         .dropdown
-            .field-label
+            .field-label(class=options.widthSize)
                 h3 #{options.headerTitle}
                 h3.field-label_color-weight #{options.headerSetting}
             div(class="iqdropdown " + options.classDropdown + " " + options.menuOpen + " " + options.widthSize)

@@ -11,7 +11,7 @@
 
             +textField( {headerTitle: 'masked text field', headerSetting: 'Default', inputType: 'text', inputPlaceholder: 'ДД.ММ.ГГГГ', inputValue: '', subscription: '', width: ''} )
 
-            .block-elements__row.block-elements__row_flex
+            .block-elements__row_flex
                 label
                     .field-label.widthSmall
                         h3 date Dropdown
@@ -34,14 +34,14 @@
 
             +textField( {headerTitle: 'subscription text field', headerSetting: '', inputType: 'email', inputPlaceholder: 'Email', inputValue: '', subscription: 'subscription', width: 'widthMedium'} )
 
-        .block-elements__column
+        .block-elements__column.block-elements__column_center
             .field-switches
                 h3 Checkbox Buttons
                 .checkbox-fields
                     include ../checkbox/checkbox
-                    +checkbox( {inputValue: 'smoke', explanation: 'Можно курить', inputChecked: false} )
-                    +checkbox( {inputValue: 'pet', explanation: 'Можно с питомцами', inputChecked: true} )
-                    +checkbox( {inputValue: 'invite', explanation: 'Можно пригласить гостей (до 10 человек)', inputChecked: true} )
+                    +checkbox( {inputValue: 'smoke', explanationEmpty: true, explanation: 'Можно курить', inputChecked: false} )
+                    +checkbox( {inputValue: 'pet', explanationEmpty: true, explanation: 'Можно с питомцами', inputChecked: true} )
+                    +checkbox( {inputValue: 'invite', explanationEmpty: true, explanation: 'Можно пригласить гостей (до 10 человек)', inputChecked: true} )
 
             .field-switches
                 h3 Radio Buttons
@@ -96,3 +96,46 @@
                 h3 pagination
                 include ../pagination/pagination
 
+    .block-elements.block-dropdowns
+        .block-elements__column
+            +dropdown( {headerTitle: 'Dropdown', headerSetting: 'Default', classDropdown: 'room', menuOpen: '', widthSize: 'widthMedium', dataItem: [{optionId: 'bedroom', defaultcount: 2, mincount: 1, itemText: 'спальни'}, {optionId: 'bed', defaultcount: 2, mincount: 1, itemText: 'кровати'}, {optionId: 'bathroom', defaultcount: '0', mincount: '0', itemText: 'ванные комнаты'}] } )
+            +dropdown( {headerTitle: 'Dropdown', headerSetting: 'expanded', classDropdown: 'room', menuOpen: 'menu-open', widthSize: 'widthMedium', dataItem: [{optionId: 'bedroom', defaultcount: 2, mincount: 1, itemText: 'спальни'}, {optionId: 'bed', defaultcount: 2, mincount: 1, itemText: 'кровати'}, {optionId: 'bathroom', defaultcount: '0', mincount: '0', itemText: 'ванные комнаты'}] } )
+        .block-elements__column.block-elements__column_center
+            +dropdown( { headerTitle: 'Dropdown', headerSetting: '', classDropdown: 'visitors', menuOpen: 'menu-open', widthSize: 'widthLarge', dataItem: [{optionId: 'adult', defaultcount: '0', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '0', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}] } )
+        .block-elements__column
+            +dropdown( { headerTitle: 'Dropdown', headerSetting: '', classDropdown: 'visitors', menuOpen: 'menu-open', widthSize: 'widthLarge', dataItem: [{optionId: 'adult', defaultcount: '2', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '1', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}] } )
+
+    .block-elements.block-checkbox
+        .block-elements__column
+            .checkbox-list
+                include ../expandable-checkbox-list/expandable-checkbox-list
+                +details( {detailsOpen: false, summaryText: 'expandable checkbox list'} )
+                +details( {detailsOpen: true, summaryText: 'expandable checkbox list'} )
+                    .checkbox-fields
+                        +checkbox( {inputValue: 'breakfast', explanationEmpty: true, explanation: 'Завтрак', inputChecked: false} )
+                        +checkbox( {inputValue: 'desk', explanationEmpty: true, explanation: 'Письменный стол', inputChecked: true} )
+                        +checkbox( {inputValue: 'highchair', explanationEmpty: true, explanation: 'Стул для кормления', inputChecked: true} )
+                        +checkbox( {inputValue: 'cot', explanationEmpty: true, explanation: 'Кроватка', inputChecked: true} )
+                        +checkbox( {inputValue: 'TV', explanationEmpty: true, explanation: 'Телевизор', inputChecked: false} )
+                        +checkbox( {inputValue: 'shampoo', explanationEmpty: true, explanation: 'Шампунь', inputChecked: false} )
+                        +checkbox( {inputValue: 'TV', explanationEmpty: true, explanation: 'Телевизор', inputChecked: false} )
+                        +checkbox( {inputValue: 'shampoo', explanationEmpty: true, explanation: 'Шампунь', inputChecked: false} )
+        .block-elements__column.block-elements__column_center
+            h3 Rich Checkbox Buttons
+            .checkbox-fields
+                +checkbox( {inputValue: 'wide corridor', explanationEmpty: false, richData: {title: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'}, inputChecked: false} )
+                +checkbox( {inputValue: 'assistant', explanationEmpty: false, richData: {title: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист и проводит до номера.'}, inputChecked: false} )
+        .block-elements__column
+            h3 bullet list
+            include ../bullet-list/bullet-list
+            +bulletList( {items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'] } )
+
+    .block-elements.block-comfort
+        .block-elements__column
+            include ../item-comfort/item-comfort
+            +itemComfort( {iconSymbol: 'insert_emoticon', title: 'Комфорт', text: 'Шумопоглощающие стены'} )
+            +itemComfort( {iconSymbol: 'location_city', title: 'Удобство', text: 'Окно в каждой из спален'} )
+        .block-elements__column_center
+            .block-comment
+                include ../comment/comment
+                +comment( {urlImg: 'avatar.png', name: 'Мурад Сарафанов', written: '5 дней назад', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'} )
