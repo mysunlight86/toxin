@@ -1,0 +1,52 @@
+.form-elements {
+    margin: 65px 141px 132px 141px;
+}
+
+.block-elements {
+    display: flex;
+
+    &__column {
+        min-width: 320px;
+
+        &_center {
+            margin-left: 126px;
+            margin-right: 132px;
+        }
+    }
+
+    &__row {
+        margin-bottom: 20px;
+        width: 320px;
+
+        &_flex {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+.input-dropdown {
+    @extend .block-elements__row_flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.buttons {
+    margin-top: 44px;
+}
+
+.field-buttons {
+    margin-top: 16px;
+
+    &__row {
+        display: flex;
+    }
+}
+
+.block-dropdowns {
+    margin-top: 100px;
+}
+
+.block-comfort {
+    margin-top: 20px;
+}

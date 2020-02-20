@@ -1,0 +1,20 @@
+mixin dropdown(options)
+    .block-elements__row
+        .dropdown
+            .field-label(class=options.widthSize)
+                h3 #{options.headerTitle}
+                h3.field-label_color-weight #{options.headerSetting}
+            div(class="iqdropdown " + options.classDropdown + " " + options.menuOpen + " " + options.widthSize)
+                p.iqdropdown-selection
+                div(class="iqdropdown-menu " + options.widthSize)
+                    each item in options.dataItem
+                        +menuOption( item )
+                    .iqdropdown-menu-buttons
+                        .iqdropdown-menu-apply Применить
+                        button.iqdropdown-menu-reset
+                            | очистить
+
+mixin menuOption(data)
+    .iqdropdown-menu-option(data-id=data.optionId data-defaultcount=data.defaultcount data-mincount=data.mincount)
+        div
+            p.iqdropdown-item #{data.itemText}

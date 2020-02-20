@@ -1,0 +1,81 @@
+.button {
+    margin-bottom: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+
+    &_fill-100 {
+        background: $purple-gradient;
+    }
+
+    &_fill-50 {
+        @extend .button_fill-100;
+        opacity: 0.5;
+    }
+
+    &_border-fill-100 {
+        background: $purple-gradient;
+        padding: 2px;
+        position: relative;
+
+        &:before {
+            content: "CLICK ME";
+            background-color: #fff;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 95px;
+            height: 40px;
+            border-radius: 22px;
+            color: $purple;
+        }
+    }
+
+    &_border-fill-50 {
+        @extend .button_border-fill-100;
+        opacity: 0.5;
+    }
+
+    &_button-small {
+        width: 99px;
+        height: 44px;
+        border-radius: 22px;
+    }
+
+    &_button-big {
+        @extend .button_button-small;
+        width: 320px;
+        position: relative;
+        &:before {
+            content: "\e5c8";
+            font-family: Material Icons;
+            font-size: 24px;
+            font-weight: normal;
+            color: #fff;
+            position: absolute;
+            right: 10px;
+        }
+    }
+
+    &_button-text {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 44px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    &_button-transparent {
+        line-height: 15px;
+        width: auto;
+        height: auto;
+    }
+
+    &_color-active {
+        color: $purple;
+    }
+
+    &_color-passive {
+        color: $dark-shade-50;
+    }
+}
