@@ -4,5 +4,6 @@ mixin textField(options)
             .field-label
                 h3 #{options.headerTitle}
                 h3.field-label_color-weight #{options.headerSetting}
-            input(type=options.inputType placeholder=options.inputPlaceholder value=options.inputValue class="text-field-input-enter " + options.subscription + ' ' + options.width)
+            if options.dateMasked === 'date-masked'
+            input(type=options.inputType placeholder=options.inputPlaceholder value=options.inputValue class="text-field-input-enter " + options.subscription + ' ' + options.width + ' ' + options.dateMasked pattern=options.pattern)
             span.material-icon

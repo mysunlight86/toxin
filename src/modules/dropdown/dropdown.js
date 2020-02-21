@@ -1,4 +1,4 @@
-import "./iq-dropdown";
+import './iq-dropdown';
 import i18n from "i18n-js";
 
 i18n.translations["ru"] = {

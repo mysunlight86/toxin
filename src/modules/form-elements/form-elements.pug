@@ -2,14 +2,14 @@
     .block-elements
         .block-elements__column
             include ../text-field/text-field
-            +textField( {headerTitle: 'Text Field', headerSetting: 'Default', inputType: 'email', inputPlaceholder: 'Email', inputValue: '', subscription: '', width: ''} )
+            +textField( {headerTitle: 'Text Field', headerSetting: 'Default', inputType: 'email', inputPlaceholder: 'Email', inputValue: '', subscription: '', width: '', pattern: '([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})'} )
 
             +textField( {headerTitle: 'Text Field', headerSetting: 'Hover / Focus', inputType: 'text', inputPlaceholder: '', inputValue: 'This is pretty awesome', subscription: '', width: ''} )
 
             include ../dropdown/dropdown
             +dropdown( { headerTitle: 'Dropdown', headerSetting: 'Default', classDropdown: 'visitors', menuOpen: '', widthSize: 'widthLarge', dataItem: [{optionId: 'adult', defaultcount: '0', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '0', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}] } )
 
-            +textField( {headerTitle: 'masked text field', headerSetting: 'Default', inputType: 'text', inputPlaceholder: 'ДД.ММ.ГГГГ', inputValue: '', subscription: '', width: ''} )
+            +textField( {headerTitle: 'masked text field', headerSetting: 'Default', inputType: 'text', inputPlaceholder: 'ДД.ММ.ГГГГ', inputValue: '', subscription: '', width: '', dateMasked: 'date-masked'} )
 
             .block-elements__row_flex
                 label
@@ -32,7 +32,7 @@
                         span 19 авг - 23 авг
                         span.material-icon <i class="material-icons md-dark-50">expand_more</i>
 
-            +textField( {headerTitle: 'subscription text field', headerSetting: '', inputType: 'email', inputPlaceholder: 'Email', inputValue: '', subscription: 'subscription', width: 'widthMedium'} )
+            +textField( {headerTitle: 'subscription text field', headerSetting: '', inputType: 'email', inputPlaceholder: 'Email', inputValue: '', subscription: 'subscription', width: 'widthMedium', pattern: '([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})'} )
 
         .block-elements__column.block-elements__column_center
             .field-switches
