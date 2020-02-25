@@ -1,0 +1,18 @@
+input.mydatepicker + span.material-icon:before {
+    content: "\e5cf";
+    font-family: Material Icons;
+    color: $dark-shade-50;
+    position: absolute;
+    font-size: 24px;
+    top: -3px;
+    right: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.datepicker-inline {
+    position: absolute;
+    z-index: 10;
+    margin-top: 12px;
+}

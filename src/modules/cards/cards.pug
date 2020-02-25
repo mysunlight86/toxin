@@ -1,0 +1,86 @@
+.cards
+    .cards__column_big
+        .card-wrap.card-wrap_big
+            form(method='post' action='#')
+                .form__row
+                    h1 Найдём номера под ваши пожелания
+                .form__row.form__row_flex
+                    +datepicker( {headerTitle: 'прибытие', class: 'arrival', inputPlaceholder: 'ДД.ММ.ГГГГ', inputValue: 'ДД.ММ.ГГГГ', width: 'dropdown-width-small'} )
+                    +datepicker( {headerTitle: 'выезд', class: 'exit', inputPlaceholder: 'ДД.ММ.ГГГГ', inputValue: 'ДД.ММ.ГГГГ', width: 'dropdown-width-small'} )
+                .form__row
+                    +dropdown( { headerTitle: 'гости', headerSetting: '', classDropdown: 'visitors', menuOpen: '', widthSize: 'dropdown-width-large', dataItem: [{optionId: 'adult', defaultcount: '0', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '0', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}] } )
+                .form__row.form__row_with-button
+                    +buttons( {type: 'submit', buttonWidth: 'button_button-big', fill: 'button_fill-100', styleText: 'button_button-text', buttonValue: 'подобрать номер'} )
+
+        .card-wrap.card-wrap_big.cards__card-wrap
+            form(method='post' action='#')
+                .form__row
+                    h1 Регистрация аккаунта
+                .form__row
+                    .form__item
+                        +textField( {inputType: 'text', inputPlaceholder: 'Имя', width: 'dropdown-width-large'} )
+                    .form__item
+                        +textField( {inputType: 'text', inputPlaceholder: 'Фамилия', width: 'dropdown-width-large'} )
+                    .form__item.radio-fields
+                        +radioButton( {inputValue: 'male', explanation: 'Мужчина', inputChecked: true} )
+                        +radioButton( {inputValue: 'female', explanation: 'Женщина', inputChecked: false} )
+                .form__row
+                    +textField( {headerTitle: 'дата рождения', inputType: 'text', inputPlaceholder: 'ДД.ММ.ГГГГ', dateMasked: 'date-masked'} )
+                .form__row
+                    .form__item
+                        +textField( {headerTitle: 'данные для входа в сервис', inputType: 'email', inputPlaceholder: 'Email', pattern: '([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})'} )
+                    .form__item
+                        +textField( {inputType: 'password', inputPlaceholder: 'Пароль', width: 'dropdown-width-large'} )
+                    .form__item.toggle-fields
+                        +toggle( {inputValue: 'no-receive', explanation: 'Получать спецпредложения', inputChecked: false} )
+                    .form__row.form__row_with-button
+                        +buttons( {type: 'submit', buttonWidth: 'button_button-big', fill: 'button_fill-100', styleText: 'button_button-text', buttonValue: 'перейти к оплате'} )
+                    .form__row.form__row_with-button.form__row_flex
+                        p Уже есть аккаунт на Toxin
+                        +buttons( {styleText: 'button_button-text', buttonWidth: 'button_button-small', borderStyle: 'button_border-fill-100', buttonValue: 'войти'} )
+
+    .cards__column_big
+        .card-wrap.card-wrap_big
+            form(method='post' action='#')
+                .form__header.form__row_flex
+                    .form__header_left
+                        span.room-number №
+                        =' '
+                        h2.room-number 888
+                        =' '
+                        h3.room-class люкс
+                    .form__header_right
+                        span.price 9 990₽
+                        =' '
+                        span.price-period в сутки
+                .form__row.form__row_flex
+                    +datepicker( {headerTitle: 'прибытие', class: 'arrival', inputPlaceholder: 'ДД.ММ.ГГГГ', inputValue: 'ДД.ММ.ГГГГ', width: 'dropdown-width-small'} )
+                    +datepicker( {headerTitle: 'выезд', class: 'exit', inputPlaceholder: 'ДД.ММ.ГГГГ', inputValue: 'ДД.ММ.ГГГГ', width: 'dropdown-width-small'} )
+                .form__row
+                    +dropdown( { headerTitle: 'гости', classDropdown: 'visitors', widthSize: 'dropdown-width-large', dataItem: [{optionId: 'adult', defaultcount: '2', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '1', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}] } )
+                .form__row
+                    .form__item.form__item_flex
+                        .service-product
+                            span.service-name 9 990₽ х 4 суток
+                        span.service-cost 39 960₽
+                    .form__item.form__item_flex
+                        .service-product
+                            span.service-name Сбор за услуги: скидка 2 179₽
+                            span.service-info i
+                        span.service-cost 0₽
+                    .form__item.form__item_flex
+                        .service-product
+                            span.service-name Сбор за дополнительные услуги
+                            span.service-info i
+                        span.service-cost 300₽
+                    .form__item_total
+                        ul.dotted
+                            li
+                                h2 Итого
+                                h2 38 081₽
+                .form__row.form__row_with-button
+                    +buttons( {type: 'submit', buttonWidth: 'button_button-big', fill: 'button_fill-100', styleText: 'button_button-text', buttonValue: 'забронировать'} )
+
+
+
+

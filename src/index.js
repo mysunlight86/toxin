@@ -6,8 +6,10 @@ import 'webpack-jquery-ui/css'
 import './modules/dropdown/dropdown'
 import './modules/range-slider/range-slider'
 import './modules/form-elements/maskedinput'
+import 'air-datepicker/dist/js/datepicker'
 
-// import 'air-datepicker'
+import './modules/datepicker/datepicker'
+
 
 // SCSS
 //import './assets/scss/main.scss'

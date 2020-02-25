@@ -1,10 +1,12 @@
 .button {
-    margin-bottom: 30px;
-    margin-right: 20px;
     cursor: pointer;
+    background-color: transparent;
+    font-family: Montserrat;
+    padding: 0px;
 
     &_fill-100 {
         background: $purple-gradient;
+        color: #fff;
     }
 
     &_fill-50 {
@@ -12,22 +14,20 @@
         opacity: 0.5;
     }
 
+    &_button-text {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 44px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
     &_border-fill-100 {
         background: $purple-gradient;
-        padding: 2px;
-        position: relative;
-
-        &:before {
-            content: "CLICK ME";
-            background-color: #fff;
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            width: 95px;
-            height: 40px;
-            border-radius: 22px;
-            color: $purple;
-        }
+        border: 2px solid transparent;
+        border-radius: 22px;
+        box-shadow: inset 2px 1000px 1px #fff;
+        color: $purple;
     }
 
     &_border-fill-50 {
@@ -54,15 +54,6 @@
             position: absolute;
             right: 10px;
         }
-    }
-
-    &_button-text {
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 44px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #fff;
     }
 
     &_button-transparent {
