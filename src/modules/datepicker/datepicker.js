@@ -2,7 +2,9 @@ $(function() {
     // Инициализация
     $(".arrival").datepicker({});
     $(".exit").datepicker({});
-    $(".temp").datepicker();
+    $(".temp").datepicker({
+        inline: true
+    });
 });
 
 // $('#my-element').datepicker([options])

@@ -14,11 +14,16 @@
 }
 
 .card-wrap {
-    padding: 40px 30px 30px;
     background-color: #fff;
 
     &_big {
         width: $lg-card-width;
+        padding: 40px 30px 30px;
+    }
+
+    &_medium {
+        width: $md-card-width;
+
     }
 }
 
@@ -70,7 +75,7 @@ span.room-number {
 
 h2.room-number {
     display: inline-block;
-    font-family: Montserrat;
+ //   font-family: Montserrat;
     margin: 0px 5px;
     line-height: 22px;
 }
@@ -150,4 +155,5 @@ span.service-cost {
     position: relative;
     bottom: -5px;
     display: inline-block;
+ //   font-family: Montserrat;
 }
