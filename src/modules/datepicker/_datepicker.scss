@@ -11,17 +11,18 @@ input.mydatepicker + span.material-icon:before {
     align-items: center;
 }
 
-input.temp {
+input.none {
     display: none;
 }
 
-.datepicker-inline .datepicker {
-    width: 100%;
+.mydatepicker {
+    text-transform: lowercase;
+}
+
+.datepicker {
+    width: 320px;
     box-sizing: border-box;
     padding: 20px;
-    // position: absolute;
-    // z-index: 10;
-    // margin-top: 12px;
 }
 
 .datepicker--nav {
@@ -65,11 +66,11 @@ input.temp {
     }
 }
 
-.datepicker--content {
-    font-family: $main-font;
-    font-size: 12px;
-    line-height: 15px;
-}
+// .datepicker--content {
+//     font-family: $main-font;
+//     font-size: 12px;
+//     line-height: 15px;
+// }
 
 .datepicker--day-name {
     font-weight: bold;
@@ -86,13 +87,74 @@ input.temp {
 
 .datepicker--day-name,
 .datepicker--cell {
-    width: 38px;
+    width: 38.578px;
     height: 40px;
     box-sizing: border-box;
+    font-family: $main-font;
+    font-size: 12px;
+    line-height: 15px;
 }
 
-.datepicker--cell.-current- {
+.datepicker--cell {
     border-radius: 22px;
-    background: $green-gradient;
-    color: #ffffff;
+
+    &.-current- {
+        background: $green-gradient;
+        color: #ffffff;
+    }
+
+    &:hover,
+    &.-current-:hover,
+    &.-selected-,
+    &.-range-from-,
+    &.-range-to-,
+    &.-range-from-:hover,
+    &.-range-to-:hover {
+        background: $purple-gradient;
+        color: #ffffff;
+        border-radius: 22px;
+    }
+
+    &.-range-from-,
+    &.-range-to- {
+        position: relative;
+    }
+
+    &.-range-from-:after,
+    &.-range-to-:before {
+        content: "";
+        width: 40px;
+        height: 40px;
+        background: $purple-gradient;
+        opacity: 0.25;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &.-range-from-:after {
+        border-top-left-radius: 22px;
+        border-bottom-left-radius: 22px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    &.-range-to-:before {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+
+    &.-in-range- {
+        background: $purple-gradient;
+        opacity: 0.25;
+    }
+}
+
+.datepicker--buttons {
+    border: none;
 }

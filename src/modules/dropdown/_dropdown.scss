@@ -102,14 +102,6 @@ span.counter {
     padding: 13px 7px;
     cursor: pointer;
 }
-/*
-.dropdown-width-medium .iqdropdown-menu-buttons {
-    width: $md-dropdown-width + 7px;
-}
-
-.dropdown-width-large .iqdropdown-menu-buttons {
-    width: $lg-dropdown-width + 7px;
-}*/
 
 .iqdropdown-menu-reset {
     @extend span.counter;
