@@ -1,3 +1,5 @@
+import './air-datepicker'
+
 $(function() {
     // Инициализация
     $(".arrival").datepicker({
@@ -80,20 +82,20 @@ var myDatepicker = $(".mydatepicker").data("datepicker");
     };
 })(jQuery);*/
 
-$(".mydatepicker").datepicker({
-    onShow: function(input) {
-        setTimeout(function() {
-            const $panelButtons = $(".datepicker--buttons");
-            const $btnApply = $(
-                `<span class="datepicker--button" data-action="hide">
-                    применить
-                </span>`
-            );
-            $btnApply.unbind("click").bind("click", function() {
-                $.datepicker.onHide(input);
-            });
+// $(".mydatepicker").datepicker({
+//     onShow: function(input) {
+//         setTimeout(function() {
+//             const $panelButtons = $(".datepicker--buttons");
+//             const $btnApply = $(
+//                 `<span class="datepicker--button" data-action="hide">
+//                     применить
+//                 </span>`
+//             );
+//             $btnApply.unbind("click").bind("click", function() {
+//                 $.datepicker.onHide(input);
+//             });
 
-            $btnApply.appendTo($panelButtons);
-        }, 1);
-    }
-});
+//             $btnApply.appendTo($panelButtons);
+//         }, 1);
+//     }
+// });
