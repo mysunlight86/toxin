@@ -17,8 +17,14 @@ input.none {
     display: none;
 }
 
-.mydatepicker {
+.period {
     text-transform: lowercase;
+}
+
+.mydatepicker {
+    @include placeholder {
+        color: $dark-shade-75;
+    }
 }
 
 .datepicker {
@@ -112,7 +118,8 @@ input.none {
     &.-range-from-,
     &.-range-to-,
     &.-range-from-:hover,
-    &.-range-to-:hover {
+    &.-range-to-:hover,
+    &.datepicker--cell-day.-range-from-.-current-.-selected- {
         background: $purple-gradient;
         color: #ffffff;
         border-radius: 22px;
@@ -139,17 +146,11 @@ input.none {
     }
 
     &.-range-from-:after {
-        border-top-left-radius: 22px;
-        border-bottom-left-radius: 22px;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
+        border-radius: 22px 0px 0px 22px;
     }
 
     &.-range-to-:before {
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
-        border-top-right-radius: 50%;
-        border-bottom-right-radius: 50%;
+        border-radius: 0 50% 50% 0;
     }
 
     &.-in-range- {
@@ -158,6 +159,47 @@ input.none {
     }
 }
 
+.datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-current- {
+    background: $purple-gradient;
+    color: #ffffff;
+}
+
 .datepicker--buttons {
     border: none;
+    justify-content: space-between;
+    padding: 0px;
+    margin-top: 20px;
+}
+
+.datepicker--button {
+    font-family: $main-font;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    height: 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+span[data-action="clear"] {
+    color: $dark-shade-50;
+}
+
+span[data-action="clear"]:hover {
+    color: $dark-shade-50;
+    background-color: #fff;
+}
+
+span[data-action="apply"] {
+    color: $purple;
+    text-align: right;
+}
+
+span[data-action="apply"]:hover {
+    color: $purple;
+    text-align: right;
+    background-color: #fff;
 }

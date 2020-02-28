@@ -47,6 +47,7 @@
 
             todayButton: false,
             clearButton: false,
+            applyButton: false,
 
             showEvent: 'focus',
             autoClose: false,
@@ -597,6 +598,10 @@
             if (this.opts.onSelect) {
                 this._triggerOnChange()
             }
+        },
+
+        apply: function () {
+            this.hide();
         },
 
         /**
@@ -1480,6 +1485,7 @@
             monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
             today: 'Сегодня',
             clear: 'Очистить',
+            apply: 'Применить',
             dateFormat: 'dd.mm.yyyy',
             timeFormat: 'hh:ii',
             firstDay: 1
@@ -1848,6 +1854,9 @@
             }
             if (this.opts.clearButton) {
                 this._addButton('clear')
+            }
+            if (this.opts.applyButton) {
+                this._addButton("apply");
             }
         },
 
