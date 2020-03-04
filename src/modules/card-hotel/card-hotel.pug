@@ -1,17 +1,15 @@
 mixin cardHotel(options)
     .card-wrap.card-wrap__hotel
-        if options.isArrow
+        if options.arrows
             .single-item
-                .card-wrap__hotel_slide-arrow.card-wrap__hotel_n888
-                .card-wrap__hotel_slide-arrow.card-wrap__hotel_n840
-                .card-wrap__hotel_slide-arrow.card-wrap__hotel_n888
-                .card-wrap__hotel_slide-arrow.card-wrap__hotel_n840
+                each item in options.imgSrc
+                    .card-wrap__hotel_slide-arrow
+                        img(src=item)
         else
             .single-item(data-slick='{"arrows": false}')
-                .card-wrap__hotel_slide-arrow.card-wrap__hotel_n840.single-item_no-arrows
-                .card-wrap__hotel_slide-arrow.card-wrap__hotel_n888.single-item_no-arrows
-                .card-wrap__hotel_slide-arrow.card-wrap__hotel_n840.single-item_no-arrows
-                .card-wrap__hotel_slide-arrow.card-wrap__hotel_n888.single-item_no-arrows
+                each item in options.imgSrc
+                    .card-wrap__hotel_slide-arrow
+                        img(src=item)
         .card-wrap__block
             .card-wrap__row.form__row_flex
                 .form__header_left

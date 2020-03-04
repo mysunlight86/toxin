@@ -31,16 +31,26 @@
     &__hotel {
         box-shadow: 0px 10px 20px $dark-shade-5;
         width: $sm-card-width;
+
         &_slide-arrow {
             height: 150px;
-            box-shadow: inset 40px 0px 20px $shadow-color,
-                inset -40px 0px 20px $shadow-color;
-        }
-        &_n888 {
-            background-image: url("/assets/img/imageN888.jpg");
-        }
-        &_n840 {
-            background-image: url("/assets/img/imageN840.jpg");
+            // position: relative;
+            // float: left;
+
+            // &:before {
+            //     content: "";
+            //     position: absolute;
+            //     top: 0;
+            //     bottom: 0;
+            //     left: 0;
+            //     right: 0;
+            //     box-shadow: inset 40px 0px 20px $shadow-color,
+            //         inset -40px 0px 20px $shadow-color;
+            // }
+
+            // img {
+            //     float: left;
+            // }
         }
     }
 
@@ -59,13 +69,13 @@
     }
 }
 
-.single-item_no-arrows {
-    box-shadow: none;
+// .single-item_no-arrows:before {
+//     box-shadow: none;
 
-    .slick-prev:before {
-        content: "";
-    }
-}
+//     .slick-prev:before {
+//         content: "";
+//     }
+// }
 
 .slick-dotted.slick-slider {
     margin-bottom: 0px;
@@ -78,10 +88,24 @@
 .slick-prev,
 .slick-next {
     z-index: 10;
+    height: 100%;
+    width: 40px;
+    opacity: 1;
+    color: #fff;
 }
 
-.slick-prev {
-    left: 10px;
+.slick-prev,
+.slick-prev:hover,
+.slick-prev:focus {
+    background: linear-gradient(to right, $shadow-color, transparent);
+    left: 0;
+}
+
+.slick-next,
+.slick-next:hover,
+.slick-next:focus {
+    background: linear-gradient(to left, $shadow-color, transparent);
+    right: 0;
 }
 
 .slick-prev:before {
@@ -93,15 +117,14 @@
     display: flex;
     transform: rotate(90deg);
     opacity: 1;
-}
-
-.slick-next {
-    right: 10px;
+    color: #fff;
+    position: absolute;
 }
 
 .slick-next:before {
     @extend .slick-prev:before;
     transform: rotate(-90deg);
+    right: 10px;
 }
 
 .slick-dots {
