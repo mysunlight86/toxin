@@ -1,0 +1,11 @@
+.card-wrap.card-wrap_big
+    form(method='post' action='#')
+        .form__row
+            h1 Найдём номера под ваши пожелания
+        .form__row.form__row_flex
+            +datepicker( {headerTitle: 'прибытие', class: 'arrival', inputPlaceholder: 'ДД.ММ.ГГГГ', inputValue: 'ДД.ММ.ГГГГ', width: 'dropdown-width-small'} )
+            +datepicker( {headerTitle: 'выезд', class: 'exit', inputPlaceholder: 'ДД.ММ.ГГГГ', inputValue: 'ДД.ММ.ГГГГ', width: 'dropdown-width-small'} )
+        .form__row
+            +dropdown( { headerTitle: 'гости', headerSetting: '', classDropdown: 'visitors', menuOpen: '', widthSize: 'dropdown-width-large', dataItem: [{optionId: 'adult', defaultcount: '0', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '0', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}] } )
+        .form__row.form__row_with-button
+            +buttons( {type: 'submit', buttonWidth: 'button_button-big', fill: 'button_fill-100', styleText: 'button_button-text', buttonValue: 'подобрать номер'} )

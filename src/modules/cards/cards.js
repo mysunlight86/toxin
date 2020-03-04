@@ -1,3 +1,5 @@
-$(".single-item").slick({
-    dots: true,
+$(document).ready(function() {
+    $(".single-item").slick({
+        dots: true
+    });
 });

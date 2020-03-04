@@ -31,7 +31,6 @@
     &__hotel {
         box-shadow: 0px 10px 20px $dark-shade-5;
         width: $sm-card-width;
-        margin-top: 40px;
         &_slide-arrow {
             height: 150px;
             box-shadow: inset 40px 0px 20px $shadow-color,
@@ -190,18 +189,20 @@ h3.room-class {
     line-height: 24px;
 }
 
-span.price {
+span.price,
+span.quantity {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
     color: $dark-shade-50;
+}
 
-    &-period {
-        font-size: 12px;
-        color: $dark-shade-50;
-    }
+span.price-period,
+span.quantity-text {
+    font-size: 12px;
+    color: $dark-shade-50;
 }
 
 .service-product {
