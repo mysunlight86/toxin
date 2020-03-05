@@ -1,0 +1,22 @@
+.headers-and-footers
+    header.header
+        .container
+            .headers-and-footers__row
+                .headers-and-footers__row_left
+                    +logoColor()
+                    +logoName()
+                .headers-and-footers__row_right
+                    ul.menu
+                        li.menu__item
+                            a.menu__link.active(href='#') Home
+                        li.menu__item
+                            a.menu__link(href='#') About Us
+                        li.menu__item
+                            a.menu__link.drop-menu(href='#') Services
+                        li.menu__item
+                            a.menu__link(href='#') Careers
+                        li.menu__item
+                            a.menu__link(href='#') News
+                        li.menu__item
+                            a.menu__link(href='#') Documentation
+                    .authorization
