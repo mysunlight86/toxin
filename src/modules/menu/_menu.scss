@@ -1,0 +1,19 @@
+.menu {
+    display: flex;
+    line-height: 17px;
+
+    &__link {
+        display: flex;
+        color: $dark-shade-50;
+        padding: 15px;
+
+        &.active {
+            font-weight: bold;
+            color: $dark-shade-75;
+        }
+    }
+}
+
+.drop-menu {
+    line-height: 17px;
+}
