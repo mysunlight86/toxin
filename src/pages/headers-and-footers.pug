@@ -1,0 +1,19 @@
+extends ../modules/utils/pug/base
+
+include ../modules/buttons/buttons
+include ../modules/text-field/text-field
+
+block variables
+    - var title = 'Toxin - uikit (cards)';
+    - var description = 'Подготовка карточек';
+
+block content
+    .content-wrapper.content-wrapper_style
+        .content-wrapper__logo
+            +logo()
+
+        .headers-and-footers
+            include ../modules/header/header-no-authorization
+            include ../modules/header/header-authorization
+            include ../modules/footer/footer
+            include ../modules/footer-mobile/footer-mobile

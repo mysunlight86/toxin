@@ -26,7 +26,7 @@
 @import "../modules/header/header";
 @import "../modules/footer/footer";
 @import "../modules/footer-mobile/footer-mobile";
-@import "../modules/headers-and-footers/headers-and-footers";
+@import "./headers-and-footers";
 
 html {
     line-height: $main-line-height;
