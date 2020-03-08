@@ -27,13 +27,26 @@
 @import "../modules/footer/footer";
 @import "../modules/footer-mobile/footer-mobile";
 @import "../modules/headers-and-footers/headers-and-footers";
-@import "./uikit";
 
 html {
     line-height: $main-line-height;
     font-size: $main-font-size;
     color: $dark-shade-100;
     font-family: $main-font;
+}
+
+.content-wrapper {
+    max-width: (1440px/$main-font-size)*1rem;
+    margin: (150px/$main-font-size)*1rem auto;
+
+    &__logo {
+        padding-top: (30px/$main-font-size)*1rem;
+        margin-left: (30px/$main-font-size)*1rem;
+    }
+
+    &_style {
+        background-color: $background-color;
+    }
 }
 
 h1,

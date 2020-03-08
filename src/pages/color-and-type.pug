@@ -1,17 +1,26 @@
-include ../modules/utils/pug/mixins
+extends ../modules/utils/pug/base
 
-.color-and-type
-    .color-and-type_flex
-        .color-and-type__column
-            +interpretation( {className: 'block_opacity_100', header: 'Dark Shade 100%', text: '#1F2041'} )
-            +interpretation( {className: 'block_opacity_75', header: 'Dark Shade 75%', text: '#1F2041'} )
-            +interpretation( {className: 'block_opacity_50', header: 'Dark Shade 50%', text: '#1F2041'} )
-            +interpretation( {className: 'block_opacity_25', header: 'Dark Shade 25%', text: '#1F2041'} )
-            +interpretation( {className: 'block_opacity_5', header: 'Dark Shade 5%', text: '#1F2041'} )
-            +interpretation( {className: 'block_purple', header: 'Purple', text: '#BC9CFF'} )
-            +interpretation( {className: 'block_green', header: 'Green', text: '#6FCF97'} )
-        .color-and-type__column.color-and-type__column_type
-            +explanation( {tagName: 'h1', tagText: 'H1', text: 'This one is the sub-section or widget title'} )
-            +explanation( {tagName: 'h2', tagText: 'H2', text: 'Next one is the item title inside widgets'} )
-            +explanation( {tagName: 'h3', tagText: 'H3', text: 'This is a label or CTA text'} )
-            +explanation( {tagName: 'p', tagText: 'Body', text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'} )
+block variables
+    - var title = 'Toxin - uikit';
+    - var description = 'Подготовка базовых элементов';
+
+block content
+    .content-wrapper
+        .content-wrapper__logo
+            +logo()
+
+        .color-and-type
+            .color-and-type_flex
+                .color-and-type__column
+                    +interpretation( {className: 'block_opacity_100', header: 'Dark Shade 100%', text: '#1F2041'} )
+                    +interpretation( {className: 'block_opacity_75', header: 'Dark Shade 75%', text: '#1F2041'} )
+                    +interpretation( {className: 'block_opacity_50', header: 'Dark Shade 50%', text: '#1F2041'} )
+                    +interpretation( {className: 'block_opacity_25', header: 'Dark Shade 25%', text: '#1F2041'} )
+                    +interpretation( {className: 'block_opacity_5', header: 'Dark Shade 5%', text: '#1F2041'} )
+                    +interpretation( {className: 'block_purple', header: 'Purple', text: '#BC9CFF'} )
+                    +interpretation( {className: 'block_green', header: 'Green', text: '#6FCF97'} )
+                .color-and-type__column.color-and-type__column_type
+                    +explanation( {tagName: 'h1', tagText: 'H1', text: 'This one is the sub-section or widget title'} )
+                    +explanation( {tagName: 'h2', tagText: 'H2', text: 'Next one is the item title inside widgets'} )
+                    +explanation( {tagName: 'h3', tagText: 'H3', text: 'This is a label or CTA text'} )
+                    +explanation( {tagName: 'p', tagText: 'Body', text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'} )
