@@ -1,0 +1,41 @@
+extends ../modules/utils/pug/base
+
+include ../modules/datepicker/datepicker
+include ../modules/dropdown/dropdown
+include ../modules/text-field/text-field
+include ../modules/radio-button/radio-button
+include ../modules/toggle/toggle
+include ../modules/rate-button/rate-button
+
+block variables
+    - var title = 'Toxin - uikit (cards)';
+    - var description = 'Подготовка карточек';
+
+block content
+    .content-wrapper.content-wrapper_style
+        .content-wrapper__logo
+            +logo()
+
+        .cards
+            .cards__column_big
+                include ../modules/card-landing/card-landing
+
+                .cards__card-wrap
+                    include ../modules/card-registration/card-registration
+
+            .cards__column_big
+                include ../modules/card-room-details/card-room-details
+
+                .cards__card-wrap
+                    include ../modules/card-authorization/card-authorization
+
+            .cards__column
+                .card-wrap.card-wrap_medium
+                    input(type="text" class="none")
+
+                .cards__card-wrap
+                    include ../modules/card-hotel/card-hotel
+                    +cardHotel( {arrows: true, imgSrc: ['assets/img/imageN888.jpg', 'assets/img/imageN840.jpg','assets/img/imageN888.jpg', 'assets/img/imageN840.jpg'], roomNumber: "888", roomClass: 'люкс', price: "9 990₽", starNumber: 5, checkedNumber: 5, ratingNumber: 2, quantity: "145", quantityText: "Отзывов"} )
+
+                .cards__card-wrap
+                    +cardHotel( {arrows: false, imgSrc: ['assets/img/imageN840.jpg', 'assets/img/imageN888.jpg', 'assets/img/imageN840.jpg','assets/img/imageN888.jpg'], roomNumber: "840", price: "9 990₽", starNumber: 5, checkedNumber: 4, ratingNumber: 1, quantity: "65", quantityText: "Отзывов"} )

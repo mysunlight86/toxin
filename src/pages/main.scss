@@ -2,8 +2,7 @@
 @import "../modules/utils/scss/fonts";
 @import "../modules/utils/scss/vars";
 @import "../modules/utils/scss/mixins";
-@import "_color-and-type.scss";
-@import "../modules/form-elements/form-elements";
+@import "./color-and-type";
 @import "../modules/text-field/text-field";
 @import "../modules/dropdown/dropdown";
 @import "../modules/checkbox/checkbox";
@@ -19,21 +18,35 @@
 @import "../modules/item-comfort/item-comfort";
 @import "../modules/comment/comment";
 @import "../modules/datepicker/datepicker";
+@import "./form-elements";
 @import "../../node_modules/slick-carousel/slick/slick.css";
 @import "../../node_modules/slick-carousel/slick/slick-theme.css";
-@import "../modules/cards/cards";
+@import "./cards";
 @import "../modules/menu/menu";
 @import "../modules/header/header";
 @import "../modules/footer/footer";
 @import "../modules/footer-mobile/footer-mobile";
-@import "../modules/headers-and-footers/headers-and-footers";
-@import "./uikit";
+@import "./headers-and-footers";
 
 html {
     line-height: $main-line-height;
     font-size: $main-font-size;
     color: $dark-shade-100;
     font-family: $main-font;
+}
+
+.content-wrapper {
+    max-width: (1440px/$main-font-size)*1rem;
+    margin: (150px/$main-font-size)*1rem auto;
+
+    &__logo {
+        padding-top: (30px/$main-font-size)*1rem;
+        margin-left: (30px/$main-font-size)*1rem;
+    }
+
+    &_style {
+        background-color: $background-color;
+    }
 }
 
 h1,
