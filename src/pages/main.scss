@@ -2,8 +2,7 @@
 @import "../modules/utils/scss/fonts";
 @import "../modules/utils/scss/vars";
 @import "../modules/utils/scss/mixins";
-@import "_color-and-type.scss";
-@import "../modules/form-elements/form-elements";
+@import "./color-and-type";
 @import "../modules/text-field/text-field";
 @import "../modules/dropdown/dropdown";
 @import "../modules/checkbox/checkbox";
@@ -19,6 +18,7 @@
 @import "../modules/item-comfort/item-comfort";
 @import "../modules/comment/comment";
 @import "../modules/datepicker/datepicker";
+@import "./form-elements";
 @import "../../node_modules/slick-carousel/slick/slick.css";
 @import "../../node_modules/slick-carousel/slick/slick-theme.css";
 @import "../modules/cards/cards";
