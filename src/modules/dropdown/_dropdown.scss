@@ -99,16 +99,8 @@ span.counter {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
-    padding: 13px 0px;
+    padding: 13px 7px;
     cursor: pointer;
-}
-
-.widthMedium .iqdropdown-menu-buttons {
-    width: $md-dropdown-width - 71px;
-}
-
-.widthLarge .iqdropdown-menu-buttons {
-    width: $lg-dropdown-width - 75px;
 }
 
 .iqdropdown-menu-reset {

@@ -1,38 +1,24 @@
 .form-elements
     .block-elements
         .block-elements__column
-            include ../text-field/text-field
-            +textField( {headerTitle: 'Text Field', headerSetting: 'Default', inputType: 'email', inputPlaceholder: 'Email', inputValue: '', subscription: '', width: '', pattern: '([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})'} )
-
-            +textField( {headerTitle: 'Text Field', headerSetting: 'Hover / Focus', inputType: 'text', inputPlaceholder: '', inputValue: 'This is pretty awesome', subscription: '', width: ''} )
-
-            include ../dropdown/dropdown
-            +dropdown( { headerTitle: 'Dropdown', headerSetting: 'Default', classDropdown: 'visitors', menuOpen: '', widthSize: 'widthLarge', dataItem: [{optionId: 'adult', defaultcount: '0', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '0', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}] } )
-
-            +textField( {headerTitle: 'masked text field', headerSetting: 'Default', inputType: 'text', inputPlaceholder: 'ДД.ММ.ГГГГ', inputValue: '', subscription: '', width: '', dateMasked: 'date-masked'} )
-
-            .block-elements__row_flex
-                label
-                    .field-label.widthSmall
-                        h3 date Dropdown
-                    .text-field-input-enter.input-dropdown.widthSmall
-                        span ДД.ММ.ГГГГ
-                        span.material-icon <i class="material-icons md-dark-50">expand_more</i>
-                label
-                    .field-label.widthSmall
-                        h3 date Dropdown
-                    .text-field-input-enter.input-dropdown.widthSmall
-                        span 19.08.2019
-                        span.material-icon <i class="material-icons md-dark-50">expand_more</i>
             .block-elements__row
-                label
-                    .field-label
-                        h3 filter date dropdown
-                    .text-field-input-enter.input-dropdown.widthMedium
-                        span 19 авг - 23 авг
-                        span.material-icon <i class="material-icons md-dark-50">expand_more</i>
-
-            +textField( {headerTitle: 'subscription text field', headerSetting: '', inputType: 'email', inputPlaceholder: 'Email', inputValue: '', subscription: 'subscription', width: 'widthMedium', pattern: '([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})'} )
+                include ../text-field/text-field
+                +textField( {headerTitle: 'Text Field', headerSetting: 'Default', inputType: 'email', inputPlaceholder: 'Email', inputValue: '', subscription: '', width: '', pattern: '([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})'} )
+            .block-elements__row
+                +textField( {headerTitle: 'Text Field', headerSetting: 'Hover / Focus', inputType: 'text', inputPlaceholder: '', inputValue: 'This is pretty awesome', subscription: '', width: ''} )
+            .block-elements__row
+                include ../dropdown/dropdown
+                +dropdown( { headerTitle: 'Dropdown', headerSetting: 'Default', classDropdown: 'visitors', menuOpen: '', widthSize: 'dropdown-width-large', dataItem: [{optionId: 'adult', defaultcount: '0', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '0', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}] } )
+            .block-elements__row
+                +textField( {headerTitle: 'masked text field', headerSetting: 'Default', inputType: 'text', inputPlaceholder: 'ДД.ММ.ГГГГ', inputValue: '', subscription: '', width: '', dateMasked: 'date-masked'} )
+            .block-elements__row_flex
+                include ../datepicker/datepicker
+                +datepicker( {headerTitle: 'date Dropdown', class: 'temp', inputPlaceholder: 'ДД.ММ.ГГГГ', inputValue: 'ДД.ММ.ГГГГ', width: 'dropdown-width-small'} )
+                +datepicker( {headerTitle: 'date Dropdown', class: 'temp', inputPlaceholder: '19.08.2019', inputValue: '19.08.2019', width: 'dropdown-width-small'} )
+            .block-elements__row
+                +datepicker( {headerTitle: 'filter date dropdown', class: 'period', inputPlaceholder: '19 авг - 23 авг', inputValue: '19 авг - 23 авг', width: 'dropdown-width-medium'} )
+            .block-elements__row
+                +textField( {headerTitle: 'subscription text field', headerSetting: '', inputType: 'email', inputPlaceholder: 'Email', inputValue: '', subscription: 'subscription', width: 'dropdown-width-medium', pattern: '([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})'} )
 
         .block-elements__column.block-elements__column_center
             .field-switches
@@ -74,7 +60,7 @@
         .block-elements__column
             .range-slider
                 include ../range-slider/range-slider
-                +rangeSlider( {headerTitle: 'Range Slider', inputType: 'text', width: 'widthMedium'} )
+                +rangeSlider( {headerTitle: 'Range Slider', inputType: 'text', width: 'dropdown-width-medium'} )
 
             .buttons
                 h3 buttons
@@ -98,12 +84,13 @@
 
     .block-elements.block-dropdowns
         .block-elements__column
-            +dropdown( {headerTitle: 'Dropdown', headerSetting: 'Default', classDropdown: 'room', menuOpen: '', widthSize: 'widthMedium', dataItem: [{optionId: 'bedroom', defaultcount: 2, mincount: 1, itemText: 'спальни'}, {optionId: 'bed', defaultcount: 2, mincount: 1, itemText: 'кровати'}, {optionId: 'bathroom', defaultcount: '0', mincount: '0', itemText: 'ванные комнаты'}] } )
-            +dropdown( {headerTitle: 'Dropdown', headerSetting: 'expanded', classDropdown: 'room', menuOpen: 'menu-open', widthSize: 'widthMedium', dataItem: [{optionId: 'bedroom', defaultcount: 2, mincount: 1, itemText: 'спальни'}, {optionId: 'bed', defaultcount: 2, mincount: 1, itemText: 'кровати'}, {optionId: 'bathroom', defaultcount: '0', mincount: '0', itemText: 'ванные комнаты'}] } )
+            .block-elements__row
+                +dropdown( {headerTitle: 'Dropdown', headerSetting: 'Default', classDropdown: 'room', menuOpen: '', widthSize: 'dropdown-width-medium', dataItem: [{optionId: 'bedroom', defaultcount: 2, mincount: 1, itemText: 'спальни'}, {optionId: 'bed', defaultcount: 2, mincount: 1, itemText: 'кровати'}, {optionId: 'bathroom', defaultcount: '0', mincount: '0', itemText: 'ванные комнаты'}] } )
+            +dropdown( {marginTop: 'dropdown-open', headerTitle: 'Dropdown', headerSetting: 'expanded', classDropdown: 'room', menuOpen: 'menu-open', widthSize: 'dropdown-width-medium', dataItem: [{optionId: 'bedroom', defaultcount: 2, mincount: 1, itemText: 'спальни'}, {optionId: 'bed', defaultcount: 2, mincount: 1, itemText: 'кровати'}, {optionId: 'bathroom', defaultcount: '0', mincount: '0', itemText: 'ванные комнаты'}] } )
         .block-elements__column.block-elements__column_center
-            +dropdown( { headerTitle: 'Dropdown', headerSetting: '', classDropdown: 'visitors', menuOpen: 'menu-open', widthSize: 'widthLarge', dataItem: [{optionId: 'adult', defaultcount: '0', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '0', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}] } )
+            +dropdown( { headerTitle: 'Dropdown', headerSetting: '', classDropdown: 'visitors', menuOpen: 'menu-open', widthSize: 'dropdown-width-large', dataItem: [{optionId: 'adult', defaultcount: '0', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '0', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}] } )
         .block-elements__column
-            +dropdown( { headerTitle: 'Dropdown', headerSetting: '', classDropdown: 'visitors', menuOpen: 'menu-open', widthSize: 'widthLarge', dataItem: [{optionId: 'adult', defaultcount: '2', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '1', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}] } )
+            +dropdown( { headerTitle: 'Dropdown', headerSetting: '', classDropdown: 'visitors', menuOpen: 'menu-open', widthSize: 'dropdown-width-large', dataItem: [{optionId: 'adult', defaultcount: '2', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '1', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}] } )
 
     .block-elements.block-checkbox
         .block-elements__column

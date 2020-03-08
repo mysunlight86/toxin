@@ -1,0 +1,26 @@
+.headers-and-footers {
+    padding: 72px 0px 130px;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &_right {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: 1440px - 2 * 140px;
+}
+
+.logo-margin {
+    margin-right: 12.5px;
+}

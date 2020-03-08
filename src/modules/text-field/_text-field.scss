@@ -32,7 +32,7 @@ input.subscription + span.material-icon:before {
     content: "\e5c8";
     font-family: Material Icons;
     background: $purple-gradient;
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     font-size: 24px;

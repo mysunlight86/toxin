@@ -1,0 +1,14 @@
+.card-wrap.card-wrap_big
+    form(method="post" action="#")
+        .form__row
+            h1 Войти
+        .form__row
+            .form__item
+                +textField( {inputType: 'email', inputPlaceholder: 'Email', pattern: '([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})'} )
+            .form__item
+                +textField( {inputType: 'password', inputPlaceholder: 'Пароль', width: 'dropdown-width-large'} )
+        .form__row.form__row_with-button
+            +buttons( {type: 'submit', buttonWidth: 'button_button-big', fill: 'button_fill-100', styleText: 'button_button-text', buttonValue: 'войти'} )
+        .form__row.form__row_with-button.form__row_flex
+            p Нет аккаунта на Toxin?
+            +buttons( {styleText: 'button_button-text', buttonWidth: 'button_button-small', borderStyle: 'button_border-fill-100', buttonValue: 'создать'} )

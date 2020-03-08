@@ -28,7 +28,7 @@
             const $this = $(this);
             const $selection = $this.find("p.iqdropdown-selection").last();
             const $menu = $this.find("div.iqdropdown-menu");
-            const $resetButton = $menu.find("button.iqdropdown-menu-reset");
+            const $resetButton = $menu.find("button[type='reset']");
             const $items = $menu.find("div.iqdropdown-menu-option");
             const dataAttrOptions = {
                 selectionText: $selection.data("selection-text"),

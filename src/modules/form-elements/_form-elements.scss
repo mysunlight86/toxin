@@ -1,5 +1,5 @@
 .form-elements {
-    margin: 65px 141px 132px 141px;
+    margin: 65px 141px 132px;
 }
 
 .block-elements {
@@ -21,6 +21,7 @@
         &_flex {
             display: flex;
             justify-content: space-between;
+            padding-bottom: 40px;
         }
     }
 }
@@ -28,7 +29,6 @@
 .input-dropdown {
     @extend .block-elements__row_flex;
     align-items: center;
-    margin-bottom: 40px;
 }
 
 .buttons {
@@ -40,6 +40,11 @@
 
     &__row {
         display: flex;
+        padding-bottom: 30px;
+
+             .button:first-child {
+                 margin-right: 20px;
+             }
     }
 }
 

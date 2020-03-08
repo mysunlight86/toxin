@@ -1,6 +1,6 @@
 mixin comment(options)
     .user-ui
-        img.user-avatar(src='./assets/img/' + options.urlImg)
+        img.user-avatar(src='/assets/img/' + options.urlImg)
         .input-like
             +likeButton( {inputValue: 'like', inputChecked: true} )
     .user-comment

@@ -1,0 +1,13 @@
+header.header
+    .container
+        .headers-and-footers__row
+            .headers-and-footers__row_left
+                +logoColor()
+                +logoName()
+            .headers-and-footers__row_right
+                include ../menu/menu
+                .authorization
+                    .authorization-login
+                        +buttons( {styleText: 'button_button-text', buttonWidth: 'button_button-small', borderStyle: 'button_border-fill-100', buttonValue: 'Login'} )
+                    .authorization-register
+                        +buttons( {fill: 'button_fill-100', styleText: 'button_button-text', buttonWidth: 'button_button-small', buttonValue: 'REGISTER'} )
