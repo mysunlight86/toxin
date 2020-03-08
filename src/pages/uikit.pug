@@ -1,4 +1,4 @@
-extends ../modules/utils/pug/base.pug
+extends ../modules/utils/pug/base
 
 block variables
     - var title = 'Toxin - uikit';
@@ -8,7 +8,8 @@ block content
     .content-wrapper
         .content-wrapper__logo
             +logo()
-        include ../modules/color-and-type/color-and-type
+        include ./color-and-type
+    //-    include ./color-and-type.pug
     .content-wrapper
         .content-wrapper__logo
             +logo()

@@ -2,7 +2,7 @@
 @import "../modules/utils/scss/fonts";
 @import "../modules/utils/scss/vars";
 @import "../modules/utils/scss/mixins";
-@import "../modules/color-and-type/color-and-type";
+@import "_color-and-type.scss";
 @import "../modules/form-elements/form-elements";
 @import "../modules/text-field/text-field";
 @import "../modules/dropdown/dropdown";
@@ -23,6 +23,9 @@
 @import "../../node_modules/slick-carousel/slick/slick-theme.css";
 @import "../modules/cards/cards";
 @import "../modules/menu/menu";
+@import "../modules/header/header";
+@import "../modules/footer/footer";
+@import "../modules/footer-mobile/footer-mobile";
 @import "../modules/headers-and-footers/headers-and-footers";
 @import "./uikit";
 
