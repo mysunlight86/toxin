@@ -13,7 +13,11 @@ block content
             +logo()
 
         .headers-and-footers
-            include ../modules/header/header-no-authorization
-            include ../modules/header/header-authorization
-            include ../modules/footer/footer
-            include ../modules/footer-mobile/footer-mobile
+            .headers-and-footers__block
+                include ../modules/header/header-no-authorization
+            .headers-and-footers__block
+                include ../modules/header/header-authorization
+            .headers-and-footers__block
+                include ../modules/footer/footer
+            .headers-and-footers__block
+                include ../modules/footer-mobile/footer-mobile

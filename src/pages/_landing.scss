@@ -1,0 +1,19 @@
+.content {
+    background-image: url("/assets/img/background-landing.jpg");
+    position: relative;
+    min-height: 830px;
+
+    &__card {
+        margin-top: 70px;
+        float: left;
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 18px;
+        right: 140px;
+        width: 297px;
+        text-align: right;
+        color: $dark-shade-75;
+    }
+}

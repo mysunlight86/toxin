@@ -1,0 +1,24 @@
+include ./mixins
+include ../../buttons/buttons
+include ../../text-field/text-field
+include ../../datepicker/datepicker
+include ../../dropdown/dropdown
+block variables
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title #{title}
+        meta(name="description", content=description)
+        link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Quicksand:400,700&display=swap&subset=cyrillic" rel="stylesheet")
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        block head
+
+    body
+        .content-wrapper
+            include ../../header/header-no-authorization
+            block content
+        include ../../footer/footer

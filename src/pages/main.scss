@@ -27,6 +27,7 @@
 @import "../modules/footer/footer";
 @import "../modules/footer-mobile/footer-mobile";
 @import "./headers-and-footers";
+@import "_landing.scss";
 
 html {
     line-height: $main-line-height;
@@ -37,7 +38,7 @@ html {
 
 .content-wrapper {
     max-width: (1440px/$main-font-size)*1rem;
-    margin: (150px/$main-font-size)*1rem auto;
+    margin: 0 auto;
 
     &__logo {
         padding-top: (30px/$main-font-size)*1rem;
