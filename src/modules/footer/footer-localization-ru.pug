@@ -1,0 +1,49 @@
+footer.footer
+    .container.footer__row
+        .footer__column_large
+            .cell
+                +logoColor()
+                +logoName()
+            .description Бронирование номеров в&nbsp;лучшем отеле 2019 года по&nbsp;версии ассоциации &laquo;Отельные взгляды&raquo;
+        .footer__column_small
+            h3.menu-title навигация
+            ul
+                li.menu-item
+                    a(href='#') О нас
+                li.menu-item
+                    a(href='#') Новости
+                li.menu-item
+                    a(href='#') Служба поддержки
+                li.menu-item
+                    a(href='#') Услуги
+        .footer__column_small
+            h3.menu-title о нас
+            ul
+                li.menu-item
+                    a(href='#') О сервисе
+                li.menu-item
+                    a(href='#') Наша команда
+                li.menu-item
+                    a(href='#') Вакансии
+                li.menu-item
+                    a(href='#') Инвесторы
+        .footer__column_small
+            h3.menu-title Служба поддержки
+            ul
+                li.menu-item
+                    a(href='#') Соглашения
+                li.menu-item
+                    a(href='#') Сообщества
+                li.menu-item
+                    a(href='#') Связь с нами
+        .footer__column_large
+            h3.menu-title Подписка
+            .description.cell Получайте специальные предложения и&nbsp;новости сервиса
+            +textField( {inputType: 'email', inputPlaceholder: 'Email', inputValue: '', subscription: 'subscription', width: 'dropdown-width-medium', pattern: '([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})'} )
+    .copyright
+        .container.headers-and-footers__row
+            p Copyright &copy; 2018 Toxin UI Kit. All rights reserved.
+            .icons
+                <i class='fab fa-twitter'></i>
+                <i class='fab fa-facebook-square'></i>
+                <i class='fab fa-instagram'></i>

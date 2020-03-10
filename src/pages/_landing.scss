@@ -1,6 +1,9 @@
 .content {
     background-image: url("/assets/img/background-landing.jpg");
-    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    //    position: relative;
     min-height: 830px;
 
     &__card {
@@ -10,8 +13,8 @@
 
     &__text {
         position: absolute;
-        bottom: 18px;
-        right: 140px;
+        top: 764px;
+        right: 0;
         width: 297px;
         text-align: right;
         color: $dark-shade-75;
