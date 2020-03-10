@@ -12,4 +12,6 @@
 
 ### Website pages
 
-[landing](https://mysunlight86.github.io/toxin/dist/index.html)<br>
+[Landing](https://mysunlight86.github.io/toxin/dist/index.html)<br>
+
+[Search room](https://mysunlight86.github.io/toxin/dist/search-room.html)<br>
