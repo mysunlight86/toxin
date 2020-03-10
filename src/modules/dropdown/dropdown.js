@@ -25,6 +25,12 @@ i18n.translations["ru"] = {
         few: "{{count}} гостя",
         many: "{{count}} гостей",
         other: "{{count}} гостей"
+    },
+    "%n infant": {
+        one: "{{count}} младенец",
+        few: "{{count}} младенца",
+        many: "{{count}} младенцев",
+        other: "{{count}} младенцев"
     }
 };
 
@@ -49,7 +55,9 @@ i18n.locale = "ru";
 var captions = {
     bathroom: "%n bathroom",
     bedroom: "%n bedroom",
-    bed: "%n bed"
+    bed: "%n bed",
+    visitor: "%n visitor",
+    infant: "%n infant"
 };
 
 $(document).ready(function() {
@@ -72,7 +80,11 @@ $(document).ready(function() {
             const items = Object.keys(itemCount)
               .map(key => itemCount[key])
               .join(' + ');
-            return i18n.t("%n visitor", { count: totalItems });
+            return (
+                i18n.t("%n visitor", { count: totalItems }) +
+                ", " +
+                i18n.t("%n infant", { count: itemCount.infant })
+            );
           },
         onChange: function(id, count, totalItems) {
             console.log(id, count, totalItems);

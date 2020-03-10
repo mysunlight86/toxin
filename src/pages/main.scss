@@ -27,7 +27,8 @@
 @import "../modules/footer/footer";
 @import "../modules/footer-mobile/footer-mobile";
 @import "./headers-and-footers";
-@import "_landing.scss";
+@import "./landing";
+@import "./search-room";
 
 html {
     line-height: $main-line-height;

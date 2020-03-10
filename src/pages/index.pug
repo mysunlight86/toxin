@@ -3,10 +3,10 @@ extends ../modules/utils/pug/main
 block variables
     - var title = 'Toxin - landing';
     - var description = 'Главная страница';
+    - var pageClass = 'landing';
 
 block content
-    .content
-        .container
-            .content__card
-                include ../modules/card-landing/card-landing
-            .content__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+    .container
+        .content__card
+            include ../modules/card-landing/card-landing
+        .content__text Лучшие номера для вашей работы, отдыха и&nbsp;просто вдохновения

@@ -1,0 +1,47 @@
+.search-room {
+    background-color: rgba(31, 32, 65, 0.05);
+
+    .container {
+        display: flex;
+    }
+}
+
+.content {
+    &__side {
+        padding-top: 30px;
+        margin-right: 60px;
+
+        &_row {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__main {
+        h1 {
+            margin-top: 30px;
+            margin-bottom: 21px;
+        }
+    }
+}
+
+p.explanation {
+    font-size: 12px;
+    line-height: 14px;
+    color: $dark-shade-50;
+    margin-top: 11px;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 12px;
+    grid-row-gap: 21px;
+}
+
+.pagination {
+    margin-top: 41px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+    align-items: center;
+}

@@ -1,0 +1,64 @@
+extends ../modules/utils/pug/main
+
+include ../modules/range-slider/range-slider
+include ../modules/checkbox/checkbox
+include ../modules/expandable-checkbox-list/expandable-checkbox-list
+include ../modules/card-hotel/card-hotel
+include ../modules/rate-button/rate-button
+
+block variables
+    - var title = 'Toxin - search room';
+    - var description = 'Страница подбора номера';
+    - var pageClass = 'search-room';
+
+block content
+    .container
+        .content__side
+            .content__side_row
+                +datepicker( {headerTitle: 'даты пребывания в отеле', class: 'period', inputPlaceholder: '19 авг - 23 авг', inputValue: '19 авг - 23 авг', width: 'dropdown-width-medium'} )
+            .content__side_row
+                +dropdown( { headerTitle: 'Dropdown', headerSetting: '', classDropdown: 'visitors', widthSize: 'dropdown-width-medium', dataItem: [{optionId: 'adult', defaultcount: '1', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '1', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '1', mincount: '0', itemText: 'младенцы'}] } )
+            .content__side_row
+                +rangeSlider( {headerTitle: 'диапазон цены', inputType: 'text', width: 'dropdown-width-medium'} )
+                p.explanation Стоимость за&nbsp;сутки пребывания в&nbsp;номере
+            .content__side_row
+                h3 Checkbox Buttons
+                .checkbox-fields
+                    +checkbox( {inputValue: 'smoke', explanationEmpty: true, explanation: 'Можно курить', inputChecked: false} )
+                    +checkbox( {inputValue: 'pet', explanationEmpty: true, explanation: 'Можно с питомцами', inputChecked: true} )
+                    +checkbox( {inputValue: 'invite', explanationEmpty: true, explanation: 'Можно пригласить гостей (до 10 человек)', inputChecked: true} )
+            .content__side_row
+                h3 доступность
+                .checkbox-fields
+                    +checkbox( {inputValue: 'wide corridor', explanationEmpty: false, richData: {title: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'}, inputChecked: false} )
+                    +checkbox( {inputValue: 'assistant', explanationEmpty: false, richData: {title: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист и проводит до номера.'}, inputChecked: false} )
+            .content__side_row
+                +dropdown( {headerTitle: 'удобства номера', classDropdown: 'room', widthSize: 'dropdown-width-medium', dataItem: [{optionId: 'bedroom', defaultcount: 2, mincount: 1, itemText: 'спальни'}, {optionId: 'bed', defaultcount: 2, mincount: 1, itemText: 'кровати'}, {optionId: 'bathroom', defaultcount: '0', mincount: '0', itemText: 'ванные комнаты'}] } )
+            .content__side_row
+                +details( {detailsOpen: false, summaryText: 'expandable checkbox list'} )
+                    .checkbox-fields
+                        +checkbox( {inputValue: 'breakfast', explanationEmpty: true, explanation: 'Завтрак', inputChecked: false} )
+                        +checkbox( {inputValue: 'desk', explanationEmpty: true, explanation: 'Письменный стол', inputChecked: true} )
+                        +checkbox( {inputValue: 'highchair', explanationEmpty: true, explanation: 'Стул для кормления', inputChecked: true} )
+                        +checkbox( {inputValue: 'cot', explanationEmpty: true, explanation: 'Кроватка', inputChecked: true} )
+                        +checkbox( {inputValue: 'TV', explanationEmpty: true, explanation: 'Телевизор', inputChecked: false} )
+                        +checkbox( {inputValue: 'shampoo', explanationEmpty: true, explanation: 'Шампунь', inputChecked: false} )
+                        +checkbox( {inputValue: 'TV', explanationEmpty: true, explanation: 'Телевизор', inputChecked: false} )
+                        +checkbox( {inputValue: 'shampoo', explanationEmpty: true, explanation: 'Шампунь', inputChecked: false} )
+        .content__main
+            h1 Номера, которые мы для вас подобрали
+            .grid-cards
+                +cardHotel( {arrows: false, imgSrc: ['assets/img/imageN888.jpg', 'assets/img/imageN888.jpg','assets/img/imageN888.jpg', 'assets/img/imageN888.jpg'], roomNumber: "888", roomClass: 'люкс', price: "9 990₽", starNumber: 5, checkedNumber: 5, ratingNumber: 1, quantity: "145", quantityText: "Отзывов"} )
+                +cardHotel( {arrows: false, imgSrc: ['assets/img/imageN840.jpg', 'assets/img/imageN840.jpg', 'assets/img/imageN840.jpg','assets/img/imageN840.jpg'], roomNumber: "840", price: "9 990₽", starNumber: 5, checkedNumber: 4, ratingNumber: 2, quantity: "65", quantityText: "Отзывов"} )
+                +cardHotel( {arrows: false, imgSrc: ['assets/img/imageN980.jpg', 'assets/img/imageN980.jpg','assets/img/imageN980.jpg', 'assets/img/imageN980.jpg'], roomNumber: "980", roomClass: 'люкс', price: "8 500₽", starNumber: 5, checkedNumber: 3, ratingNumber: 3, quantity: "35", quantityText: "Отзывов"} )
+                +cardHotel( {arrows: false, imgSrc: ['assets/img/imageN856.jpg', 'assets/img/imageN856.jpg', 'assets/img/imageN856.jpg','assets/img/imageN856.jpg'], roomNumber: "856", price: "7 300₽", starNumber: 5, checkedNumber: 5, ratingNumber: 4, quantity: "19", quantityText: "Отзывов"} )
+                +cardHotel( {arrows: false, imgSrc: ['assets/img/imageN740.jpg', 'assets/img/imageN740.jpg', 'assets/img/imageN740.jpg','assets/img/imageN740.jpg'], roomNumber: "740", price: "6 000₽", starNumber: 5, checkedNumber: 4, ratingNumber: 5, quantity: "44", quantityText: "Отзывов"} )
+                +cardHotel( {arrows: false, imgSrc: ['assets/img/imageN982.jpg', 'assets/img/imageN982.jpg', 'assets/img/imageN982.jpg','assets/img/imageN982.jpg'], roomNumber: "982", price: "5 800₽", starNumber: 5, checkedNumber: 3, ratingNumber: 6, quantity: "56", quantityText: "Отзывов"} )
+                +cardHotel( {arrows: false, imgSrc: ['assets/img/imageN678.jpg', 'assets/img/imageN678.jpg', 'assets/img/imageN678.jpg','assets/img/imageN678.jpg'], roomNumber: "678", price: "5 500₽", starNumber: 5, checkedNumber: 5, ratingNumber: 7, quantity: "45", quantityText: "Отзывов"} )
+                +cardHotel( {arrows: false, imgSrc: ['assets/img/imageN450.jpg', 'assets/img/imageN450.jpg', 'assets/img/imageN450.jpg','assets/img/imageN450.jpg'], roomNumber: "450", price: "5 300₽", starNumber: 5, checkedNumber: 4, ratingNumber: 8, quantity: "39", quantityText: "Отзывов"} )
+                +cardHotel( {arrows: false, imgSrc: ['assets/img/imageN350.jpg', 'assets/img/imageN350.jpg', 'assets/img/imageN350.jpg','assets/img/imageN350.jpg'], roomNumber: "350", price: "5 000₽", starNumber: 5, checkedNumber: 3, ratingNumber: 9, quantity: "77", quantityText: "Отзывов"} )
+                +cardHotel( {arrows: false, imgSrc: ['assets/img/imageN666.jpg', 'assets/img/imageN666.jpg', 'assets/img/imageN666.jpg','assets/img/imageN666.jpg'], roomNumber: "666", price: "5 000₽", starNumber: 5, checkedNumber: 5, ratingNumber: 10, quantity: "25", quantityText: "Отзывов"} )
+                +cardHotel( {arrows: false, imgSrc: ['assets/img/imageN444.jpg', 'assets/img/imageN444.jpg', 'assets/img/imageN444.jpg','assets/img/imageN444.jpg'], roomNumber: "444", price: "5 000₽", starNumber: 5, checkedNumber: 3, ratingNumber: 11, quantity: "15", quantityText: "Отзывов"} )
+                +cardHotel( {arrows: false, imgSrc: ['assets/img/imageN352.jpg', 'assets/img/imageN352.jpg', 'assets/img/imageN352.jpg','assets/img/imageN352.jpg'], roomNumber: "352", price: "5 000₽", starNumber: 5, checkedNumber: 3, ratingNumber: 12, quantity: "55", quantityText: "Отзывов"} )
+            .pagination
+                include ../modules/pagination/pagination
