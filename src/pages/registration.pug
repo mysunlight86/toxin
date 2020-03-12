@@ -1,0 +1,14 @@
+extends ../modules/utils/pug/main
+
+include ../modules/radio-button/radio-button
+include ../modules/toggle/toggle
+
+block variables
+    - var title = 'Toxin - registration';
+    - var description = 'Страница регистрации';
+    - var pageClass = 'registration';
+
+block content
+    .container
+        .content__card-registration
+            include ../modules/card-registration/card-registration

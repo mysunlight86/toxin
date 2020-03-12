@@ -2,7 +2,7 @@ mixin comment(options)
     .user-ui
         img.user-avatar(src='./assets/img/' + options.urlImg)
         .input-like
-            +likeButton( {inputValue: 'like', inputChecked: true} )
+            +likeButton( {inputValue: 'like', inputChecked: options.inputChecked} )
     .user-comment
         .user-comment__name #{options.name}
         .user-comment__written #{options.written}

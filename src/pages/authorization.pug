@@ -1,0 +1,11 @@
+extends ../modules/utils/pug/main
+
+block variables
+    - var title = 'Toxin - authorization';
+    - var description = 'Страница входа';
+    - var pageClass = 'authorization-page';
+
+block content
+    .container
+        .content__card-authorization
+            include ../modules/card-authorization/card-authorization

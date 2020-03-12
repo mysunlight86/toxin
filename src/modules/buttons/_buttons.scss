@@ -26,7 +26,9 @@
         background: $purple-gradient;
         border: 2px solid transparent;
         border-radius: 22px;
-        box-shadow: inset 2px 1000px 1px #fff;
+        background-image: linear-gradient(white, white), $purple-gradient;
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
         color: $purple;
     }
 

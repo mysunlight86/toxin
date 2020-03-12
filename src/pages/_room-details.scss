@@ -61,6 +61,24 @@
     &__impress {
         margin-right: 70px;
         min-width: 349px;
+
+        h2 {
+            margin-bottom: 21px;
+        }
+    }
+
+    &__reviews {
+        max-width: 711px;
+
+        &-quantity {
+            display: flex;
+            justify-content: space-between;
+
+            .quantity {
+                line-height: 14px;
+                color: $dark-shade-50;
+            }
+        }
     }
 
     &__regulation {
