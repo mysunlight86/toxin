@@ -29,6 +29,9 @@
 @import "./headers-and-footers";
 @import "./landing";
 @import "./search-room";
+@import "./room-details";
+@import "./registration";
+@import "./authorization";
 
 html {
     line-height: $main-line-height;

@@ -1,11 +1,12 @@
 .menu {
     display: flex;
     line-height: 17px;
+    margin-right: 3px;
 
     &__link {
         display: flex;
         color: $dark-shade-50;
-        padding: 15px;
+        padding: 10px;
 
         &.active {
             font-weight: bold;
@@ -14,6 +15,11 @@
     }
 }
 
+.services {
+    margin-right: 6px;
+}
+
 .drop-menu {
     line-height: 17px;
+    width: 19px;
 }

@@ -1,4 +1,4 @@
-import './iq-dropdown';
+import "./iq-dropdown";
 import i18n from "i18n-js";
 
 i18n.translations["ru"] = {
@@ -73,19 +73,22 @@ $(document).ready(function() {
         }
     });
     $(".visitors").iqDropdown({
-        setSelectionText: function (itemCount, totalItems) {
+        setSelectionText: function(itemCount, totalItems) {
             if (totalItems === 0) {
                 return "Сколько гостей";
             }
             const items = Object.keys(itemCount)
-              .map(key => itemCount[key])
-              .join(' + ');
+                .map(key => itemCount[key])
+                .join(" + ");
+            if (itemCount.infant === 0) {
+                return i18n.t("%n visitor", { count: totalItems });
+            }
             return (
                 i18n.t("%n visitor", { count: totalItems }) +
                 ", " +
                 i18n.t("%n infant", { count: itemCount.infant })
             );
-          },
+        },
         onChange: function(id, count, totalItems) {
             console.log(id, count, totalItems);
         }

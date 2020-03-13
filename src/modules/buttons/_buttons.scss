@@ -23,10 +23,11 @@
     }
 
     &_border-fill-100 {
-        background: $purple-gradient;
+        background-image: linear-gradient(#ffffff, #ffffff), $purple-gradient;
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
         border: 2px solid transparent;
         border-radius: 22px;
-        box-shadow: inset 2px 1000px 1px #fff;
         color: $purple;
     }
 
@@ -37,8 +38,9 @@
 
     &_button-small {
         width: auto;
-        padding: 0px 20px;
-        height: 44px;
+        padding: 0px 19px;
+        height: 34px;
+        line-height: normal;
         border-radius: 22px;
     }
 

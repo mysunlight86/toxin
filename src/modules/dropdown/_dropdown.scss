@@ -8,6 +8,10 @@
     border-radius: 2px;
     cursor: pointer;
 
+    &-content {
+        min-width: 82px;
+    }
+
     p.iqdropdown-selection {
         font-family: Montserrat;
         font-style: normal;

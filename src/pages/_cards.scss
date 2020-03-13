@@ -34,23 +34,6 @@
 
         &_slide-arrow {
             height: 150px;
-            // position: relative;
-            // float: left;
-
-            // &:before {
-            //     content: "";
-            //     position: absolute;
-            //     top: 0;
-            //     bottom: 0;
-            //     left: 0;
-            //     right: 0;
-            //     box-shadow: inset 40px 0px 20px $shadow-color,
-            //         inset -40px 0px 20px $shadow-color;
-            // }
-
-            // img {
-            //     float: left;
-            // }
         }
     }
 
@@ -68,14 +51,6 @@
         }
     }
 }
-
-// .single-item_no-arrows:before {
-//     box-shadow: none;
-
-//     .slick-prev:before {
-//         content: "";
-//     }
-// }
 
 .slick-dotted.slick-slider {
     margin-bottom: 0px;
