@@ -15,3 +15,9 @@
 [Landing](https://mysunlight86.github.io/toxin/dist/index.html)<br>
 
 [Search room](https://mysunlight86.github.io/toxin/dist/search-room.html)<br>
+
+[Room details](https://mysunlight86.github.io/toxin/dist/room-details.html)<br>
+
+[Registration](https://mysunlight86.github.io/toxin/dist/registration.html)<br>
+
+[Authorization](https://mysunlight86.github.io/toxin/dist/authorization.html)<br>
