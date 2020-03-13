@@ -46,7 +46,9 @@
 
     &_button-big {
         @extend .button_button-small;
-        width: 320px;
+        width: 318px;
+        height: 44px;
+        padding-left: 13px;
         position: relative;
         &:before {
             content: "\e5c8";
@@ -56,6 +58,7 @@
             color: #fff;
             position: absolute;
             right: 10px;
+            top: 11px;
         }
     }
 

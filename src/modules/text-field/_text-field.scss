@@ -28,6 +28,10 @@
     color: $dark-shade-75;
 }
 
+.subscription {
+    letter-spacing: 1px;
+}
+
 input.subscription + span.material-icon:before {
     content: "\e5c8";
     font-family: Material Icons;
@@ -37,7 +41,7 @@ input.subscription + span.material-icon:before {
     position: absolute;
     font-size: 24px;
     top: -3px;
-    right: 15px;
+    right: 11px;
     cursor: pointer;
     display: flex;
     align-items: center;

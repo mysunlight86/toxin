@@ -7,7 +7,7 @@ input.mydatepicker + span.material-icon:before {
     position: absolute;
     font-size: 24px;
     top: -3px;
-    right: 15px;
+    right: 10px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -22,6 +22,9 @@ input.none {
 }
 
 .mydatepicker {
+    padding: 7px 14px;
+    height: 44px;
+
     @include placeholder {
         color: $dark-shade-75;
     }
