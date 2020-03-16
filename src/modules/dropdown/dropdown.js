@@ -61,7 +61,7 @@ var captions = {
 };
 
 $(document).ready(function() {
-    $(".room").iqDropdown({
+    $(".conveniences").iqDropdown({
         minItems: 2,
         onChange: function(id, count, totalItems) {
             console.log(id, count, totalItems);

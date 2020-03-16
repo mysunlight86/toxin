@@ -105,6 +105,10 @@ span.counter {
     flex-direction: row-reverse;
     padding: 13px 7px;
     cursor: pointer;
+
+    button {
+        padding: 0;
+    }
 }
 
 .iqdropdown-menu-reset {
@@ -116,4 +120,8 @@ span.counter {
 .iqdropdown-menu-apply {
     @extend span.counter;
     color: $purple;
+}
+
+.conveniences .iqdropdown-menu-buttons {
+    display: none;
 }

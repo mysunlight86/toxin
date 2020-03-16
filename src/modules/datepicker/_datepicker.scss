@@ -34,6 +34,14 @@ input.none {
     width: 320px;
     box-sizing: border-box;
     padding: 20px;
+
+    // &-inline {
+    //     margin-top: 5px;
+    // }
+
+    &--cells {
+        margin-top: -3px;
+    }
 }
 
 .datepicker--pointer {
@@ -42,6 +50,8 @@ input.none {
 
 .datepicker--nav {
     border: none;
+    min-height: 0;
+    padding: 0;
 
     &-action {
         position: relative;
@@ -81,11 +91,20 @@ input.none {
     }
 }
 
-// .datepicker--content {
-//     font-family: $main-font;
-//     font-size: 12px;
-//     line-height: 15px;
-// }
+.datepicker--body {
+    margin-top: 5px;
+}
+
+.datepicker--content {
+    padding: 4px 0 0;
+    //     font-family: $main-font;
+    //     font-size: 12px;
+    //     line-height: 15px;
+}
+
+.datepicker--days-names {
+    margin-top: 24px;
+}
 
 .datepicker--day-name {
     font-weight: bold;
@@ -102,7 +121,7 @@ input.none {
 
 .datepicker--day-name,
 .datepicker--cell {
-    width: 38.578px;
+    width: 39.5px;
     height: 40px;
     box-sizing: border-box;
     font-family: $main-font;

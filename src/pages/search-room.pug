@@ -33,7 +33,7 @@ block content
                     +checkbox( {inputValue: 'wide corridor', explanationEmpty: false, richData: {title: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'}, inputChecked: false} )
                     +checkbox( {inputValue: 'assistant', explanationEmpty: false, richData: {title: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист и проводит до номера.'}, inputChecked: false} )
             .content__side_row
-                +dropdown( {headerTitle: 'удобства номера', classDropdown: 'room', widthSize: 'dropdown-width-medium', dataItem: [{optionId: 'bedroom', defaultcount: 2, mincount: 1, itemText: 'спальни'}, {optionId: 'bed', defaultcount: 2, mincount: 1, itemText: 'кровати'}, {optionId: 'bathroom', defaultcount: '0', mincount: '0', itemText: 'ванные комнаты'}] } )
+                +dropdown( {headerTitle: 'удобства номера', classDropdown: 'conveniences', widthSize: 'dropdown-width-medium', dataItem: [{optionId: 'bedroom', defaultcount: 2, mincount: 1, itemText: 'спальни'}, {optionId: 'bed', defaultcount: 2, mincount: 1, itemText: 'кровати'}, {optionId: 'bathroom', defaultcount: '0', mincount: '0', itemText: 'ванные комнаты'}] } )
             .content__side_row
                 +details( {detailsOpen: false, summaryText: 'expandable checkbox list'} )
                     .checkbox-fields
