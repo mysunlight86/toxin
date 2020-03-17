@@ -35,13 +35,13 @@ input.none {
     box-sizing: border-box;
     padding: 20px;
 
-    // &-inline {
-    //     margin-top: 5px;
-    // }
-
     &--cells {
         margin-top: -3px;
     }
+}
+
+.datepicker.-bottom-left-.-from-bottom-.active {
+    margin-top: -7px !important;
 }
 
 .datepicker--pointer {
