@@ -38,95 +38,19 @@
     }
 
     &__block {
-        padding: 8px 0px 0px;
+        padding: 11px 0px 0px;
     }
 
     &__row {
-        padding: 10px 0px;
-        margin: 0px 20px;
+        padding: 10px 0 8px;
+        margin: 0px 16px 0 19px;
         border-bottom: 1px solid rgba(31, 32, 65, 0.1);
 
         &:last-child {
             border-bottom: 0px;
+            margin: -1px 19px 0px 21px;
         }
     }
-}
-
-.slick-dotted.slick-slider {
-    margin-bottom: 0px;
-}
-
-.slick-slide {
-    height: 150px;
-}
-
-.slick-prev,
-.slick-next {
-    z-index: 10;
-    height: 100%;
-    width: 40px;
-    opacity: 1;
-    color: #fff;
-}
-
-.slick-prev,
-.slick-prev:hover,
-.slick-prev:focus {
-    background: linear-gradient(to right, $shadow-color, transparent);
-    left: 0;
-}
-
-.slick-next,
-.slick-next:hover,
-.slick-next:focus {
-    background: linear-gradient(to left, $shadow-color, transparent);
-    right: 0;
-}
-
-.slick-prev:before {
-    content: "\e5cf";
-    font-family: Material Icons;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    display: flex;
-    transform: rotate(90deg);
-    opacity: 1;
-    color: #fff;
-    position: absolute;
-}
-
-.slick-next:before {
-    @extend .slick-prev:before;
-    transform: rotate(-90deg);
-    right: 10px;
-}
-
-.slick-dots {
-    text-align: right;
-    bottom: 15px;
-    left: -10px;
-}
-
-.slick-dots li button:before {
-    content: "";
-    width: 7.5px;
-    height: 7.49px;
-    border: 1px solid #ffffff;
-    box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
-    border-radius: 50%;
-    opacity: 1;
-}
-
-.slick-dots li.slick-active button:before {
-    background-color: #fff;
-    opacity: 1;
-}
-
-.slick-dots li {
-    width: 7.5px;
-    height: 7.49px;
-    margin: 0px 2px;
 }
 
 .form {
@@ -168,6 +92,10 @@
             display: flex;
         }
     }
+
+    &__footer_right {
+        margin-top: -16px;
+    }
 }
 
 span.room-number {
@@ -177,7 +105,6 @@ span.room-number {
 
 h2.room-number {
     display: inline-block;
-    //   font-family: Montserrat;
     margin: 0px 5px;
     line-height: 22px;
 }
@@ -188,19 +115,31 @@ h3.room-class {
 }
 
 span.price,
+span.quantity,
+span.price-period,
+span.quantity-text {
+    color: $dark-shade-50;
+}
+
+span.price,
 span.quantity {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
-    color: $dark-shade-50;
 }
 
-span.price-period,
-span.quantity-text {
+span.quantity {
+    font-size: 15px;
+}
+
+span.price-period {
     font-size: 12px;
-    color: $dark-shade-50;
+}
+
+span.quantity-text {
+    font-size: 13px;
 }
 
 .service-product {
@@ -259,5 +198,4 @@ span.service-cost {
     position: relative;
     bottom: -5px;
     display: inline-block;
-    //   font-family: Montserrat;
 }

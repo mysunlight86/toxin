@@ -17,25 +17,25 @@ block content
             .content__side_row
                 +datepicker( {headerTitle: 'даты пребывания в отеле', class: 'period', inputPlaceholder: '19 авг - 23 авг', inputValue: '19 авг - 23 авг', width: 'dropdown-width-medium'} )
             .content__side_row
-                +dropdown( { headerTitle: 'Dropdown', headerSetting: '', classDropdown: 'visitors', widthSize: 'dropdown-width-medium', dataItem: [{optionId: 'adult', defaultcount: '1', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '1', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '1', mincount: '0', itemText: 'младенцы'}] } )
+                +dropdown( { headerTitle: 'гости', classDropdown: 'visitors', widthSize: 'dropdown-width-medium', dataItem: [{optionId: 'adult', defaultcount: '1', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '1', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '1', mincount: '0', itemText: 'младенцы'}] } )
             .content__side_row
                 +rangeSlider( {headerTitle: 'диапазон цены', inputType: 'text', width: 'dropdown-width-medium'} )
                 p.explanation Стоимость за&nbsp;сутки пребывания в&nbsp;номере
-            .content__side_row
+            .content__side_row.checkbox-buttons
                 h3 Checkbox Buttons
                 .checkbox-fields
                     +checkbox( {inputValue: 'smoke', explanationEmpty: true, explanation: 'Можно курить', inputChecked: false} )
                     +checkbox( {inputValue: 'pet', explanationEmpty: true, explanation: 'Можно с питомцами', inputChecked: true} )
                     +checkbox( {inputValue: 'invite', explanationEmpty: true, explanation: 'Можно пригласить гостей (до 10 человек)', inputChecked: true} )
             .content__side_row
-                h3 доступность
+                h3.availability доступность
                 .checkbox-fields
                     +checkbox( {inputValue: 'wide corridor', explanationEmpty: false, richData: {title: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'}, inputChecked: false} )
                     +checkbox( {inputValue: 'assistant', explanationEmpty: false, richData: {title: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист и проводит до номера.'}, inputChecked: false} )
-            .content__side_row
+            .content__side_row.convenience
                 +dropdown( {headerTitle: 'удобства номера', classDropdown: 'conveniences', widthSize: 'dropdown-width-medium', dataItem: [{optionId: 'bedroom', defaultcount: 2, mincount: 1, itemText: 'спальни'}, {optionId: 'bed', defaultcount: 2, mincount: 1, itemText: 'кровати'}, {optionId: 'bathroom', defaultcount: '0', mincount: '0', itemText: 'ванные комнаты'}] } )
-            .content__side_row
-                +details( {detailsOpen: false, summaryText: 'expandable checkbox list'} )
+            .content__side_row.added-convenience
+                +details( {detailsOpen: false, summaryText: 'дополнительные удобства'} )
                     .checkbox-fields
                         +checkbox( {inputValue: 'breakfast', explanationEmpty: true, explanation: 'Завтрак', inputChecked: false} )
                         +checkbox( {inputValue: 'desk', explanationEmpty: true, explanation: 'Письменный стол', inputChecked: true} )

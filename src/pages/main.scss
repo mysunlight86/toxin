@@ -21,6 +21,7 @@
 @import "./form-elements";
 @import "../../node_modules/slick-carousel/slick/slick.css";
 @import "../../node_modules/slick-carousel/slick/slick-theme.css";
+@import "../modules/card-hotel/card-hotel";
 @import "./cards";
 @import "../modules/menu/menu";
 @import "../modules/header/header";
@@ -72,7 +73,6 @@ h3 {
 h1 {
     font-size: (24px / $main-font-size) * 1rem;
     line-height: (30px / $main-font-size) * 1rem;
-    letter-spacing: 1.1px;
 }
 
 h2 {

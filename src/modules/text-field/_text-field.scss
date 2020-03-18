@@ -28,8 +28,8 @@
     color: $dark-shade-75;
 }
 
-.subscription {
-    letter-spacing: 1px;
+input.subscription {
+    width: 260px;
 }
 
 input.subscription + span.material-icon:before {

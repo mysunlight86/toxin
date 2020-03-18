@@ -23,9 +23,9 @@ mixin cardHotel(options)
                     =' '
                     span.price-period в сутки
             .card-wrap__row.form__row_flex
-                .form__header_left
+                .form__footer_left
                     +rateButton( {starNumber: options.starNumber, checkedNumber: options.checkedNumber, ratingNumber: options.ratingNumber} )
-                .form__header_right
+                .form__footer_right
                     span.quantity #{options.quantity}
                     =' '
                     span.quantity-text #{options.quantityText}
