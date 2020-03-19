@@ -48,7 +48,7 @@
         @extend .button_button-small;
         width: 318px;
         height: 44px;
-        padding-left: 13px;
+        padding-left: 16px;
         position: relative;
         &:before {
             content: "\e5c8";
@@ -75,4 +75,14 @@
     &_color-passive {
         color: $dark-shade-50;
     }
+}
+
+button.create {
+    padding: 20px 16px;
+    line-height: 0px;
+}
+
+button.login {
+    padding: 20px 24px;
+    line-height: 0px;
 }

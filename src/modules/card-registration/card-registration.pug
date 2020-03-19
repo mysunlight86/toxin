@@ -4,9 +4,9 @@
             h1 Регистрация аккаунта
         .form__row
             .form__item
-                +textField( {inputType: 'text', inputPlaceholder: 'Имя', width: 'dropdown-width-large'} )
+                +textField( {fieldHide: true, inputType: 'text', inputPlaceholder: 'Имя', width: 'dropdown-width-large'} )
             .form__item
-                +textField( {inputType: 'text', inputPlaceholder: 'Фамилия', width: 'dropdown-width-large'} )
+                +textField( {fieldHide: true, inputType: 'text', inputPlaceholder: 'Фамилия', width: 'dropdown-width-large'} )
             .form__item.radio-fields
                 +radioButton( {inputValue: 'male', explanation: 'Мужчина', inputChecked: true} )
                 +radioButton( {inputValue: 'female', explanation: 'Женщина', inputChecked: false} )
@@ -16,11 +16,11 @@
             .form__item
                 +textField( {headerTitle: 'данные для входа в сервис', inputType: 'email', inputPlaceholder: 'Email', pattern: '([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})'} )
             .form__item
-                +textField( {inputType: 'password', inputPlaceholder: 'Пароль', width: 'dropdown-width-large'} )
+                +textField( {fieldHide: true, inputType: 'password', inputPlaceholder: 'Пароль', width: 'dropdown-width-large'} )
             .form__item.toggle-fields
                 +toggle( {inputValue: 'no-receive', explanation: 'Получать спецпредложения', inputChecked: false} )
-            .form__row.form__row_with-button
+            .form__row.form__row_with-button.in-registration
                 +buttons( {type: 'submit', buttonWidth: 'button_button-big', fill: 'button_fill-100', styleText: 'button_button-text', buttonValue: 'перейти к оплате'} )
             .form__row.form__row_with-button.form__row_flex
                 p Уже есть аккаунт на Toxin
-                +buttons( {styleText: 'button_button-text', buttonWidth: 'button_button-small', borderStyle: 'button_border-fill-100', buttonValue: 'войти'} )
+                +buttons( {styleText: 'button_button-text', buttonWidth: 'button_button-small', borderStyle: 'button_border-fill-100', buttonName: 'login', buttonValue: 'войти'} )

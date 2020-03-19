@@ -1,6 +1,8 @@
 .footer {
     background-color: #fff;
     min-width: 1440px;
+    box-shadow: 0px 10px 20px $dark-shade-5;
+    border-top: 1px solid $dark-shade-5;
 
     &__row {
         padding: 100px 0px 92px;

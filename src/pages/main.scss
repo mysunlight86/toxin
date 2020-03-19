@@ -42,12 +42,12 @@ html {
 }
 
 .content-wrapper {
-    max-width: (1440px/$main-font-size)*1rem;
+    max-width: (1440px / $main-font-size) * 1rem;
     margin: 0 auto;
 
     &__logo {
-        padding-top: (30px/$main-font-size)*1rem;
-        margin-left: (30px/$main-font-size)*1rem;
+        padding-top: (30px / $main-font-size) * 1rem;
+        margin-left: (30px / $main-font-size) * 1rem;
     }
 
     &_style {
@@ -78,6 +78,7 @@ h1 {
 h2 {
     font-size: (19px / $main-font-size) * 1rem;
     line-height: (24px/14px) * 1rem;
+    letter-spacing: 0.5px;
 }
 
 h3 {

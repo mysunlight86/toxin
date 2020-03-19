@@ -1,6 +1,6 @@
 mixin textField(options)
     label
-        .field-label
+        .field-label(style=(options.fieldHide ? "display: none;" : ""))
             h3 #{options.headerTitle}
             h3.field-label_color-weight #{options.headerSetting}
         input(type=options.inputType placeholder=options.inputPlaceholder value=options.inputValue class="text-field-input-enter " + options.subscription + ' ' + options.width + ' ' + options.dateMasked pattern=options.pattern)
