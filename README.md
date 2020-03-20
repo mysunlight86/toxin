@@ -24,17 +24,17 @@
 
 ## Project deployment<br>
 
-### Install dependencies<br>
+### To install dependencies<br>
 
 `npm install`<br>
 
-### Start the server<br>
+### To start the server<br>
 
 `npm run dev`<br>
 
-Visit http://localhost:8081/ to see index.html.<br>
+To visit http://localhost:8081/ to see index.html.<br>
 
-For all possible pages of the project:<br>
+To visit for all possible pages of the project:<br>
 
 http://localhost:8081/search-room.html<br>
 
