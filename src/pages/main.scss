@@ -33,6 +33,7 @@
 @import "./room-details";
 @import "./registration";
 @import "./authorization";
+@import "../modules/utils/scss/adaptive";
 
 html {
     line-height: $main-line-height;
