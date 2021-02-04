@@ -1,5 +1,7 @@
 # toxin
 
+Проект о гостинице с номерами
+
 ### UI kit
 
 [Colors and type](https://mysunlight86.github.io/toxin/dist/color-and-type.html) <br>
