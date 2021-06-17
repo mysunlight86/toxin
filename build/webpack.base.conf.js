@@ -11,6 +11,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
+//  assets: path.join(__dirname, '../dist/assets'),
   assets: 'assets/'
 }
 
@@ -110,7 +111,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[hash].css`,
+      filename: `${PATHS.assets}css/main.css`,
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
